@@ -17,7 +17,7 @@ export default function ProgramsPage() {
                     <div className="features-grid stagger-reveal">
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><i className="fa-solid fa-children"></i></div>
+                                <div className="feature-icon mx-auto mb-4"><span className="range-mark mark-junior" aria-hidden="true"></span></div>
                                 <h3 className="heading-md">Junior Camps</h3>
                                 <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
                                 <Link href="/contact" className="btn btn-primary w-full">Ask About Camps</Link>
@@ -25,7 +25,7 @@ export default function ProgramsPage() {
                         </div>
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><i className="fa-solid fa-school"></i></div>
+                                <div className="feature-icon mx-auto mb-4"><span className="range-mark mark-clipboard" aria-hidden="true"></span></div>
                                 <h3 className="heading-md">Field Trip Program</h3>
                                 <p className="mb-4">A curriculum-aligned Physical Education field trip for Grades 7-12, built around golf fundamentals, safety, and active outdoor learning.</p>
                                 <Link href="#field-trips" className="btn btn-primary w-full">View Proposal</Link>
@@ -46,7 +46,7 @@ export default function ProgramsPage() {
             {/* Field Trip Proposal */}
             <section id="field-trips" className="section field-trip-section">
                 <div className="container">
-                    <div className="section-header text-center reveal">
+                    <div className="section-header field-trip-header text-center reveal">
                         <span className="badge premium-badge mb-4">Physical Education</span>
                         <h2 className="heading-lg text-reveal">Field Trip Proposal</h2>
                         <p className="text-lead">A safe, inclusive, and engaging golf program designed to support Alberta Physical Education learning outcomes for Grades 7-12.</p>
@@ -67,28 +67,28 @@ export default function ProgramsPage() {
 
                     <div className="field-trip-outcomes stagger-reveal">
                         <div className="field-trip-outcome reveal">
-                            <i className="fa-solid fa-person-running"></i>
+                            <span className="outcome-code" aria-hidden="true">PE</span>
                             <div>
                                 <h3>Physical Literacy</h3>
                                 <p>Students develop movement skills through grip, stance, posture, balance, hand-eye coordination, spatial awareness, and controlled swing patterns.</p>
                             </div>
                         </div>
                         <div className="field-trip-outcome reveal">
-                            <i className="fa-solid fa-heart-pulse"></i>
+                            <span className="outcome-code" aria-hidden="true">HL</span>
                             <div>
                                 <h3>Healthy Active Living</h3>
                                 <p>Golf is introduced as a lifelong outdoor activity that supports regular movement, mental focus, and continued participation beyond school.</p>
                             </div>
                         </div>
                         <div className="field-trip-outcome reveal">
-                            <i className="fa-solid fa-people-group"></i>
+                            <span className="outcome-code" aria-hidden="true">ET</span>
                             <div>
                                 <h3>Responsibility & Etiquette</h3>
                                 <p>Students practice respect for peers, instructors, shared spaces, routines, patience, and safe conduct in a group setting.</p>
                             </div>
                         </div>
                         <div className="field-trip-outcome reveal">
-                            <i className="fa-solid fa-shield-halved"></i>
+                            <span className="outcome-code" aria-hidden="true">SF</span>
                             <div>
                                 <h3>Safety & Risk Awareness</h3>
                                 <p>Staff provide clear safety briefings around equipment handling, swing zones, physical boundaries, and supervised activity flow.</p>

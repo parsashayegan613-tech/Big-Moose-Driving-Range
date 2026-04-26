@@ -54,9 +54,9 @@ export default function PricingPage() {
                             <div className="price">$10<span className="price-cents">.50</span></div>
                             <p className="cash-price">or $10.00 cash</p>
                             <ul className="pricing-features">
-                                <li><i className="fa-solid fa-check text-primary"></i> Titleist & Callaway balls</li>
-                                <li><i className="fa-solid fa-check text-primary"></i> Elevated mats</li>
-                                <li><i className="fa-solid fa-check text-primary"></i> Targets on range</li>
+                                <li><span className="price-bullet mark-balls" aria-hidden="true"></span> Titleist & Callaway balls</li>
+                                <li><span className="price-bullet mark-mat" aria-hidden="true"></span> Elevated mats</li>
+                                <li><span className="price-bullet mark-target" aria-hidden="true"></span> Targets on range</li>
                             </ul>
                         </div>
 
@@ -68,9 +68,9 @@ export default function PricingPage() {
                             <div className="price">$15<span className="price-cents">.50</span></div>
                             <p className="cash-price">or $15.00 cash</p>
                             <ul className="pricing-features">
-                                <li><i className="fa-solid fa-check text-primary"></i> Titleist & Callaway balls</li>
-                                <li><i className="fa-solid fa-check text-primary"></i> Elevated mats</li>
-                                <li><i className="fa-solid fa-check text-primary"></i> Targets on range</li>
+                                <li><span className="price-bullet mark-balls" aria-hidden="true"></span> Titleist & Callaway balls</li>
+                                <li><span className="price-bullet mark-mat" aria-hidden="true"></span> Elevated mats</li>
+                                <li><span className="price-bullet mark-target" aria-hidden="true"></span> Targets on range</li>
                             </ul>
                         </div>
                     </div>
@@ -80,14 +80,14 @@ export default function PricingPage() {
                     <h2 className="heading-md text-center mb-pricing-sub mt-pricing-section reveal">Punch Cards</h2>
                     <div className="pricing-grid punch-grid">
                         <div className="pricing-card punch-card reveal">
-                            <div className="punch-icon"><i className="fa-solid fa-ticket"></i></div>
+                            <div className="punch-icon"><span className="range-mark mark-punch-card" aria-hidden="true"></span></div>
                             <h3 className="heading-md">10 Small Buckets</h3>
                             <div className="price">$70</div>
                             <p className="punch-savings">Save $35</p>
                         </div>
 
                         <div className="pricing-card punch-card reveal">
-                            <div className="punch-icon"><i className="fa-solid fa-ticket"></i></div>
+                            <div className="punch-icon"><span className="range-mark mark-punch-card" aria-hidden="true"></span></div>
                             <h3 className="heading-md">10 Large Buckets</h3>
                             <div className="price">$125</div>
                             <p className="punch-savings">Save $30</p>
@@ -95,7 +95,7 @@ export default function PricingPage() {
 
                         <div className="pricing-card punch-card popular reveal">
                             <div className="popular-badge">MOST POPULAR</div>
-                            <div className="punch-icon"><i className="fa-solid fa-ticket"></i></div>
+                            <div className="punch-icon"><span className="range-mark mark-punch-card" aria-hidden="true"></span></div>
                             <h3 className="heading-md">20 Large Buckets</h3>
                             <div className="price">$200</div>
                             <p className="punch-savings">Save $110</p>
@@ -106,7 +106,7 @@ export default function PricingPage() {
                     <h2 className="heading-md text-center mb-pricing-sub mt-pricing-section reveal">Rentals & Extras</h2>
                     <div className="extras-grid reveal">
                         <div className="extra-item">
-                            <div className="extra-icon"><i className="fa-solid fa-golf-ball-tee"></i></div>
+                            <div className="extra-icon"><span className="range-mark mark-clubs" aria-hidden="true"></span></div>
                             <div>
                                 <h4>Club Rental</h4>
                                 <p>$7.00</p>
@@ -114,7 +114,7 @@ export default function PricingPage() {
                         </div>
 
                         <div className="extra-item">
-                            <div className="extra-icon"><i className="fa-solid fa-percent"></i></div>
+                            <div className="extra-icon"><span className="range-mark mark-senior" aria-hidden="true"></span></div>
                             <div>
                                 <h4>Senior Discount</h4>
                                 <p>30% off all buckets</p>
