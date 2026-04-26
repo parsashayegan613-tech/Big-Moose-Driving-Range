@@ -32,6 +32,18 @@ export default function Home() {
             time: "Google review",
             text: "Well this is a friendly driving range for all ages. There are spare golf clubs for people who do not have any especially for children. The staff is down to earth and willing to help you improve your technique. Great family environment.",
         },
+        {
+            author: "Ashley Jones",
+            initial: "A",
+            time: "10 months ago",
+            text: "Amazing driving range! I messaged ahead and they said it would be ok for me to bring my pups - they love tagging along to golf courses - so that was a huge bonus for me! A large bucket of balls was super affordable and big enough for my boyfriend and I to share. Balls were high quality, brands like Calloway and Titleist, and in great shape!! Loved the targets to shoot at too! Another highlight was the great music that they played. Very fun vibes!! Overall, 10/10 experience and will be back lots this summer!",
+        },
+        {
+            author: "Zayd Siddiqui",
+            initial: "Z",
+            time: "11 months ago",
+            text: "Loved my experience here! Extremely great price for a large bucket and good-quality mats to swing on. I liked the targets out in the field that you can aim for. Extremely friendly staff who are helpful and knowledgeable - I even got some tips on my swing when I asked one of the staff members, which is not something I've had happen at any other ranges. 100% would recommend this place and will be coming back often!",
+        },
     ];
 
     return (
