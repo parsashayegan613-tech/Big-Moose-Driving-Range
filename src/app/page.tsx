@@ -60,7 +60,6 @@ export default function Home() {
                 </div>
 
                 <div className="hero-scroll-indicator">
-                    <span>Scroll</span>
                     <div className="scroll-line"></div>
                 </div>
             </header>
