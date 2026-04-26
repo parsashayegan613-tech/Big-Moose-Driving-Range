@@ -3,6 +3,15 @@ import HeroBackground from '@/components/HeroBackground';
 import Link from 'next/link';
 
 export default function Home() {
+    const marqueeItems = [
+        "Drive Further",
+        "Hit Better",
+        "Play More",
+        "35 Elevated Mats",
+        "Premium Titleist",
+        "Open Daily",
+    ];
+
     return (
         <main>
             {/* Hero Section */}
@@ -67,20 +76,16 @@ export default function Home() {
             {/* Marquee Ticker */}
             <div className="marquee-section">
                 <div className="marquee-track">
-                    <div className="marquee-content">
-                        <span>Drive Further</span><span className="marquee-dot"></span>
-                        <span>Hit Better</span><span className="marquee-dot"></span>
-                        <span>Play More</span><span className="marquee-dot"></span>
-                        <span>35 Elevated Mats</span><span className="marquee-dot"></span>
-                        <span>Premium Titleist</span><span className="marquee-dot"></span>
-                        <span>Open Daily</span><span className="marquee-dot"></span>
-                        <span>Drive Further</span><span className="marquee-dot"></span>
-                        <span>Hit Better</span><span className="marquee-dot"></span>
-                        <span>Play More</span><span className="marquee-dot"></span>
-                        <span>35 Elevated Mats</span><span className="marquee-dot"></span>
-                        <span>Premium Titleist</span><span className="marquee-dot"></span>
-                        <span>Open Daily</span><span className="marquee-dot"></span>
-                    </div>
+                    {[0, 1, 2, 3].map((groupIndex) => (
+                        <div className="marquee-content" aria-hidden={groupIndex > 0} key={groupIndex}>
+                            {marqueeItems.map((item) => (
+                                <React.Fragment key={`${groupIndex}-${item}`}>
+                                    <span>{item}</span>
+                                    <span className="marquee-dot"></span>
+                                </React.Fragment>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
 

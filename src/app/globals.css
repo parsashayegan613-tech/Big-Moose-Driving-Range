@@ -2939,15 +2939,16 @@ h1, h2, h3, h4 {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 25s linear infinite;
+  animation: marqueeScroll 22s linear infinite;
+  will-change: transform;
 }
 
 .marquee-content {
   display: flex;
   align-items: center;
   gap: 0;
-  flex-shrink: 0;
-  padding-right: 0;
+  flex: 0 0 auto;
+  min-width: max-content;
 }
 
 .marquee-content span {
@@ -2971,11 +2972,7 @@ h1, h2, h3, h4 {
 
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.marquee-section:hover .marquee-track {
-  animation-play-state: paused;
+  100% { transform: translateX(-25%); }
 }
 
 /* =========================================
