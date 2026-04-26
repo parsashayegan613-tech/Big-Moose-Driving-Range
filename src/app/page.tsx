@@ -32,20 +32,6 @@ export default function Home() {
             time: "Google review",
             text: "Well this is a friendly driving range for all ages. There are spare golf clubs for people who do not have any especially for children. The staff is down to earth and willing to help you improve your technique. Great family environment.",
         },
-        {
-            author: "More Google reviews",
-            initial: "G",
-            time: "Read on Google",
-            text: "See the latest public feedback, star ratings, and customer photos directly on Big Moose Driving Range's Google profile.",
-            isCta: true,
-        },
-        {
-            author: "Visited recently?",
-            initial: "★",
-            time: "Leave a review",
-            text: "Share your experience on Google so new golfers can see what to expect before they visit the range.",
-            isCta: true,
-        },
     ];
 
     return (
@@ -184,7 +170,7 @@ export default function Home() {
                                     href={googleReviewsUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`testimonial-card google-review-card${review.isCta ? ' google-review-card-cta' : ''}`}
+                                    className="testimonial-card google-review-card"
                                     data-testimonial={index}
                                     aria-label={`Open Big Moose Driving Range Google reviews: ${review.author}`}
                                     key={review.author}
