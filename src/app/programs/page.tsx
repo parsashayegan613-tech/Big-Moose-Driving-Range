@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import RangeIcon from '@/components/RangeIcon';
 
 export default function ProgramsPage() {
     return (
@@ -17,7 +18,7 @@ export default function ProgramsPage() {
                     <div className="features-grid stagger-reveal">
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><span className="range-mark mark-junior" aria-hidden="true"></span></div>
+                                <div className="feature-icon mx-auto mb-4"><RangeIcon name="junior" /></div>
                                 <h3 className="heading-md">Junior Camps</h3>
                                 <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
                                 <Link href="/contact" className="btn btn-primary w-full">Ask About Camps</Link>
@@ -25,7 +26,7 @@ export default function ProgramsPage() {
                         </div>
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><span className="range-mark mark-clipboard" aria-hidden="true"></span></div>
+                                <div className="feature-icon mx-auto mb-4"><RangeIcon name="clipboard" /></div>
                                 <h3 className="heading-md">Field Trip Program</h3>
                                 <p className="mb-4">A curriculum-aligned Physical Education field trip for Grades 7-12, built around golf fundamentals, safety, and active outdoor learning.</p>
                                 <Link href="#field-trips" className="btn btn-primary w-full">View Proposal</Link>

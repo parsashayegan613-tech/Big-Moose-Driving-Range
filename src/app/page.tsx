@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroBackground from '@/components/HeroBackground';
 import Link from 'next/link';
+import RangeIcon from '@/components/RangeIcon';
 
 export default function Home() {
     const marqueeItems = [
@@ -22,14 +23,14 @@ export default function Home() {
                 {/* Floating Glass Elements & Particles */}
                 <div className="hero-particles">
                     <div className="glass-floating-card glass-card-1">
-                        <span className="range-mark mark-bays" aria-hidden="true"></span>
+                        <RangeIcon name="bays" />
                         <div>
                             <strong>35 Bays</strong>
                             <span>Open Now</span>
                         </div>
                     </div>
                     <div className="glass-floating-card glass-card-2">
-                        <span className="range-mark mark-balls" aria-hidden="true"></span>
+                        <RangeIcon name="balls" />
                         <div>
                             <strong>Premium</strong>
                             <span>Titleist Balls</span>
@@ -100,25 +101,25 @@ export default function Home() {
                         <div className="visit-line" aria-hidden="true"></div>
                         <div className="visit-step reveal">
                             <span>01</span>
-                            <span className="range-mark mark-sign" aria-hidden="true"></span>
+                            <RangeIcon name="sign" />
                             <h3>Park & Check In</h3>
                             <p>Head to the range shack, pick your bucket size, and ask about rentals if you need clubs.</p>
                         </div>
                         <div className="visit-step reveal">
                             <span>02</span>
-                            <span className="range-mark mark-bucket" aria-hidden="true"></span>
+                            <RangeIcon name="bucket" />
                             <h3>Grab Your Bucket</h3>
                             <p>Choose a small or large bucket, or save with a punch card if you plan to practice often.</p>
                         </div>
                         <div className="visit-step reveal">
                             <span>03</span>
-                            <span className="range-mark mark-mat" aria-hidden="true"></span>
+                            <RangeIcon name="mat" />
                             <h3>Pick a Mat</h3>
                             <p>Set up at an elevated mat, aim at the targets, and work through your bag at your pace.</p>
                         </div>
                         <div className="visit-step reveal">
                             <span>04</span>
-                            <span className="range-mark mark-flag" aria-hidden="true"></span>
+                            <RangeIcon name="flag" />
                             <h3>Stay & Play</h3>
                             <p>Add mini golf, putting practice, yard games, or a lesson inquiry while you are here.</p>
                         </div>
@@ -239,21 +240,21 @@ export default function Home() {
                         </div>
                         <div className="local-highlights">
                             <div>
-                                <span className="range-mark mark-bucket" aria-hidden="true"></span>
+                                <RangeIcon name="bucket" />
                                 <div>
                                     <h3>Driving Range Near Windermere</h3>
                                     <p>Stop by for a quick bucket after work or make it a full practice session with premium balls, targets, and elevated hitting mats.</p>
                                 </div>
                             </div>
                             <div>
-                                <span className="range-mark mark-mini-golf" aria-hidden="true"></span>
+                                <RangeIcon name="miniGolf" />
                                 <div>
                                     <h3>Mini Golf & Family Practice</h3>
                                     <p>Bring family or friends for mini golf, yard games, club rentals, and space for beginners to get comfortable.</p>
                                 </div>
                             </div>
                             <div>
-                                <span className="range-mark mark-swing" aria-hidden="true"></span>
+                                <RangeIcon name="swing" />
                                 <div>
                                     <h3>Golf Lessons & Teaching Pros</h3>
                                     <p>Connect with experienced instructors for swing help, private lessons, junior development, and structured practice support.</p>

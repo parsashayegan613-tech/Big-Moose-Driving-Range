@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import RangeIcon from '@/components/RangeIcon';
 
 export default function FacilitiesPage() {
     return (
@@ -35,7 +36,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/range-bays.jpg" alt="Elevated hitting mats at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-bays" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="bays" /></div>
                                 <h3 className="heading-md mt-4">35 Elevated Mats</h3>
                                 <p>Spacious elevated hitting stations that simulate real fairway conditions for a true-to-course experience.</p>
                             </div>
@@ -47,7 +48,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/feature-balls.svg" alt="Titleist and Callaway golf balls" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-balls" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="balls" /></div>
                                 <h3 className="heading-md mt-4">Titleist & Callaway Balls</h3>
                                 <p>Practice with the same quality balls the pros use. Every bucket is loaded with premium non-restricting Titleist and Callaway balls.</p>
                             </div>
@@ -59,7 +60,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/range-targets.jpg" alt="Distance targets on the driving range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-target" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="target" /></div>
                                 <h3 className="heading-md mt-4">On-Range Targets</h3>
                                 <p>Dial in your distances with clearly marked targets spread across the range to sharpen your accuracy.</p>
                             </div>
@@ -71,7 +72,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/feature-food.svg" alt="Hotdog cart at the driving range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-concession" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="concession" /></div>
                                 <h3 className="heading-md mt-4">Hotdog Cart</h3>
                                 <p>Grab a bite from our on-site hotdog cart. Available Friday-Sunday to fuel up your practice session.</p>
                             </div>
@@ -83,7 +84,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/yard-games-mini-golf.jpg" alt="Mini golf and yard games at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-mini-golf" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="miniGolf" /></div>
                                 <h3 className="heading-md mt-4">Mini Golf</h3>
                                 <p>Fun for the whole family! Tee off on our brand new mini golf course for just $5 per person. Putters and balls supplied.</p>
                             </div>
@@ -95,7 +96,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/golden-hour-range.jpg" alt="Grass hitting area at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-grass" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="grass" /></div>
                                 <h3 className="heading-md mt-4">Grass Range</h3>
                                 <p>Hit off real grass on our dedicated grass range. Over 8 bays available, open Friday through Sunday.</p>
                             </div>
@@ -107,7 +108,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/putting-green.jpg" alt="Chipping and putting green at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-short-game" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="shortGame" /></div>
                                 <h3 className="heading-md mt-4">Chipping & Putting</h3>
                                 <p>Dial in your short game at our dedicated chipping and putting area designed for all skill levels.</p>
                             </div>
@@ -119,7 +120,7 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/yard-games-mini-golf.jpg" alt="Yard games at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><span className="range-mark mark-yard-games" aria-hidden="true"></span></div>
+                                <div className="feature-icon"><RangeIcon name="yardGames" /></div>
                                 <h3 className="heading-md mt-4">Yard Games</h3>
                                 <p>Take a break from swinging and enjoy our complimentary yard games, free to play for all visitors.</p>
                             </div>
