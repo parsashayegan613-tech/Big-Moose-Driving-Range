@@ -12,6 +12,41 @@ export default function Home() {
         "Premium Titleist",
         "Open Daily",
     ];
+    const googleReviewsUrl = "https://www.google.com/search?q=Big+Moose+Driving+Range+Edmonton+reviews";
+    const reviews = [
+        {
+            author: "Cory Collins",
+            initial: "C",
+            time: "Google review",
+            text: "Used to go to Golf Canada range but found the golf balls and mats getting pretty run down so tried this option out late last year and a handful of times this year. The owner and other staff are always super friendly and have been impressed with the quality of the range mats and balls.",
+        },
+        {
+            author: "Maeve",
+            initial: "M",
+            time: "Google review",
+            text: "Big Moose Driving Range is honestly a gem. The place is open, the mats are big and brand new, and you get a huge bucket of balls. They are always cleaning up, keeping the balls nice, and the staff are friendly.",
+        },
+        {
+            author: "DDCL Home Improvement",
+            initial: "D",
+            time: "Google review",
+            text: "Well this is a friendly driving range for all ages. There are spare golf clubs for people who do not have any especially for children. The staff is down to earth and willing to help you improve your technique. Great family environment.",
+        },
+        {
+            author: "More Google reviews",
+            initial: "G",
+            time: "Read on Google",
+            text: "See the latest public feedback, star ratings, and customer photos directly on Big Moose Driving Range's Google profile.",
+            isCta: true,
+        },
+        {
+            author: "Visited recently?",
+            initial: "★",
+            time: "Leave a review",
+            text: "Share your experience on Google so new golfers can see what to expect before they visit the range.",
+            isCta: true,
+        },
+    ];
 
     return (
         <main>
@@ -144,70 +179,55 @@ export default function Home() {
 
                     <div className="testimonial-carousel reveal">
                         <div className="testimonial-carousel-track">
-                            <div className="testimonial-card" data-testimonial="0">
-                                <div className="testimonial-quote-icon"><i className="fa-solid fa-quote-left"></i></div>
-                                <div className="testimonial-stars">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                                <p className="testimonial-text">&ldquo;Used to go to Golf Canada range but found the golf balls and mats getting pretty run down so tried this option out late last year and a handful of times this year. The owner and other staff are always super friendly and have been impressed with the quality of the range mats and balls.&rdquo;</p>
-                                <div className="testimonial-author">
-                                    <div className="testimonial-avatar"><i className="fa-solid fa-user"></i></div>
-                                    <div>
-                                        <h4>Cory Collins</h4>
-                                        <p>Google Review</p>
+                            {reviews.map((review, index) => (
+                                <a
+                                    href={googleReviewsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`testimonial-card google-review-card${review.isCta ? ' google-review-card-cta' : ''}`}
+                                    data-testimonial={index}
+                                    aria-label={`Open Big Moose Driving Range Google reviews: ${review.author}`}
+                                    key={review.author}
+                                >
+                                    <div className="google-review-topline">
+                                        <div className="google-reviewer">
+                                            <div className="testimonial-avatar">{review.initial}</div>
+                                            <div>
+                                                <h4>{review.author}</h4>
+                                                <p>{review.time}</p>
+                                            </div>
+                                        </div>
+                                        <span className="google-wordmark" aria-label="Google">
+                                            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+                                        </span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="testimonial-card" data-testimonial="1">
-                                <div className="testimonial-quote-icon"><i className="fa-solid fa-quote-left"></i></div>
-                                <div className="testimonial-stars">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                                <p className="testimonial-text">&ldquo;Big Moose Driving Range is honestly a gem. The place is open, the mats are big and brand new, and you get a huge bucket of balls. I came in the morning and saw the owner checking every mat and tee. They&apos;re always cleaning up, keeping the balls nice, and the staff are friendly... If you come often, the punch card is such a good deal.&rdquo;</p>
-                                <div className="testimonial-author">
-                                    <div className="testimonial-avatar"><i className="fa-solid fa-user"></i></div>
-                                    <div>
-                                        <h4>Maeve</h4>
-                                        <p>Google Review</p>
+                                    <div className="testimonial-stars" aria-label="5 star rating">
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="testimonial-card" data-testimonial="2">
-                                <div className="testimonial-quote-icon"><i className="fa-solid fa-quote-left"></i></div>
-                                <div className="testimonial-stars">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                                <p className="testimonial-text">&ldquo;Well this is a friendly driving range for all ages. There are spare golf clubs for people who do not have any especially for children. The staff is down to earth and willing to help to you improve your technique. Great family environment.&rdquo;</p>
-                                <div className="testimonial-author">
-                                    <div className="testimonial-avatar"><i className="fa-solid fa-user"></i></div>
-                                    <div>
-                                        <h4>DDCL Home Improvement</h4>
-                                        <p>Google Review</p>
+                                    <p className="testimonial-text">&ldquo;{review.text}&rdquo;</p>
+                                    <div className="google-review-footer">
+                                        <span>Open on Google</span>
+                                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                     </div>
-                                </div>
-                            </div>
+                                </a>
+                            ))}
                         </div>
 
                         <div className="testimonial-controls">
                             <button className="testimonial-prev" aria-label="Previous review"><i className="fa-solid fa-arrow-left"></i></button>
                             <div className="testimonial-dots">
-                                <button className="testimonial-dot active" data-index="0" aria-label="Review 1"></button>
-                                <button className="testimonial-dot" data-index="1" aria-label="Review 2"></button>
-                                <button className="testimonial-dot" data-index="2" aria-label="Review 3"></button>
+                                {reviews.map((review, index) => (
+                                    <button
+                                        className={`testimonial-dot${index === 0 ? ' active' : ''}`}
+                                        data-index={index}
+                                        aria-label={`Review ${index + 1}: ${review.author}`}
+                                        key={review.author}
+                                    ></button>
+                                ))}
                             </div>
                             <button className="testimonial-next" aria-label="Next review"><i className="fa-solid fa-arrow-right"></i></button>
                         </div>
