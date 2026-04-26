@@ -44,6 +44,12 @@ export default function Home() {
             time: "11 months ago",
             text: "Loved my experience here! Extremely great price for a large bucket and good-quality mats to swing on. I liked the targets out in the field that you can aim for. Extremely friendly staff who are helpful and knowledgeable - I even got some tips on my swing when I asked one of the staff members, which is not something I've had happen at any other ranges. 100% would recommend this place and will be coming back often!",
         },
+        {
+            author: "Rachel McFadden",
+            initial: "R",
+            time: "11 months ago",
+            text: "This is THE driving range in south Edmonton! Lots of space, friendly staff, run by a family. Prices for buckets are incredibly fair. Family friendly and zero judgement for beginners and experts alike!",
+        },
     ];
 
     return (
