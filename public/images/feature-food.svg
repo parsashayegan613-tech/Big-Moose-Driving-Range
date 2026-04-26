@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1F4529"/>
+  <rect x="8" y="8" width="784" height="584" rx="4" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="8 4"/>
+  <!-- Food Truck Icon -->
+  <g transform="translate(400, 248)" opacity="0.3">
+    <!-- Truck body -->
+    <rect x="-65" y="-35" width="100" height="55" rx="4" fill="none" stroke="white" stroke-width="3"/>
+    <!-- Cab -->
+    <path d="M 35,-35 L 35,20 L 60,20 L 60,-10 L 45,-35 Z" fill="none" stroke="white" stroke-width="3"/>
+    <!-- Windshield -->
+    <line x1="45" y1="-30" x2="55" y2="-10" stroke="white" stroke-width="2"/>
+    <!-- Serving window -->
+    <rect x="-45" y="-25" width="35" height="22" rx="2" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Wheels -->
+    <circle cx="-35" cy="28" r="10" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="-35" cy="28" r="3" fill="white"/>
+    <circle cx="45" cy="28" r="10" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="45" cy="28" r="3" fill="white"/>
+    <!-- Awning -->
+    <path d="M -70,-35 L -70,-48 L 35,-48 L 35,-35" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="-70" y1="-48" x2="-75" y2="-35" stroke="white" stroke-width="2"/>
+  </g>
+  <text x="400" y="350" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" letter-spacing="1">Food Trucks</text>
+  <text x="400" y="385" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="400">Replace with real photo</text>
+</svg>

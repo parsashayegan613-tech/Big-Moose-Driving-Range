@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1F4529"/>
+  <rect x="8" y="8" width="784" height="584" rx="4" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="8 4"/>
+  <!-- Target/Bullseye Icon -->
+  <g transform="translate(400, 245)" opacity="0.3">
+    <circle cx="0" cy="0" r="55" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="25" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    <!-- Crosshair lines -->
+    <line x1="0" y1="-62" x2="0" y2="-55" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="55" x2="0" y2="62" stroke="white" stroke-width="2"/>
+    <line x1="-62" y1="0" x2="-55" y2="0" stroke="white" stroke-width="2"/>
+    <line x1="55" y1="0" x2="62" y2="0" stroke="white" stroke-width="2"/>
+  </g>
+  <text x="400" y="350" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" letter-spacing="1">Range Targets</text>
+  <text x="400" y="385" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="400">Replace with real photo</text>
+</svg>
