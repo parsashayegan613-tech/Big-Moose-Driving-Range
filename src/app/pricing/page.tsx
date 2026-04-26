@@ -1,5 +1,7 @@
 import React from 'react';
 import RangeIcon from '@/components/RangeIcon';
+import TrackedCta from '@/components/TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function PricingPage() {
     return (
@@ -73,6 +75,21 @@ export default function PricingPage() {
                                 <li><span className="price-bullet"><RangeIcon name="mat" /></span> Elevated mats</li>
                                 <li><span className="price-bullet"><RangeIcon name="target" /></span> Targets on range</li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <div className="decision-cta reveal">
+                        <div>
+                            <h3>Ready to hit a bucket?</h3>
+                            <p>Walk up during open hours, or call before you head over if weather looks uncertain.</p>
+                        </div>
+                        <div className="decision-cta-actions">
+                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="pricing_after_buckets" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                            </TrackedCta>
+                            <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="pricing_after_buckets" className="btn btn-outline">
+                                <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                            </TrackedCta>
                         </div>
                     </div>
 

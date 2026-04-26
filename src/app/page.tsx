@@ -1,7 +1,8 @@
 import React from 'react';
 import HeroBackground from '@/components/HeroBackground';
-import Link from 'next/link';
 import RangeIcon from '@/components/RangeIcon';
+import TrackedCta from '@/components/TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function Home() {
     const marqueeItems = [
@@ -103,8 +104,12 @@ export default function Home() {
                     </p>
 
                     <div className="hero-actions">
-                        <Link href="/pricing" className="btn btn-primary btn-lg">View Pricing <i className="fa-solid fa-arrow-right"></i></Link>
-                        <Link href="/contact" className="btn btn-outline btn-lg">Get Directions</Link>
+                        <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="home_hero" className="btn btn-primary btn-lg">
+                            {ctaLinks.pricing.label} <i className="fa-solid fa-arrow-right"></i>
+                        </TrackedCta>
+                        <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_hero" className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+                            {ctaLinks.directions.label}
+                        </TrackedCta>
                     </div>
                 </div>
 
@@ -260,6 +265,14 @@ export default function Home() {
                                 <span>Jagare Ridge</span>
                                 <span>Chappelle</span>
                                 <span>Paisley</span>
+                            </div>
+                            <div className="local-cta-actions">
+                                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_local_section" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                    <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                                </TrackedCta>
+                                <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="home_local_section" className="btn btn-outline">
+                                    <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                                </TrackedCta>
                             </div>
                         </div>
                         <div className="local-highlights">

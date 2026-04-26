@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import RangeIcon from '@/components/RangeIcon';
+import TrackedCta from '@/components/TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function ProgramsPage() {
     return (
@@ -21,7 +23,9 @@ export default function ProgramsPage() {
                                 <div className="feature-icon mx-auto mb-4"><RangeIcon name="junior" /></div>
                                 <h3 className="heading-md">Junior Camps</h3>
                                 <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
-                                <Link href="/contact" className="btn btn-primary w-full">Ask About Camps</Link>
+                                <TrackedCta href={ctaLinks.campInquiry.href} action={ctaLinks.campInquiry.action} placement="programs_junior_card" className="btn btn-primary w-full">
+                                    {ctaLinks.campInquiry.label}
+                                </TrackedCta>
                             </div>
                         </div>
                         <div className="feature-card reveal glass-card">
@@ -124,8 +128,12 @@ export default function ProgramsPage() {
                             <p>Contact us with your school details, proposed dates, grade level, group size, and any accessibility or supervision questions.</p>
                         </div>
                         <div className="field-trip-actions">
-                            <a href="tel:+17809097769" className="btn btn-primary"><i className="fa-solid fa-phone"></i> Call Us</a>
-                            <a href="mailto:bigmoosedrivingrange@gmail.com?subject=Field%20Trip%20Inquiry%20-%20Big%20Moose%20Driving%20Range" className="btn btn-accent"><i className="fa-solid fa-envelope"></i> Email Inquiry</a>
+                            <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="field_trip_cta" className="btn btn-primary">
+                                <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                            </TrackedCta>
+                            <TrackedCta href={ctaLinks.fieldTripEmail.href} action={ctaLinks.fieldTripEmail.action} placement="field_trip_cta" className="btn btn-accent">
+                                <i className="fa-solid fa-envelope"></i> {ctaLinks.fieldTripEmail.label}
+                            </TrackedCta>
                         </div>
                     </div>
                 </div>

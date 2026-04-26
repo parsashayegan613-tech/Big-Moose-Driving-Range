@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import RangeIcon from '@/components/RangeIcon';
+import TrackedCta from '@/components/TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function FacilitiesPage() {
     return (
@@ -124,6 +126,21 @@ export default function FacilitiesPage() {
                                 <h3 className="heading-md mt-4">Yard Games</h3>
                                 <p>Take a break from swinging and enjoy our complimentary yard games, free to play for all visitors.</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <div className="decision-cta reveal">
+                        <div>
+                            <h3>Want to try the range?</h3>
+                            <p>Check bucket pricing first, then open directions when you are ready to head over.</p>
+                        </div>
+                        <div className="decision-cta-actions">
+                            <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="facilities_after_features" className="btn btn-primary">
+                                {ctaLinks.pricing.label}
+                            </TrackedCta>
+                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="facilities_after_features" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                            </TrackedCta>
                         </div>
                     </div>
                 </div>

@@ -24,6 +24,27 @@ export default function VanillaInteractions() {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
     backToTop?.addEventListener("click", scrollToTop);
 
+    // --- CTA tracking ---
+    const handleCtaClick = (event: Event) => {
+      const target = event.target as Element | null;
+      const ctaEl = target?.closest("[data-cta]") as HTMLElement | null;
+      if (!ctaEl) return;
+
+      const payload = {
+        event: "cta_click",
+        cta: ctaEl.dataset.cta,
+        placement: ctaEl.dataset.ctaPlacement,
+        href: ctaEl instanceof HTMLAnchorElement ? ctaEl.href : undefined,
+        path: window.location.pathname,
+      };
+
+      const trackingWindow = window as typeof window & { dataLayer?: Record<string, unknown>[] };
+      trackingWindow.dataLayer = trackingWindow.dataLayer || [];
+      trackingWindow.dataLayer.push(payload);
+      window.dispatchEvent(new CustomEvent("bigmoose:cta", { detail: payload }));
+    };
+    document.addEventListener("click", handleCtaClick);
+
     // --- Mobile CTA bar visibility ---
     const mobileCta = document.querySelector(".mobile-cta-bar") as HTMLElement;
     const handleScrollCta = () => {
@@ -36,6 +57,7 @@ export default function VanillaInteractions() {
     return () => {
       window.removeEventListener("scroll", handleScrollTop);
       backToTop?.removeEventListener("click", scrollToTop);
+      document.removeEventListener("click", handleCtaClick);
       window.removeEventListener("scroll", handleScrollCta);
     };
   }, []);

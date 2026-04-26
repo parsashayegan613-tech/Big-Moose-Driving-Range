@@ -2,6 +2,8 @@ import React from 'react';
 import VanillaInteractions from './VanillaInteractions';
 import PageLoader from './PageLoader';
 import ScrollProgress from './ScrollProgress';
+import TrackedCta from './TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function GlobalComponents() {
   return (
@@ -17,15 +19,15 @@ export default function GlobalComponents() {
 
       {/* Mobile Floating CTA Bar */}
       <div className="mobile-cta-bar">
-          <a href="tel:+15875948874" className="mobile-cta-call">
+          <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="mobile_sticky_bar" className="mobile-cta-call">
               <i className="fa-solid fa-phone"></i> Call
-          </a>
-          <a href="/pricing" className="mobile-cta-pricing">
+          </TrackedCta>
+          <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="mobile_sticky_bar" className="mobile-cta-pricing">
               <i className="fa-solid fa-tag"></i> Pricing
-          </a>
-          <a href="https://maps.google.com/?q=13415+41+Ave+SW+Edmonton+AB" target="_blank" rel="noopener noreferrer" className="mobile-cta-directions">
+          </TrackedCta>
+          <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="mobile_sticky_bar" target="_blank" rel="noopener noreferrer" className="mobile-cta-directions">
               <i className="fa-solid fa-diamond-turn-right"></i> Directions
-          </a>
+          </TrackedCta>
       </div>
 
       {/* Gallery Lightbox */}

@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import RangeIcon from '@/components/RangeIcon';
+import TrackedCta from '@/components/TrackedCta';
+import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
 
 export default function ContactPage() {
     const faqSchema = {
@@ -74,7 +76,7 @@ export default function ContactPage() {
             <section id="contact" className="section contact pt-0">
                 <div className="container">
                     <div className="contact-form-card reveal">
-                        <form action="mailto:bigmoosedrivingrange@gmail.com" method="GET" encType="text/plain" className="contact-form">
+                        <form action={siteConfig.emailHref} method="GET" encType="text/plain" className="contact-form">
                             <div className="form-field">
                                 <label htmlFor="subject">Subject</label>
                                 <input type="text" id="subject" name="subject" placeholder="e.g. Group booking inquiry" className="form-input" required />
@@ -83,7 +85,9 @@ export default function ContactPage() {
                                 <label htmlFor="body">Message</label>
                                 <textarea id="body" name="body" rows={5} placeholder="How can we help you?" className="form-textarea" required></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary contact-submit"><i className="fa-solid fa-paper-plane"></i> Send via Email Client</button>
+                            <button type="submit" className="btn btn-primary contact-submit" {...ctaTracking(ctaLinks.email.action, "contact_form")}>
+                                <i className="fa-solid fa-paper-plane"></i> Send via Email Client
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -119,7 +123,11 @@ export default function ContactPage() {
                                 <div className="info-icon"><RangeIcon name="phone" /></div>
                                 <div>
                                     <h4>Call Us</h4>
-                                    <p><a href="tel:+15875948874">(587) 594-8874</a></p>
+                                    <p>
+                                        <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="contact_location_info">
+                                            {siteConfig.phoneDisplay}
+                                        </TrackedCta>
+                                    </p>
                                 </div>
                             </div>
 
@@ -127,13 +135,17 @@ export default function ContactPage() {
                                 <div className="info-icon"><RangeIcon name="email" /></div>
                                 <div>
                                     <h4>Email Us</h4>
-                                    <p><a href="mailto:bigmoosedrivingrange@gmail.com">bigmoosedrivingrange@gmail.com</a></p>
+                                    <p>
+                                        <TrackedCta href={ctaLinks.email.href} action={ctaLinks.email.action} placement="contact_location_info">
+                                            {siteConfig.email}
+                                        </TrackedCta>
+                                    </p>
                                 </div>
                             </div>
 
-                            <a href="https://maps.google.com/?q=13415+41+Ave+SW+Edmonton+AB" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-                                <i className="fa-solid fa-diamond-turn-right"></i> Get Directions
-                            </a>
+                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="contact_location_info" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                            </TrackedCta>
                         </div>
 
                         <div className="location-media reveal">
@@ -147,7 +159,7 @@ export default function ContactPage() {
                             {/* Google Maps Embed */}
                             <div className="location-map">
                                 <iframe
-                                    src="https://maps.google.com/maps?q=Big+Moose+Driving+Range+Edmonton+AB&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    src={siteConfig.mapsEmbedUrl}
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, borderRadius: 'inherit' }}
@@ -227,7 +239,7 @@ export default function ContactPage() {
                                 <span className="faq-icon" aria-hidden="true"></span>
                             </button>
                             <div className="faq-answer">
-                                <p>We are generally open rain or shine, but may close during severe weather for safety. Check our socials or give us a call at (587) 594-8874 for real-time updates.</p>
+                                <p>We are generally open rain or shine, but may close during severe weather for safety. Check our socials or give us a call at {siteConfig.phoneDisplay} for real-time updates.</p>
                             </div>
                         </div>
                     </div>

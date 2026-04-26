@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import TrackedCta from './TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function Footer() {
   return (
@@ -12,9 +14,15 @@ export default function Footer() {
                 <p>Check pricing, get directions, or call before you head over.</p>
             </div>
             <div className="footer-cta-actions">
-                <Link href="/pricing" className="btn btn-accent">View Pricing</Link>
-                <Link href="/contact#location" className="btn btn-outline">Get Directions</Link>
-                <a href="tel:+15875948874" className="btn btn-primary">Call Now</a>
+                <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="footer_cta" className="btn btn-accent">
+                    {ctaLinks.pricing.label}
+                </TrackedCta>
+                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="footer_cta" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    {ctaLinks.directions.label}
+                </TrackedCta>
+                <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="footer_cta" className="btn btn-primary">
+                    Call Now
+                </TrackedCta>
             </div>
         </div>
         <div className="container footer-grid">

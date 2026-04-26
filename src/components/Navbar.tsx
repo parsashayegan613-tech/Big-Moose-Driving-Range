@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import TrackedCta from './TrackedCta';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,7 +71,9 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="nav-actions">
-            <Link href="/pricing" className="btn btn-primary nav-cta">View Pricing</Link>
+            <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="nav_desktop" className="btn btn-primary nav-cta">
+              {ctaLinks.pricing.label}
+            </TrackedCta>
           </div>
 
           <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle Menu">
@@ -106,9 +110,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="tel:+15875948874" className="btn btn-primary btn-lg mobile-menu-cta">
-            <i className="fa-solid fa-phone"></i> Call Us
-          </a>
+          <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="mobile_menu" className="btn btn-primary btn-lg mobile-menu-cta">
+            <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+          </TrackedCta>
         </div>
       </div>
     </>
