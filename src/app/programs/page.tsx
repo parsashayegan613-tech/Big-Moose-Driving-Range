@@ -112,10 +112,10 @@ export default function ProgramsPage() {
                     <div className="field-trip-cta reveal">
                         <div>
                             <h3>Ready to plan a field trip?</h3>
-                            <p>Contact Nader Moussa with your school details, proposed dates, grade level, group size, and any accessibility or supervision questions.</p>
+                            <p>Contact us with your school details, proposed dates, grade level, group size, and any accessibility or supervision questions.</p>
                         </div>
                         <div className="field-trip-actions">
-                            <a href="tel:+17809097769" className="btn btn-primary"><i className="fa-solid fa-phone"></i> Call Nader</a>
+                            <a href="tel:+17809097769" className="btn btn-primary"><i className="fa-solid fa-phone"></i> Call Us</a>
                             <a href="mailto:bigmoosedrivingrange@gmail.com?subject=Field%20Trip%20Inquiry%20-%20Big%20Moose%20Driving%20Range" className="btn btn-accent"><i className="fa-solid fa-envelope"></i> Email Inquiry</a>
                         </div>
                     </div>
@@ -130,27 +130,35 @@ export default function ProgramsPage() {
                         <p className="text-lead">Connect with our experienced instructors for personalized golf lessons.</p>
                     </div>
 
-                    <div className="pricing-grid">
-                        <div className="pricing-card reveal text-center">
-                            <div className="w-24 h-24 rounded-full bg-primary/20 text-primary flex items-center justify-center text-3xl mx-auto mb-4">
-                                <i className="fa-solid fa-user-tie"></i>
+                    <div className="teaching-pro-grid">
+                        <div className="teaching-pro-card reveal">
+                            <div className="pro-photo-placeholder" aria-label="Photo placeholder for Aaron Menor">
+                                <span>AM</span>
+                                <small>Photo coming soon</small>
                             </div>
-                            <h3 className="heading-md">Aaron Menor</h3>
-                            <p className="mb-4">Professional Golf Instructor</p>
-                            <div className="flex flex-col gap-2 mt-4">
-                                <a href="https://menorgolf.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline w-full"><i className="fa-solid fa-globe"></i> menorgolf.com</a>
-                                <a href="tel:+17806601963" className="btn btn-primary w-full"><i className="fa-solid fa-phone"></i> (780) 660-1963</a>
+                            <div className="pro-card-body">
+                                <span className="pro-role">Professional Golf Instructor</span>
+                                <h3 className="heading-md">Aaron Menor</h3>
+                                <p>Book one-on-one instruction for swing work, fundamentals, and structured practice support.</p>
+                            </div>
+                            <div className="pro-actions">
+                                <a href="https://menorgolf.com" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn"><i className="fa-solid fa-globe"></i> menorgolf.com</a>
+                                <a href="tel:+17806601963" className="btn btn-primary"><i className="fa-solid fa-phone"></i> (780) 660-1963</a>
                             </div>
                         </div>
 
-                        <div className="pricing-card reveal text-center">
-                            <div className="w-24 h-24 rounded-full bg-primary/20 text-primary flex items-center justify-center text-3xl mx-auto mb-4">
-                                <i className="fa-solid fa-user-tie"></i>
+                        <div className="teaching-pro-card reveal">
+                            <div className="pro-photo-placeholder" aria-label="Photo placeholder for Cam Kyle">
+                                <span>CK</span>
+                                <small>Photo coming soon</small>
                             </div>
-                            <h3 className="heading-md">Cam Kyle</h3>
-                            <p className="mb-4">Swing Match Instructor</p>
-                            <div className="flex flex-col gap-2 mt-4">
-                                <a href="mailto:cakyle8@gmail.com" className="btn btn-primary w-full mt-auto pro-email-btn"><i className="fa-solid fa-envelope"></i> cakyle8@gmail.com</a>
+                            <div className="pro-card-body">
+                                <span className="pro-role">Swing Match Instructor</span>
+                                <h3 className="heading-md">Cam Kyle</h3>
+                                <p>Reach out for lesson availability, swing feedback, and practice planning.</p>
+                            </div>
+                            <div className="pro-actions">
+                                <a href="mailto:cakyle8@gmail.com" className="btn btn-primary pro-email-btn"><i className="fa-solid fa-envelope"></i> cakyle8@gmail.com</a>
                             </div>
                         </div>
                     </div>
