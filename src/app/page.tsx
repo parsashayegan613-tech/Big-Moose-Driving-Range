@@ -35,17 +35,22 @@ export default function Home() {
                 </div>
 
                 <div className="container hero-content text-center reveal active">
-                    <span className="badge premium-badge">
-                        <i className="fa-solid fa-location-dot"></i> Edmonton, AB
-                    </span>
+                    <div className="hero-badges">
+                        <span className="badge premium-badge">
+                            <i className="fa-solid fa-clock"></i> Open today: 10 AM - sunset
+                        </span>
+                        <span className="badge hero-location-badge">
+                            <i className="fa-solid fa-location-dot"></i> Southwest Edmonton
+                        </span>
+                    </div>
 
                     <h1 className="heading-xl hero-title split-text-animate">
-                        <span className="word">Big</span> <span className="word">Moose</span> <br />
-                        <span className="text-accent word">Driving</span> <span className="text-accent word">Range</span>
+                        <span className="word">Edmonton</span> <span className="word">Driving</span> <br />
+                        <span className="text-accent word">Range</span> <span className="word">With</span> <span className="word">35</span> <span className="word">Mats</span>
                     </h1>
 
                     <p className="text-lead hero-subtitle">
-                        Edmonton&apos;s premier driving range. 35 elevated mats, premium Titleist & Callaway balls, and a relaxing atmosphere.
+                        Practice in southwest Edmonton with elevated mats, premium Titleist and Callaway balls, range targets, mini golf, and a relaxed family-friendly setup.
                     </p>
 
                     <div className="hero-actions">
@@ -79,6 +84,38 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* First Visit Section */}
+            <section className="section first-visit-section">
+                <div className="container">
+                    <div className="section-header text-center reveal">
+                        <h2 className="heading-lg text-reveal">First Time Here?</h2>
+                        <p className="text-lead">Big Moose is built to be simple: show up, grab a bucket, and start swinging.</p>
+                    </div>
+                    <div className="visit-steps stagger-reveal">
+                        <div className="visit-step reveal">
+                            <span>01</span>
+                            <h3>Park & Check In</h3>
+                            <p>Head to the range shack, pick your bucket size, and ask about rentals if you need clubs.</p>
+                        </div>
+                        <div className="visit-step reveal">
+                            <span>02</span>
+                            <h3>Grab Your Bucket</h3>
+                            <p>Choose a small or large bucket, or save with a punch card if you plan to practice often.</p>
+                        </div>
+                        <div className="visit-step reveal">
+                            <span>03</span>
+                            <h3>Pick a Mat</h3>
+                            <p>Set up at an elevated mat, aim at the targets, and work through your bag at your pace.</p>
+                        </div>
+                        <div className="visit-step reveal">
+                            <span>04</span>
+                            <h3>Stay & Play</h3>
+                            <p>Add mini golf, putting practice, yard games, or a lesson inquiry while you are here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Wave Divider */}
             <div className="wave-divider wave-features">
@@ -174,6 +211,30 @@ export default function Home() {
                     <path d="M0,60 C480,0 960,100 1440,40 L1440,100 L0,100 Z" fill="var(--clr-secondary)" />
                 </svg>
             </div>
+
+            {/* Local SEO Section */}
+            <section className="section local-seo-section">
+                <div className="container">
+                    <div className="section-header text-center reveal">
+                        <h2 className="heading-lg text-reveal">Golf Practice in Southwest Edmonton</h2>
+                        <p className="text-lead">Big Moose serves golfers from Heritage Valley, Windermere, Jagare Ridge, Chappelle, Paisley, and nearby south Edmonton communities.</p>
+                    </div>
+                    <div className="local-seo-grid reveal">
+                        <div>
+                            <h3>Driving Range Near Windermere</h3>
+                            <p>Stop by for a quick bucket after work or make it a full practice session with premium balls, range targets, and elevated hitting mats.</p>
+                        </div>
+                        <div>
+                            <h3>Mini Golf & Family Practice</h3>
+                            <p>Bring family or friends for a relaxed visit with mini golf, yard games, club rentals, and space for beginners to get comfortable.</p>
+                        </div>
+                        <div>
+                            <h3>Golf Lessons & Teaching Pros</h3>
+                            <p>Connect with experienced instructors for swing help, private lessons, junior development, and structured practice support.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Instagram / Social Section */}
             <section className="section instagram-section">

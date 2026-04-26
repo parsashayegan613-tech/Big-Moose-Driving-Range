@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function ProgramsPage() {
     return (
@@ -18,18 +19,26 @@ export default function ProgramsPage() {
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
                                 <div className="feature-icon mx-auto mb-4"><i className="fa-solid fa-children"></i></div>
                                 <h3 className="heading-md">Junior Camps</h3>
-                                <p className="mb-4">Summer camps and youth training programs are in the works.</p>
-                                <span className="badge premium-badge">Details Coming Soon</span>
+                                <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
+                                <Link href="/contact" className="btn btn-primary w-full">Ask About Camps</Link>
                             </div>
                         </div>
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
                                 <div className="feature-icon mx-auto mb-4"><i className="fa-solid fa-school"></i></div>
                                 <h3 className="heading-md">Field Trip Inquiries</h3>
-                                <p className="mb-4">Looking to bring a school group? We offer special packages for field trips.</p>
-                                <span className="badge premium-badge">Proposal Form Coming Soon</span>
+                                <p className="mb-4">Planning a school group, team outing, or community event? Send the date, group size, and what you need.</p>
+                                <Link href="/contact" className="btn btn-primary w-full">Start an Inquiry</Link>
                             </div>
                         </div>
+                    </div>
+                    <div className="program-interest-panel reveal">
+                        <div>
+                            <span className="badge premium-badge">Coming Soon</span>
+                            <h3 className="heading-md">Want updates when programs open?</h3>
+                            <p>We can use the contact form for early interest until the full registration flow is ready.</p>
+                        </div>
+                        <Link href="/contact" className="btn btn-accent">Contact the Range</Link>
                     </div>
                 </div>
             </section>

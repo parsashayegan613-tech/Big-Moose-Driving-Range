@@ -5,6 +5,18 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="footer">
+        <div className="container footer-cta">
+            <div>
+                <span className="cta-badge"><i className="fa-solid fa-golf-ball-tee"></i> Ready to hit a bucket?</span>
+                <h2 className="heading-lg text-white">Plan your next practice session.</h2>
+                <p>Check pricing, get directions, or call before you head over.</p>
+            </div>
+            <div className="footer-cta-actions">
+                <Link href="/pricing" className="btn btn-accent">View Pricing</Link>
+                <Link href="/contact#location" className="btn btn-outline">Get Directions</Link>
+                <a href="tel:+15875948874" className="btn btn-primary">Call Now</a>
+            </div>
+        </div>
         <div className="container footer-grid">
             <div className="footer-brand">
                 <Image
@@ -33,7 +45,6 @@ export default function Footer() {
                 <div className="social-icons">
                     <a href="https://www.instagram.com/bigmoosedrivingrange/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61571553647188" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>

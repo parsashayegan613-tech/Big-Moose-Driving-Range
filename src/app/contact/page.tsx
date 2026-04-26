@@ -2,8 +2,67 @@ import React from 'react';
 import Image from 'next/image';
 
 export default function ContactPage() {
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are your hours of operation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Big Moose Driving Range is open daily from 10:00 AM until sunset, weather permitting. Hours may vary seasonally as sunset times change."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer club rentals?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Club rentals are available for $7.00. Broken rental clubs are charged at $30.00."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the senior discount?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Seniors receive 30% off all bucket sizes at the point of sale."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do punch cards work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Punch cards are prepaid packages available at the range, including 10 small buckets, 10 large buckets, and 20 large buckets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you accept cash and card?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Big Moose accepts cash and card. Cash pricing is available for small and large buckets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are you open when it rains?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Big Moose is generally open rain or shine, but may close during severe weather for safety."
+                }
+            }
+        ]
+    };
+
     return (
         <main className="subpage-main">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <div className="container subpage-header text-center">
                 <span className="badge premium-badge mb-4">Get in Touch</span>
                 <h1 className="heading-xl subpage-title text-reveal">Contact & Location</h1>
@@ -51,7 +110,7 @@ export default function ContactPage() {
                                 <div>
                                     <h4>Location</h4>
                                     <p>13415 41 Ave SW</p>
-                                    <p>Edmonton, AB T6Y 0H4</p>
+                                    <p>Edmonton, AB T6W 1A7</p>
                                 </div>
                             </div>
 

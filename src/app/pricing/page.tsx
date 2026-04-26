@@ -11,6 +11,39 @@ export default function PricingPage() {
                         <p className="text-lead max-w-2xl mx-auto mt-6">Simple, affordable pricing. Grab a bucket and start swinging. Seniors get 30% off all buckets!</p>
                     </div>
 
+                    <div className="pricing-summary reveal" aria-label="Pricing summary">
+                        <div className="pricing-summary-row pricing-summary-head">
+                            <span>Item</span>
+                            <span>Includes</span>
+                            <span>Price</span>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>Small Bucket</span>
+                            <span>45 balls</span>
+                            <strong>$10.50 card / $10 cash</strong>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>Large Bucket</span>
+                            <span>110 balls</span>
+                            <strong>$15.50 card / $15 cash</strong>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>Best Punch Card</span>
+                            <span>20 large buckets</span>
+                            <strong>$200</strong>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>Club Rental</span>
+                            <span>Per visit</span>
+                            <strong>$7</strong>
+                        </div>
+                        <div className="pricing-summary-row pricing-summary-highlight">
+                            <span>Senior Discount</span>
+                            <span>All buckets</span>
+                            <strong>30% off</strong>
+                        </div>
+                    </div>
+
                     {/* Bucket Pricing */}
                     <h2 className="heading-md text-center mb-pricing-sub reveal">Range Buckets</h2>
                     <div className="pricing-grid">

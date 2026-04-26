@@ -27,8 +27,9 @@ export default function VanillaInteractions() {
     // --- Mobile CTA bar visibility ---
     const mobileCta = document.querySelector(".mobile-cta-bar") as HTMLElement;
     const handleScrollCta = () => {
-        mobileCta?.classList.toggle("visible", window.scrollY > 500);
+        mobileCta?.classList.toggle("visible", window.scrollY > 120);
     };
+    handleScrollCta();
     window.addEventListener("scroll", handleScrollCta, { passive: true });
 
     // Cleanup global listeners
@@ -237,8 +238,9 @@ export default function VanillaInteractions() {
     initLibraries();
 
     // --- FAQ Accordion ---
-    const handleFaqClick = (e) => {
-      const item = e.currentTarget.closest('.faq-item');
+    const handleFaqClick = (e: Event) => {
+      const button = e.currentTarget as HTMLElement;
+      const item = button.closest('.faq-item');
       if (!item) return;
       const isActive = item.classList.contains("active");
       document.querySelectorAll(".faq-item").forEach((o) => {
@@ -247,7 +249,7 @@ export default function VanillaInteractions() {
       });
       if (!isActive) {
         item.classList.add("active");
-        e.currentTarget.setAttribute("aria-expanded", "true");
+        button.setAttribute("aria-expanded", "true");
       }
     };
     document.querySelectorAll(".faq-question").forEach((btn) => btn.addEventListener("click", handleFaqClick));
@@ -436,6 +438,23 @@ export default function VanillaInteractions() {
       document.documentElement.classList.remove("animations-ready");
       document.removeEventListener("keydown", handleKeydown);
       if (scrollIndicator) window.removeEventListener("scroll", handleScrollFade);
+      document.querySelectorAll(".faq-question").forEach((btn) => btn.removeEventListener("click", handleFaqClick));
+      heroEl?.removeEventListener("mousemove", handleHeroMove);
+      document.querySelectorAll(".btn-primary, .btn-accent").forEach((btn) => {
+        btn.removeEventListener("mousemove", handleMagneticMove);
+        btn.removeEventListener("mouseout", handleMagneticOut);
+      });
+      document.querySelectorAll(".btn-primary, .btn-accent, .btn-outline").forEach((btn) => {
+        btn.removeEventListener("click", handleRipple);
+      });
+      document.querySelectorAll(".feature-card, .pricing-card, .testimonial-card").forEach((card) => {
+        card.removeEventListener("mousemove", handleCardMove);
+        card.removeEventListener("mouseleave", handleCardLeave);
+      });
+      prevBtn?.removeEventListener("click", handlePrev);
+      nextBtn?.removeEventListener("click", handleNext);
+      testimonialDots.forEach((dot) => dot.removeEventListener("click", handleDotClick));
+      galleryItems.forEach((item) => item.removeEventListener("click", handleItemClick));
 
       // Remove Lightbox specific listeners attached to persistent DOM
       closeBtn?.removeEventListener("click", closeLightbox);

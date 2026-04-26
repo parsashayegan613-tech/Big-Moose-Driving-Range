@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalComponents from "@/components/GlobalComponents";
+import StructuredData from "@/components/StructuredData";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -19,6 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bigmoosedrivingrange.ca"),
   title: "Big Moose Driving Range | Edmonton's Premier Golf Practice Facility",
   description: "Big Moose Driving Range in southwest Edmonton offers 35 elevated mats, premium Titleist balls, affordable bucket pricing, and a 30% senior discount.",
 };
@@ -38,6 +40,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <GlobalComponents />
+        <StructuredData />
       </body>
     </html>
   );
