@@ -18,7 +18,11 @@ export type RangeIconName =
   | 'punchCard'
   | 'clubs'
   | 'senior'
-  | 'concession';
+  | 'concession'
+  | 'hours'
+  | 'location'
+  | 'phone'
+  | 'email';
 
 type RangeIconProps = {
   name: RangeIconName;
@@ -65,12 +69,13 @@ function Flag({ x = 32, y = 14, color = blue }: { x?: number; y?: number; color?
 const iconPaths: Record<RangeIconName, React.ReactNode> = {
   bays: (
     <>
-      <path d="M9 42h45l-6-23H19z" fill={tan} {...strokeProps} />
-      <path d="M15 36h32l-3-11H20z" fill={green} {...strokeProps} />
-      <path d="M48 19V9h8v24" fill={brown} {...strokeProps} />
-      <path d="M14 42h43" stroke={blueDark} strokeWidth="3" strokeLinecap="round" />
-      <GolfBall cx={32} cy={25} r={5} />
-      <path d="M32 30v6" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+      <path d="M8 48h48l-5-24H13z" fill={tan} {...strokeProps} />
+      <path d="M15 42h34l-3-13H18z" fill={green} {...strokeProps} />
+      <path d="M14 48h40" stroke={blue} strokeWidth="4" strokeLinecap="round" />
+      <path d="M48 24V11h8v28" fill={brown} {...strokeProps} />
+      <path d="M12 24h36" stroke={brown} strokeWidth="4" strokeLinecap="round" />
+      <GolfBall cx={31} cy={31} r={4.5} />
+      <path d="M31 35.5v6" stroke={outline} strokeWidth="3" strokeLinecap="round" />
     </>
   ),
   balls: (
@@ -105,24 +110,22 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
   ),
   mat: (
     <>
-      <path d="M9 42h46l-5 10H14z" fill={gold} {...strokeProps} />
-      <path d="M13 20h38v22H13z" fill={blue} {...strokeProps} />
-      <path d="M18 25h28v13H18z" fill={green} {...strokeProps} />
-      <GolfBall cx={32} cy={16} r={6} />
-      <path d="M32 22v10" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+      <path d="M8 45h48l-5 9H13z" fill={gold} {...strokeProps} />
+      <path d="M12 21h40v24H12z" fill={blue} {...strokeProps} />
+      <path d="M17 27h30v13H17z" fill={green} {...strokeProps} />
+      <path d="M23 40h18" stroke={blueDark} strokeWidth="3" strokeLinecap="round" />
+      <GolfBall cx={32} cy={20} r={5} />
+      <path d="M32 25v9" stroke={outline} strokeWidth="3" strokeLinecap="round" />
     </>
   ),
   sign: (
     <>
-      <path d="M12 18h40v25H12z" fill={white} {...strokeProps} />
-      <path d="M12 18h40v8H12z" fill={blue} {...strokeProps} />
-      <GolfBall cx={15} cy={20} r={6} />
-      <circle cx="20" cy="34" r="5" fill={white} {...strokeProps} />
-      <circle cx="32" cy="34" r="5" fill={white} {...strokeProps} />
-      <circle cx="44" cy="34" r="5" fill={white} {...strokeProps} />
-      <circle cx="20" cy="47" r="5" fill={white} {...strokeProps} />
-      <circle cx="32" cy="47" r="5" fill={white} {...strokeProps} />
-      <circle cx="44" cy="47" r="5" fill={brown} {...strokeProps} />
+      <path d="M14 25h36v23H14z" fill={white} {...strokeProps} />
+      <path d="M11 25l21-12 21 12z" fill={tan} {...strokeProps} />
+      <path d="M20 33h24" stroke={blue} strokeWidth="4" strokeLinecap="round" />
+      <path d="M20 41h13" stroke={brown} strokeWidth="4" strokeLinecap="round" />
+      <path d="M14 48h36" stroke={blueDark} strokeWidth="4" strokeLinecap="round" />
+      <GolfBall cx={45} cy={18} r={5} />
     </>
   ),
   flag: (
@@ -134,11 +137,12 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
   ),
   miniGolf: (
     <>
-      <path d="M12 46c8-17 32-18 43-2-4 9-36 11-43 2Z" fill={green} {...strokeProps} />
-      <Flag x={27} y={10} />
-      <ellipse cx="27" cy="44" rx="8" ry="4" fill={outline} />
-      <GolfBall cx={45} cy={42} r={5} />
-      <path d="M39 52c5 2 11 1 16-2" stroke={blueDark} strokeWidth="4" strokeLinecap="round" />
+      <path d="M10 45c7-17 35-18 45-2-4 10-36 12-45 2Z" fill={green} {...strokeProps} />
+      <Flag x={23} y={12} />
+      <ellipse cx="23" cy="43" rx="7" ry="4" fill={outline} />
+      <path d="M36 50c7 2 14 1 19-3" stroke={blue} strokeWidth="4" strokeLinecap="round" />
+      <GolfBall cx={46} cy={41} r={5} />
+      <path d="M39 37c3-2 7-2 10 0" stroke={tan} strokeWidth="4" strokeLinecap="round" />
     </>
   ),
   grass: (
@@ -150,38 +154,41 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
   ),
   shortGame: (
     <>
-      <path d="M12 46c7-12 30-13 42-3-3 8-30 13-42 3Z" fill={tan} {...strokeProps} />
+      <path d="M11 45c8-13 32-14 43-3-3 9-32 13-43 3Z" fill={green} {...strokeProps} />
+      <path d="M18 50c9 4 24 3 35-2" stroke={blue} strokeWidth="4" strokeLinecap="round" />
       <Flag x={23} y={12} color={tan} />
-      <ellipse cx="23" cy="45" rx="7" ry="4" fill={white} {...strokeProps} />
-      <GolfBall cx={46} cy={43} r={4.5} />
+      <ellipse cx="23" cy="44" rx="7" ry="4" fill={outline} />
+      <GolfBall cx={47} cy={41} r={4.5} />
     </>
   ),
   yardGames: (
     <>
-      <path d="M35 13h8v39h-8z" fill={brown} {...strokeProps} />
-      <ellipse cx="39" cy="54" rx="12" ry="5" fill={gold} {...strokeProps} />
-      <ellipse cx="30" cy="34" rx="14" ry="7" transform="rotate(-18 30 34)" fill="none" stroke={blue} strokeWidth="6" />
-      <ellipse cx="47" cy="31" rx="14" ry="7" transform="rotate(18 47 31)" fill="none" stroke={tan} strokeWidth="6" />
+      <path d="M29 12h8v39h-8z" fill={brown} {...strokeProps} />
+      <ellipse cx="33" cy="53" rx="14" ry="5" fill={gold} {...strokeProps} />
+      <ellipse cx="25" cy="34" rx="15" ry="7" transform="rotate(-18 25 34)" fill="none" stroke={blue} strokeWidth="6" />
+      <ellipse cx="44" cy="31" rx="15" ry="7" transform="rotate(18 44 31)" fill="none" stroke={tan} strokeWidth="6" />
+      <ellipse cx="38" cy="40" rx="15" ry="7" transform="rotate(-8 38 40)" fill="none" stroke={green} strokeWidth="5" />
     </>
   ),
   swing: (
     <>
-      <path d="M23 52h17l-3-26H26z" fill={blue} {...strokeProps} />
-      <path d="M24 30c-7 1-10 6-10 12v10h7V41c0-3 1-5 4-5" fill={blue} {...strokeProps} />
-      <path d="M40 30c7 1 10 6 10 12v10h-7V41c0-3-1-5-4-5" fill={tan} {...strokeProps} />
-      <path d="M25 25h14l2 6H23z" fill={brown} {...strokeProps} />
-      <path d="M23 24V8M32 24V6M41 24V9" stroke={brown} strokeWidth="4" strokeLinecap="round" />
-      <path d="M21 8h7M30 6h8M39 9h7" stroke={white} strokeWidth="5" strokeLinecap="round" />
-      <path d="M25 43c4-4 7-6 11-7" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+      <path d="M15 48c11 6 27 6 38 0" stroke={green} strokeWidth="6" strokeLinecap="round" />
+      <path d="M18 42c3-17 17-27 32-24" fill="none" stroke={blue} strokeWidth="5" strokeLinecap="round" />
+      <path d="M24 48l20-30" stroke={brown} strokeWidth="5" strokeLinecap="round" />
+      <path d="M41 18l8 4" stroke={white} strokeWidth="5" strokeLinecap="round" />
+      <path d="M40 18l9 4" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+      <GolfBall cx={17} cy={47} r={5} />
+      <path d="M28 36l10 7" stroke={tan} strokeWidth="4" strokeLinecap="round" />
     </>
   ),
   junior: (
     <>
-      <GolfBall cx={25} cy={31} r={13} />
-      <path d="M30 35c11-2 18 3 21 13" stroke={outline} strokeWidth="5" strokeLinecap="round" />
-      <path d="M29 42c7-9 20-8 28 0-5 5-19 6-28 0Z" fill={tan} {...strokeProps} />
-      <path d="M36 43h15" stroke={brown} strokeWidth="4" strokeLinecap="round" />
-      <path d="M34 42c-4 4-7 7-10 11" stroke={outline} strokeWidth="4" strokeLinecap="round" />
+      <path d="M13 45c6-12 31-12 38 0-5 8-32 8-38 0Z" fill={green} {...strokeProps} />
+      <Flag x={23} y={12} color={tan} />
+      <path d="M38 34c3-5 12-5 15 0-2 4-11 4-15 0Z" fill={blue} {...strokeProps} />
+      <path d="M40 35h11" stroke={white} strokeWidth="3" strokeLinecap="round" />
+      <GolfBall cx={43} cy={45} r={5} />
+      <path d="M18 50c8 4 22 4 34 0" stroke={blue} strokeWidth="4" strokeLinecap="round" />
     </>
   ),
   clipboard: (
@@ -194,48 +201,76 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
   ),
   punchCard: (
     <>
-      <path d="M9 16h46v35H9z" fill={tan} {...strokeProps} />
-      <path d="M9 16h46v10H9z" fill={blue} {...strokeProps} />
-      {[18, 29, 40, 51].map((cx) => (
-        <circle cx={cx} cy={35} r="5" fill={white} {...strokeProps} key={`top-${cx}`} />
+      <path d="M9 17h46v34H9z" fill={white} {...strokeProps} />
+      <path d="M9 17h46v9H9z" fill={blue} {...strokeProps} />
+      <GolfBall cx={15} cy={20} r={5} />
+      {[20, 31, 42].map((cx) => (
+        <circle cx={cx} cy={36} r="5" fill={white} {...strokeProps} key={`top-${cx}`} />
       ))}
-      {[18, 29, 40].map((cx) => (
-        <circle cx={cx} cy={47} r="5" fill={white} {...strokeProps} key={`bottom-${cx}`} />
+      {[20, 31].map((cx) => (
+        <circle cx={cx} cy={48} r="5" fill={white} {...strokeProps} key={`bottom-${cx}`} />
       ))}
-      <circle cx="51" cy="47" r="5" fill={brown} {...strokeProps} />
+      <circle cx="42" cy="48" r="5" fill={brown} {...strokeProps} />
+      <path d="M50 34l4 4 8-10" fill="none" stroke={blue} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
     </>
   ),
   clubs: (
     <>
-      <path d="M24 52h18l-3-23H27z" fill={blue} {...strokeProps} />
-      <path d="M24 30h18l2 6H22z" fill={tan} {...strokeProps} />
-      <path d="M23 28V10M32 28V7M41 28V11" stroke={outline} strokeWidth="4" strokeLinecap="round" />
-      <path d="M20 10h8M29 7h9M38 11h8" stroke={white} strokeWidth="5" strokeLinecap="round" />
-      <path d="M19 10h7M29 7h7M38 11h7" stroke={outline} strokeWidth="3" strokeLinecap="round" />
-      <path d="M19 43h-7a8 8 0 0 0 0 16h7z" fill={blue} {...strokeProps} />
-      <path d="M45 43h7a8 8 0 0 1 0 16h-7z" fill={tan} {...strokeProps} />
+      <path d="M24 52h18l-3-24H27z" fill={blue} {...strokeProps} />
+      <path d="M23 29h20l2 7H21z" fill={tan} {...strokeProps} />
+      <path d="M22 28V9M32 28V7M42 28V10" stroke={outline} strokeWidth="4" strokeLinecap="round" />
+      <path d="M18 9h9M28 7h10M38 10h9" stroke={white} strokeWidth="5" strokeLinecap="round" />
+      <path d="M18 9h8M28 7h8M38 10h8" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+      <path d="M20 44h-8a7 7 0 0 0 0 14h8z" fill={blue} {...strokeProps} />
+      <path d="M44 44h8a7 7 0 0 1 0 14h-8z" fill={tan} {...strokeProps} />
     </>
   ),
   senior: (
     <>
-      <path d="M15 36c6-10 28-10 34 0 5 8-2 17-17 17s-22-9-17-17Z" fill={white} {...strokeProps} />
-      <path d="M22 34c4-6 16-6 20 0" stroke={brown} strokeWidth="4" strokeLinecap="round" />
-      <path d="M18 34c3-11 23-13 28-1" fill={tan} {...strokeProps} />
-      <path d="M24 36h16" stroke={brown} strokeWidth="4" strokeLinecap="round" />
-      <path d="M21 46h22" stroke={blue} strokeWidth="5" strokeLinecap="round" />
-      <circle cx="49" cy="47" r="8" fill={tan} {...strokeProps} />
-      <path d="M46 50l6-6" stroke={white} strokeWidth="4" strokeLinecap="round" />
+      <GolfBall cx={27} cy={35} r={14} />
+      <circle cx="43" cy="43" r="10" fill={tan} {...strokeProps} />
+      <path d="M39 47l8-8" stroke={white} strokeWidth="4" strokeLinecap="round" />
+      <circle cx="40" cy="39" r="1.8" fill={white} />
+      <circle cx="47" cy="47" r="1.8" fill={white} />
+      <path d="M17 50c8 5 23 5 34 0" stroke={blue} strokeWidth="4" strokeLinecap="round" />
     </>
   ),
   concession: (
     <>
-      <path d="M19 50h27l-3-25H22z" fill={blue} {...strokeProps} />
-      <path d="M21 25c2-10 21-10 23 0" fill="none" {...strokeProps} />
-      <path d="M19 25h27" stroke={outline} strokeWidth="5" strokeLinecap="round" />
-      <path d="M23 33h5M31 33h5M39 33h4M25 41h5M34 41h6" stroke={white} strokeWidth="3" strokeLinecap="round" />
-      <GolfBall cx={27} cy={19} r={7} />
-      <GolfBall cx={37} cy={18} r={8} />
-      <GolfBall cx={32} cy={26} r={7} />
+      <path d="M11 27h35c5 0 9 4 9 9v11H11z" fill={tan} {...strokeProps} />
+      <path d="M17 20h22c4 0 7 3 7 7H14c0-4 2-7 3-7z" fill={blue} {...strokeProps} />
+      <path d="M17 35h15" stroke={brown} strokeWidth="4" strokeLinecap="round" />
+      <path d="M37 35h10" stroke={white} strokeWidth="4" strokeLinecap="round" />
+      <circle cx="22" cy="48" r="5" fill={white} {...strokeProps} />
+      <circle cx="45" cy="48" r="5" fill={white} {...strokeProps} />
+      <path d="M14 43h38" stroke={outline} strokeWidth="3" strokeLinecap="round" />
+    </>
+  ),
+  hours: (
+    <>
+      <circle cx="32" cy="32" r="20" fill={white} {...strokeProps} />
+      <path d="M32 19v14l9 6" stroke={blue} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M17 49c8 6 22 6 30 0" stroke={tan} strokeWidth="4" strokeLinecap="round" />
+    </>
+  ),
+  location: (
+    <>
+      <path d="M32 55s17-17 17-31c0-9-7-16-17-16s-17 7-17 16c0 14 17 31 17 31Z" fill={blue} {...strokeProps} />
+      <circle cx="32" cy="24" r="7" fill={white} {...strokeProps} />
+      <path d="M18 53c8 4 20 4 28 0" stroke={tan} strokeWidth="4" strokeLinecap="round" />
+    </>
+  ),
+  phone: (
+    <>
+      <path d="M21 13l8 10-6 6c4 7 9 12 16 16l6-6 10 8c-2 6-6 10-13 10-17-4-31-18-35-35 0-7 4-11 10-13Z" fill={blue} {...strokeProps} />
+      <path d="M18 49c8 5 21 7 32 3" stroke={tan} strokeWidth="4" strokeLinecap="round" />
+    </>
+  ),
+  email: (
+    <>
+      <path d="M11 18h42v30H11z" fill={white} {...strokeProps} />
+      <path d="M12 20l20 17 20-17" fill="none" stroke={blue} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 47l13-13M50 47L37 34" stroke={tan} strokeWidth="4" strokeLinecap="round" />
     </>
   ),
 };

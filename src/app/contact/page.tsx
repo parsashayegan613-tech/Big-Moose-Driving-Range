@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import RangeIcon from '@/components/RangeIcon';
 
 export default function ContactPage() {
     const faqSchema = {
@@ -98,7 +99,7 @@ export default function ContactPage() {
                             <p className="text-lead mb-6">Conveniently located in southwest Edmonton with plenty of parking. Open daily from 10 AM until sunset.</p>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-clock"></i></div>
+                                <div className="info-icon"><RangeIcon name="hours" /></div>
                                 <div>
                                     <h4>Hours of Operation</h4>
                                     <p>Open Daily: 10:00 AM &ndash; Sunset</p>
@@ -106,7 +107,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-map-pin"></i></div>
+                                <div className="info-icon"><RangeIcon name="location" /></div>
                                 <div>
                                     <h4>Location</h4>
                                     <p>13415 41 Ave SW</p>
@@ -115,7 +116,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-phone"></i></div>
+                                <div className="info-icon"><RangeIcon name="phone" /></div>
                                 <div>
                                     <h4>Call Us</h4>
                                     <p><a href="tel:+15875948874">(587) 594-8874</a></p>
@@ -123,7 +124,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-envelope"></i></div>
+                                <div className="info-icon"><RangeIcon name="email" /></div>
                                 <div>
                                     <h4>Email Us</h4>
                                     <p><a href="mailto:bigmoosedrivingrange@gmail.com">bigmoosedrivingrange@gmail.com</a></p>
