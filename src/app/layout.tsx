@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Luckiest_Guy, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -19,6 +19,12 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
+const brandDisplay = Luckiest_Guy({
+  variable: "--font-brand-display",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bigmoosedrivingrange.ca"),
   title: "Big Moose Driving Range | Edmonton's Premier Golf Practice Facility",
@@ -35,7 +41,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className={`${outfit.variable} ${playfair.variable} antialiased`}>
+      <body className={`${outfit.variable} ${playfair.variable} ${brandDisplay.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

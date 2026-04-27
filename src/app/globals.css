@@ -31,6 +31,7 @@
     /* Typography */
     --font-sans: 'Outfit', sans-serif;
     --font-serif: 'Playfair Display', serif;
+    --font-display: 'Supersonic Rocketship', 'SupersonicRocketship', var(--font-sans);
 
     /* Spacing & Layout */
     --container-width: 1200px;
@@ -97,6 +98,7 @@ html {
 }
 
 body {
+    --font-display: 'Supersonic Rocketship', 'SupersonicRocketship', var(--font-brand-display), var(--font-sans);
     font-family: var(--font-sans);
     background-color: var(--clr-background);
     color: var(--clr-foreground);
@@ -169,19 +171,28 @@ h1, h2, h3, h4 {
 
 .heading-xl {
     font-size: clamp(3.5rem, 9vw, 6rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.96;
+    text-shadow: 0 0.035em 0 rgba(104, 56, 24, 0.08);
 }
 
 .heading-lg {
     font-size: clamp(2.5rem, 5vw, 3.75rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.98;
+    text-shadow: 0 0.035em 0 rgba(104, 56, 24, 0.08);
 }
 
 .heading-md {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
 }
 
 .text-lead {
@@ -202,7 +213,8 @@ h1, h2, h3, h4 {
     border-radius: var(--radius-full);
     font-weight: 600;
     font-size: 1rem;
-    font-family: var(--font-sans);
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
     cursor: pointer;
     border: none;
     transition: var(--transition);
@@ -336,11 +348,12 @@ h1, h2, h3, h4 {
 
 .nav-links a {
     color: var(--clr-foreground);
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-weight: 400;
     font-size: 0.95rem;
     transition: var(--transition);
     position: relative;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 .nav-links a::after {
@@ -609,7 +622,9 @@ h1, h2, h3, h4 {
 
 .glass-floating-card strong {
     font-size: 1.1rem;
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.02em;
 }
 
 .glass-floating-card span {
@@ -751,10 +766,12 @@ h1, h2, h3, h4 {
 }
 
 .hero-title .text-accent {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 400;
     color: var(--clr-accent-light);
+    display: inline-block;
+    transform: rotate(-1.5deg) skewX(-3deg);
 }
 
 .hero-subtitle {
@@ -1476,11 +1493,12 @@ h1, h2, h3, h4 {
 
 .price {
     font-size: 4rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-weight: 400;
     line-height: 1;
     margin-bottom: 0.5rem;
     color: var(--clr-foreground);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 .price-cents {
@@ -1949,9 +1967,10 @@ h1, h2, h3, h4 {
     padding: 1.5rem 2rem;
     background: none;
     border: none;
-    font-family: var(--font-sans);
+    font-family: var(--font-display);
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: 0.01em;
     color: var(--clr-foreground);
     cursor: pointer;
     display: flex;
@@ -3298,9 +3317,9 @@ h1, h2, h3, h4 {
 }
 
 .loader-text {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
   color: #fff;
@@ -3543,9 +3562,9 @@ h1, h2, h3, h4 {
 }
 
 .gallery-h-number {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.15);
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -3557,9 +3576,9 @@ h1, h2, h3, h4 {
 }
 
 .gallery-h-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   color: white;
   letter-spacing: 0.02em;
   transform: translateY(10px);
