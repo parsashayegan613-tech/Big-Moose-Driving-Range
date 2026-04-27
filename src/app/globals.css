@@ -1295,6 +1295,14 @@ h1, h2, h3, h4 {
     background: transparent;
 }
 
+.local-highlights .local-highlight-icon {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    transform: translateX(-2px);
+}
+
 .local-highlights h3 {
     font-size: 1.15rem;
     margin-bottom: 0.35rem;

@@ -291,7 +291,8 @@ export default function Home() {
                                 </div>
                             </div>
                             <div>
-                                <RangeIcon name="swing" />
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/teaching-pros-icon.png" alt="" className="local-highlight-icon" aria-hidden="true" />
                                 <div>
                                     <h3>Golf Lessons & Teaching Pros</h3>
                                     <p>Connect with experienced instructors for swing help, private lessons, junior development, and structured practice support.</p>
