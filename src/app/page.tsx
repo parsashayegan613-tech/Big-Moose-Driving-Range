@@ -95,7 +95,7 @@ export default function Home() {
                     </div>
 
                     <h1 className="heading-xl hero-title split-text-animate">
-                        <span className="word">Edmonton</span> <span className="word">Driving</span> <br />
+                        <span className="hero-title-line"><span className="word">Edmonton</span> <span className="word">Driving</span></span> <br />
                         <span className="text-accent word">Range</span> <span className="word">With</span> <span className="word">35</span> <span className="word">Mats</span>
                     </h1>
 
