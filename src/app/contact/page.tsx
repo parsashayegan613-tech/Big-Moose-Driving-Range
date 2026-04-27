@@ -43,10 +43,10 @@ export default function ContactPage() {
             },
             {
                 "@type": "Question",
-                "name": "Do you accept cash and card?",
+                "name": "What are the bucket prices?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Big Moose accepts cash and card. Cash pricing is available for small and large buckets."
+                    "text": "Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes."
                 }
             },
             {
@@ -225,11 +225,11 @@ export default function ContactPage() {
 
                         <div className="faq-item">
                             <button className="faq-question" aria-expanded="false">
-                                <span>Do you accept cash and card?</span>
+                                <span>What are the bucket prices?</span>
                                 <span className="faq-icon" aria-hidden="true"></span>
                             </button>
                             <div className="faq-answer">
-                                <p>We accept both! Paying with cash gets you a small discount — $10.00 for a small bucket (vs. $10.50) and $15.00 for a large bucket (vs. $15.50).</p>
+                                <p>Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes.</p>
                             </div>
                         </div>
 

@@ -23,12 +23,12 @@ export default function PricingPage() {
                         <div className="pricing-summary-row">
                             <span>Small Bucket</span>
                             <span>45 balls</span>
-                            <strong>$10.50 card / $10 cash</strong>
+                            <strong>$10.50</strong>
                         </div>
                         <div className="pricing-summary-row">
                             <span>Large Bucket</span>
                             <span>110 balls</span>
-                            <strong>$15.50 card / $15 cash</strong>
+                            <strong>$15.50</strong>
                         </div>
                         <div className="pricing-summary-row">
                             <span>Best Punch Card</span>
@@ -55,7 +55,6 @@ export default function PricingPage() {
                             <h3 className="heading-md">Small Bucket</h3>
                             <p className="balls-count">45 Balls</p>
                             <div className="price">$10<span className="price-cents">.50</span></div>
-                            <p className="cash-price">or $10.00 cash</p>
                             <ul className="pricing-features">
                                 <li><span className="price-bullet"><RangeIcon name="balls" /></span> Titleist & Callaway balls</li>
                                 <li><span className="price-bullet"><RangeIcon name="mat" /></span> Elevated mats</li>
@@ -69,7 +68,6 @@ export default function PricingPage() {
                             <h3 className="heading-md">Large Bucket</h3>
                             <p className="balls-count">110 Balls</p>
                             <div className="price">$15<span className="price-cents">.50</span></div>
-                            <p className="cash-price">or $15.00 cash</p>
                             <ul className="pricing-features">
                                 <li><span className="price-bullet"><RangeIcon name="balls" /></span> Titleist & Callaway balls</li>
                                 <li><span className="price-bullet"><RangeIcon name="mat" /></span> Elevated mats</li>
