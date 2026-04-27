@@ -122,7 +122,10 @@ export default function PricingPage() {
                     <h2 className="heading-md text-center mb-pricing-sub mt-pricing-section reveal">Rentals & Extras</h2>
                     <div className="extras-grid reveal">
                         <div className="extra-item">
-                            <div className="extra-icon"><RangeIcon name="clubs" /></div>
+                            <div className="extra-icon">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/club-rental-icon.png" alt="" className="pricing-extra-icon-img" aria-hidden="true" />
+                            </div>
                             <div>
                                 <h4>Club Rental</h4>
                                 <p>$7.00</p>

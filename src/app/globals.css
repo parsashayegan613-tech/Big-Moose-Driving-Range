@@ -1665,6 +1665,13 @@ h1, h2, h3, h4 {
     flex-shrink: 0;
 }
 
+.pricing-extra-icon-img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+}
+
 .price-bullet .range-icon {
     width: 1.55rem;
     height: 1.55rem;
