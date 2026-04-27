@@ -71,6 +71,21 @@ export default function VanillaInteractions() {
     let gsapInstance: any = null;
     let ScrollTriggerPlugin: any = null;
     let testimonialInterval: any = null;
+    const scrollToRouteTarget = () => {
+      const hash = window.location.hash;
+      if (!hash) {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        return;
+      }
+
+      const target = document.querySelector(decodeURIComponent(hash));
+      if (target) {
+        target.scrollIntoView({ block: "start", behavior: "auto" });
+      }
+    };
+
+    const routeScrollFrame = window.requestAnimationFrame(scrollToRouteTarget);
+    const routeScrollTimeout = window.setTimeout(scrollToRouteTarget, 120);
 
     async function initLibraries() {
       const [gsapModule, scrollTriggerModule] = await Promise.all([
@@ -453,6 +468,8 @@ export default function VanillaInteractions() {
     // CLEANUP
     // ==========================================
     return () => {
+      window.cancelAnimationFrame(routeScrollFrame);
+      window.clearTimeout(routeScrollTimeout);
       ScrollTriggerPlugin?.getAll().forEach((t: any) => t.kill());
       if (testimonialInterval) clearInterval(testimonialInterval);
 

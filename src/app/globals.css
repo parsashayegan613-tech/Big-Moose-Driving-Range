@@ -690,7 +690,7 @@ h1, h2, h3, h4 {
 
 .hero-content {
     max-width: 850px;
-    padding-top: 60px;
+    padding-top: clamp(5rem, 8vh, 7rem);
     position: relative;
     z-index: 1;
 }
@@ -702,6 +702,15 @@ h1, h2, h3, h4 {
     gap: 0.75rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+}
+
+#location,
+#gallery,
+#faq,
+#contact,
+#punch-cards,
+#field-trips {
+    scroll-margin-top: clamp(7.5rem, 12vw, 10rem);
 }
 
 .badge.premium-badge {

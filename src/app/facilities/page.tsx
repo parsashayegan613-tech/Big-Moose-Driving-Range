@@ -138,7 +138,7 @@ export default function FacilitiesPage() {
                             <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="facilities_after_features" className="btn btn-primary">
                                 {ctaLinks.pricing.label}
                             </TrackedCta>
-                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="facilities_after_features" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="facilities_after_features" className="btn btn-outline">
                                 <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
                             </TrackedCta>
                         </div>

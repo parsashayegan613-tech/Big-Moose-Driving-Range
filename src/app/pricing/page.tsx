@@ -84,7 +84,7 @@ export default function PricingPage() {
                             <p>Walk up during open hours, or call before you head over if weather looks uncertain.</p>
                         </div>
                         <div className="decision-cta-actions">
-                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="pricing_after_buckets" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="pricing_after_buckets" className="btn btn-primary">
                                 <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
                             </TrackedCta>
                             <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="pricing_after_buckets" className="btn btn-outline">

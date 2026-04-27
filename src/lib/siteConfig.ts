@@ -19,9 +19,14 @@ export const ctaLinks = {
     action: "view_pricing",
   },
   directions: {
-    href: siteConfig.directionsUrl,
+    href: siteConfig.locationPath,
     label: "Get Directions",
     action: "get_directions",
+  },
+  googleDirections: {
+    href: siteConfig.directionsUrl,
+    label: "Open in Google Maps",
+    action: "open_google_maps",
   },
   call: {
     href: siteConfig.phoneHref,

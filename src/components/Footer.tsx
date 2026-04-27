@@ -17,7 +17,7 @@ export default function Footer() {
                 <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="footer_cta" className="btn btn-accent">
                     {ctaLinks.pricing.label}
                 </TrackedCta>
-                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="footer_cta" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="footer_cta" className="btn btn-outline">
                     {ctaLinks.directions.label}
                 </TrackedCta>
                 <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="footer_cta" className="btn btn-primary">

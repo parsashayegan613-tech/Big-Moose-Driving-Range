@@ -143,8 +143,8 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="contact_location_info" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                            <TrackedCta href={ctaLinks.googleDirections.href} action={ctaLinks.googleDirections.action} placement="contact_location_info" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.googleDirections.label}
                             </TrackedCta>
                         </div>
 

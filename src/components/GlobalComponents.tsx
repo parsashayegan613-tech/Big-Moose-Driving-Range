@@ -25,7 +25,7 @@ export default function GlobalComponents() {
           <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="mobile_sticky_bar" className="mobile-cta-pricing">
               <i className="fa-solid fa-tag"></i> Pricing
           </TrackedCta>
-          <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="mobile_sticky_bar" target="_blank" rel="noopener noreferrer" className="mobile-cta-directions">
+          <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="mobile_sticky_bar" className="mobile-cta-directions">
               <i className="fa-solid fa-diamond-turn-right"></i> Directions
           </TrackedCta>
       </div>

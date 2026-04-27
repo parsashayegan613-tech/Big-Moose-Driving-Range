@@ -107,7 +107,7 @@ export default function Home() {
                         <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="home_hero" className="btn btn-primary btn-lg">
                             {ctaLinks.pricing.label} <i className="fa-solid fa-arrow-right"></i>
                         </TrackedCta>
-                        <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_hero" className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+                        <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_hero" className="btn btn-outline btn-lg">
                             {ctaLinks.directions.label}
                         </TrackedCta>
                     </div>
@@ -267,7 +267,7 @@ export default function Home() {
                                 <span>Paisley</span>
                             </div>
                             <div className="local-cta-actions">
-                                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_local_section" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_local_section" className="btn btn-primary">
                                     <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
                                 </TrackedCta>
                                 <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="home_local_section" className="btn btn-outline">
