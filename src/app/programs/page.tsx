@@ -175,6 +175,7 @@ export default function ProgramsPage() {
                                 <p>Reach out for lesson availability, swing feedback, and practice planning.</p>
                             </div>
                             <div className="pro-actions">
+                                <a href="https://app.swingmatchgolf.com/my/instructors/cameron-kyle-0103" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn"><i className="fa-solid fa-globe"></i> Swing Match Profile</a>
                                 <a href="mailto:cakyle8@gmail.com" className="btn btn-primary pro-email-btn"><i className="fa-solid fa-envelope"></i> cakyle8@gmail.com</a>
                             </div>
                         </div>
