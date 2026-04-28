@@ -145,7 +145,8 @@ export default function Home() {
                         <div className="visit-line" aria-hidden="true"></div>
                         <div className="visit-step reveal">
                             <span>01</span>
-                            <RangeIcon name="sign" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/images/icons/park-check-in-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Park & Check In</h3>
                             <p>Head to the range shack, pick your bucket size, and ask about rentals if you need clubs.</p>
                         </div>
