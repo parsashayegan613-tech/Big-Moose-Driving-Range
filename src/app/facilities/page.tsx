@@ -104,7 +104,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/golden-hour-range.jpg" alt="Grass hitting area at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="grass" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/grass-range-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">Grass Range</h3>
                                 <p>Hit off real grass on our dedicated grass range. Over 8 bays available, open Friday through Sunday.</p>
                             </div>
