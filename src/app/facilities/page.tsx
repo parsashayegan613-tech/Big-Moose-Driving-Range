@@ -89,7 +89,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/yard-games-mini-golf.jpg" alt="Mini golf and yard games at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="miniGolf" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/mini-golf-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">Mini Golf</h3>
                                 <p>Fun for the whole family! Tee off on our brand new mini golf course for just $5 per person. Putters and balls supplied.</p>
                             </div>
