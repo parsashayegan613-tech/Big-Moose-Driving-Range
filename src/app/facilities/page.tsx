@@ -74,7 +74,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/feature-food.svg" alt="Hotdog cart at the driving range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="concession" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/hotdog-cart-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">Hotdog Cart</h3>
                                 <p>Grab a bite from our on-site hotdog cart. Available Friday-Sunday to fuel up your practice session.</p>
                             </div>
