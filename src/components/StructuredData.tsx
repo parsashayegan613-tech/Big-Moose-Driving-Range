@@ -16,7 +16,7 @@ export default function StructuredData() {
           "streetAddress": "13415 41 Ave SW",
           "addressLocality": "Edmonton",
           "addressRegion": "AB",
-          "postalCode": "T6W 1A7",
+          "postalCode": "T6Y 0H4",
           "addressCountry": "CA"
         },
         "openingHoursSpecification": [

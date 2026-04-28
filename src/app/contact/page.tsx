@@ -114,7 +114,7 @@ export default function ContactPage() {
                                 <div>
                                     <h4>Location</h4>
                                     <p>13415 41 Ave SW</p>
-                                    <p>Edmonton, AB T6W 1A7</p>
+                                    <p>Edmonton, AB T6Y 0H4</p>
                                 </div>
                             </div>
 
