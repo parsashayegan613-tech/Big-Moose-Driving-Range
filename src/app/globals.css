@@ -664,6 +664,18 @@ h1, h2, h3, h4 {
     animation-delay: -3s;
 }
 
+.glass-card-3 {
+    top: 24%;
+    right: 10%;
+    animation-delay: -1.5s;
+}
+
+.glass-card-4 {
+    bottom: 24%;
+    left: 12%;
+    animation-delay: -4.5s;
+}
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }

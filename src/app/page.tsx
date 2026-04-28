@@ -73,8 +73,22 @@ export default function Home() {
                     <div className="glass-floating-card glass-card-2">
                         <RangeIcon name="balls" />
                         <div>
-                            <strong>Premium</strong>
-                            <span>Titleist Balls</span>
+                            <strong>Premium Balls</strong>
+                            <span>Titleist & Callaway</span>
+                        </div>
+                    </div>
+                    <div className="glass-floating-card glass-card-3">
+                        <RangeIcon name="target" />
+                        <div>
+                            <strong>Range Targets</strong>
+                            <span>Marked distances</span>
+                        </div>
+                    </div>
+                    <div className="glass-floating-card glass-card-4">
+                        <RangeIcon name="miniGolf" />
+                        <div>
+                            <strong>Mini Golf</strong>
+                            <span>Stay & play</span>
                         </div>
                     </div>
                     {/* Ambient Dust Particles */}
