@@ -65,7 +65,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/range-targets.jpg" alt="Distance targets on the driving range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="target" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/on-range-targets-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">On-Range Targets</h3>
                                 <p>Dial in your distances with clearly marked targets spread across the range to sharpen your accuracy.</p>
                             </div>
