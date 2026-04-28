@@ -125,7 +125,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/yard-games-mini-golf.jpg" alt="Yard games at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="yardGames" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/yard-games-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">Yard Games</h3>
                                 <p>Take a break from swinging and enjoy our complimentary yard games, free to play for all visitors.</p>
                             </div>
