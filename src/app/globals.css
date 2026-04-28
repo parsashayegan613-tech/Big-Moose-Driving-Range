@@ -1201,6 +1201,14 @@ h1, h2, h3, h4 {
     margin-bottom: 1.25rem;
 }
 
+.visit-step-icon-img {
+    display: block;
+    width: 4.25rem;
+    height: 4.25rem;
+    object-fit: contain;
+    margin-bottom: 1.25rem;
+}
+
 .visit-step h3 {
     font-size: 1.15rem;
     margin-bottom: 0.75rem;
@@ -1361,6 +1369,10 @@ h1, h2, h3, h4 {
     }
 
     .visit-step .range-icon {
+        display: none;
+    }
+
+    .visit-step-icon-img {
         display: none;
     }
 

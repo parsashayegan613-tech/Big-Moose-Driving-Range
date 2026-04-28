@@ -163,7 +163,8 @@ export default function Home() {
                         </div>
                         <div className="visit-step reveal">
                             <span>04</span>
-                            <RangeIcon name="flag" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/images/icons/stay-play-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Stay & Play</h3>
                             <p>Add mini golf, putting practice, yard games, or a lesson inquiry while you are here.</p>
                         </div>
