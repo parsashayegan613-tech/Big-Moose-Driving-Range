@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
 
@@ -103,7 +102,7 @@ export default function ContactPage() {
                             <p className="text-lead mb-6">Conveniently located in southwest Edmonton with plenty of parking. Open daily from 10 AM until sunset.</p>
 
                             <div className="info-group">
-                                <div className="info-icon"><RangeIcon name="hours" /></div>
+                                <div className="info-icon"><i className="fa-regular fa-clock" aria-hidden="true"></i></div>
                                 <div>
                                     <h4>Hours of Operation</h4>
                                     <p>Open Daily: 10:00 AM &ndash; Sunset</p>
@@ -111,7 +110,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><RangeIcon name="location" /></div>
+                                <div className="info-icon"><i className="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                                 <div>
                                     <h4>Location</h4>
                                     <p>13415 41 Ave SW</p>
@@ -120,7 +119,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><RangeIcon name="phone" /></div>
+                                <div className="info-icon"><i className="fa-solid fa-phone" aria-hidden="true"></i></div>
                                 <div>
                                     <h4>Call Us</h4>
                                     <p>
@@ -132,7 +131,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><RangeIcon name="email" /></div>
+                                <div className="info-icon"><i className="fa-regular fa-envelope" aria-hidden="true"></i></div>
                                 <div>
                                     <h4>Email Us</h4>
                                     <p>

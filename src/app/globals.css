@@ -2672,19 +2672,19 @@ h1, h2, h3, h4 {
 }
 
 .info-icon {
-    width: 58px;
-    height: 58px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: transparent;
-    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    color: var(--clr-brand-blue);
 }
 
-.info-icon .range-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+.info-icon i {
+    font-size: 1.55rem;
+    line-height: 1;
 }
 
 .info-group h4 {
@@ -3252,8 +3252,7 @@ h1, h2, h3, h4 {
 }
 
 [data-theme="dark"] .feature-icon,
-[data-theme="dark"] .extra-icon,
-[data-theme="dark"] .info-icon {
+[data-theme="dark"] .extra-icon {
     background: rgba(23, 132, 212, 0.15);
 }
 
