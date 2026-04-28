@@ -171,7 +171,7 @@ export default function ProgramsPage() {
 
                         <div className="teaching-pro-card reveal">
                             <div className="pro-photo-frame">
-                                <Image src="/images/team/cam-kyle-headshot.png" alt="Cam Kyle" width={1200} height={900} className="pro-photo-image" />
+                                <Image src="/images/team/cam-kyle-headshot-v2.png" alt="Cam Kyle" width={1200} height={900} className="pro-photo-image" />
                             </div>
                             <div className="pro-card-body">
                                 <span className="pro-role">Swing Match Instructor</span>
