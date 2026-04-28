@@ -284,7 +284,8 @@ export default function Home() {
                                 </div>
                             </div>
                             <div>
-                                <RangeIcon name="miniGolf" />
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/mini-golf-family-icon.png" alt="" className="local-highlight-icon" aria-hidden="true" />
                                 <div>
                                     <h3>Mini Golf & Family Practice</h3>
                                     <p>Bring family or friends for mini golf, yard games, club rentals, and space for beginners to get comfortable.</p>
