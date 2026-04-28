@@ -13,7 +13,7 @@ export default function Home() {
         "Premium Titleist",
         "Open Daily",
     ];
-    const googleReviewsUrl = "https://www.google.com/search?q=Big+Moose+Driving+Range+Edmonton+reviews";
+    const googleReviewsUrl = "https://www.google.com/search?q=Big+Moose+Driving+Range+Edmonton&ludocid=5294932129446520832#lrd=0x53a01d00212498d3:0x497b60b7cd766800,1,,,,";
     const reviews = [
         {
             author: "Cory Collins",
