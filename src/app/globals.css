@@ -222,6 +222,16 @@ h1, h2, h3, h4 {
     overflow: hidden;
 }
 
+.btn:hover,
+.btn:focus-visible {
+    transform: translateY(-3px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(0, 104, 184, 0.28);
+    outline-offset: 4px;
+}
+
 .btn-primary {
     background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
     color: white;

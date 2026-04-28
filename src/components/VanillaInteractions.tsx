@@ -305,22 +305,6 @@ export default function VanillaInteractions() {
     const heroEl = document.querySelector(".hero");
     heroEl?.addEventListener("mousemove", handleHeroMove);
 
-    // --- Magnetic Buttons ---
-    const handleMagneticMove = (e: any) => {
-      const btn = e.currentTarget;
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
-    };
-    const handleMagneticOut = (e: any) => {
-      e.currentTarget.style.transform = "translate(0px, 0px) scale(1)";
-    };
-    document.querySelectorAll(".btn-primary, .btn-accent").forEach((btn) => {
-      btn.addEventListener("mousemove", handleMagneticMove);
-      btn.addEventListener("mouseout", handleMagneticOut);
-    });
-
     // --- Button Ripple Effect ---
     const handleRipple = (e: any) => {
       const btn = e.currentTarget;
@@ -479,10 +463,6 @@ export default function VanillaInteractions() {
       if (scrollIndicator) window.removeEventListener("scroll", handleScrollFade);
       document.querySelectorAll(".faq-question").forEach((btn) => btn.removeEventListener("click", handleFaqClick));
       heroEl?.removeEventListener("mousemove", handleHeroMove);
-      document.querySelectorAll(".btn-primary, .btn-accent").forEach((btn) => {
-        btn.removeEventListener("mousemove", handleMagneticMove);
-        btn.removeEventListener("mouseout", handleMagneticOut);
-      });
       document.querySelectorAll(".btn-primary, .btn-accent, .btn-outline").forEach((btn) => {
         btn.removeEventListener("click", handleRipple);
       });
