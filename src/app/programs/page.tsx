@@ -155,9 +155,8 @@ export default function ProgramsPage() {
 
                     <div className="teaching-pro-grid">
                         <div className="teaching-pro-card reveal">
-                            <div className="pro-photo-placeholder" aria-label="Photo placeholder for Aaron Menor">
-                                <span>AM</span>
-                                <small>Photo coming soon</small>
+                            <div className="pro-photo-frame">
+                                <Image src="/images/team/aaron-menor-headshot.png" alt="Aaron Menor" width={374} height={512} className="pro-photo-image" />
                             </div>
                             <div className="pro-card-body">
                                 <span className="pro-role">Professional Golf Instructor</span>
