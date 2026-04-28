@@ -2772,15 +2772,15 @@ h1, h2, h3, h4 {
 }
 
 .footer-cta .btn-outline {
-    background: var(--clr-brand-blue-soft);
-    color: var(--clr-brand-blue-dark);
-    border-color: rgba(0, 104, 184, 0.16);
+    background: var(--clr-brand-blue);
+    color: white;
+    border-color: var(--clr-brand-blue);
 }
 
 .footer-cta .btn-outline:hover {
-    background: rgba(0, 104, 184, 0.12);
-    border-color: rgba(0, 104, 184, 0.28);
-    color: var(--clr-brand-blue-dark);
+    background: var(--clr-brand-blue-dark);
+    border-color: var(--clr-brand-blue-dark);
+    color: white;
 }
 
 .footer-grid {
@@ -2797,8 +2797,8 @@ h1, h2, h3, h4 {
 }
 
 .footer .cta-badge {
-    background: var(--clr-brand-blue-soft);
-    color: var(--clr-brand-blue-dark);
+    background: var(--clr-brand-blue);
+    color: white;
 }
 
 .footer-logo {
