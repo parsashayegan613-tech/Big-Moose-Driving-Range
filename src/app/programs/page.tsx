@@ -20,7 +20,10 @@ export default function ProgramsPage() {
                     <div className="features-grid stagger-reveal">
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><RangeIcon name="junior" /></div>
+                                <div className="feature-icon mx-auto mb-4">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/junior-camps-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md">Junior Camps</h3>
                                 <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
                                 <TrackedCta href={ctaLinks.campInquiry.href} action={ctaLinks.campInquiry.action} placement="programs_junior_card" className="btn btn-primary w-full">
