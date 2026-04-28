@@ -133,6 +133,38 @@ export default function Home() {
                 </div>
             </header>
 
+            <section className="mobile-hero-feature-grid" aria-label="Range highlights">
+                <div className="mobile-hero-feature">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/icons/elevated-mats-icon.png" alt="" aria-hidden="true" />
+                    <div>
+                        <strong>35 Bays</strong>
+                        <span>Open now</span>
+                    </div>
+                </div>
+                <div className="mobile-hero-feature">
+                    <RangeIcon name="balls" />
+                    <div>
+                        <strong>Premium Balls</strong>
+                        <span>Titleist & Callaway</span>
+                    </div>
+                </div>
+                <div className="mobile-hero-feature">
+                    <RangeIcon name="target" />
+                    <div>
+                        <strong>Targets</strong>
+                        <span>Marked distances</span>
+                    </div>
+                </div>
+                <div className="mobile-hero-feature">
+                    <RangeIcon name="miniGolf" />
+                    <div>
+                        <strong>Mini Golf</strong>
+                        <span>Stay & play</span>
+                    </div>
+                </div>
+            </section>
+
             {/* Marquee Ticker */}
             <div className="marquee-section">
                 <div className="marquee-track">
