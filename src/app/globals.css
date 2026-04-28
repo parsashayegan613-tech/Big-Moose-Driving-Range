@@ -2518,7 +2518,7 @@ h1, h2, h3, h4 {
 }
 
 .pro-photo-frame {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     border-radius: var(--radius-lg);
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(229, 226, 220, 0.95);
@@ -2772,7 +2772,15 @@ h1, h2, h3, h4 {
 }
 
 .footer-cta .btn-outline {
-    background: rgba(0, 104, 184, 0.06);
+    background: var(--clr-brand-blue-soft);
+    color: var(--clr-brand-blue-dark);
+    border-color: rgba(0, 104, 184, 0.16);
+}
+
+.footer-cta .btn-outline:hover {
+    background: rgba(0, 104, 184, 0.12);
+    border-color: rgba(0, 104, 184, 0.28);
+    color: var(--clr-brand-blue-dark);
 }
 
 .footer-grid {
@@ -2786,6 +2794,11 @@ h1, h2, h3, h4 {
 
 .footer .text-white {
     color: var(--clr-foreground);
+}
+
+.footer .cta-badge {
+    background: var(--clr-brand-blue-soft);
+    color: var(--clr-brand-blue-dark);
 }
 
 .footer-logo {

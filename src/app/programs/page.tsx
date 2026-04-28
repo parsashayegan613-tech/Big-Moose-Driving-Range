@@ -156,7 +156,7 @@ export default function ProgramsPage() {
                     <div className="teaching-pro-grid">
                         <div className="teaching-pro-card reveal">
                             <div className="pro-photo-frame">
-                                <Image src="/images/team/aaron-menor-headshot.png" alt="Aaron Menor" width={1200} height={900} className="pro-photo-image" />
+                                <Image src="/images/team/aaron-menor-headshot-square.png" alt="Aaron Menor" width={1000} height={1000} className="pro-photo-image" />
                             </div>
                             <div className="pro-card-body">
                                 <span className="pro-role">Professional Golf Instructor</span>
@@ -171,7 +171,7 @@ export default function ProgramsPage() {
 
                         <div className="teaching-pro-card reveal">
                             <div className="pro-photo-frame">
-                                <Image src="/images/team/cam-kyle-headshot-v2.png" alt="Cam Kyle" width={1200} height={900} className="pro-photo-image" />
+                                <Image src="/images/team/cam-kyle-headshot-square.png" alt="Cam Kyle" width={1000} height={1000} className="pro-photo-image" />
                             </div>
                             <div className="pro-card-body">
                                 <span className="pro-role">Swing Match Instructor</span>
