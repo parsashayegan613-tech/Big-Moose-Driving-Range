@@ -5,7 +5,7 @@ export const siteConfig = {
   email: "bigmoosedrivingrange@gmail.com",
   emailHref: "mailto:bigmoosedrivingrange@gmail.com",
   address: "13415 41 Ave SW, Edmonton, AB T6W 1A7",
-  directionsUrl: "https://maps.google.com/?q=13415+41+Ave+SW+Edmonton+AB",
+  directionsUrl: "https://www.google.com/maps?cid=5294932129446520832",
   mapsEmbedUrl: "https://maps.google.com/maps?q=Big+Moose+Driving+Range+Edmonton+AB&t=&z=15&ie=UTF8&iwloc=&output=embed",
   pricingPath: "/pricing",
   contactPath: "/contact",
