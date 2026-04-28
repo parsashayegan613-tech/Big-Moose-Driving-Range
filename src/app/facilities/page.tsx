@@ -113,7 +113,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/putting-green.jpg" alt="Chipping and putting green at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="shortGame" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/chipping-putting-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">Chipping & Putting</h3>
                                 <p>Dial in your short game at our dedicated chipping and putting area designed for all skill levels.</p>
                             </div>
