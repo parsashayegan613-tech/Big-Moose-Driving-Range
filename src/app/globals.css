@@ -1613,6 +1613,13 @@ h1, h2, h3, h4 {
     height: 4.7rem;
 }
 
+.pricing-punch-icon-img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: block;
+}
+
 .punch-card .price {
     margin-bottom: 0.5rem;
 }

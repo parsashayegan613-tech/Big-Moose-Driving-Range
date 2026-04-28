@@ -96,14 +96,20 @@ export default function PricingPage() {
                     <h2 className="heading-md text-center mb-pricing-sub mt-pricing-section reveal">Punch Cards</h2>
                     <div className="pricing-grid punch-grid">
                         <div className="pricing-card punch-card reveal">
-                            <div className="punch-icon"><RangeIcon name="punchCard" /></div>
+                            <div className="punch-icon">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                            </div>
                             <h3 className="heading-md">10 Small Buckets</h3>
                             <div className="price">$70</div>
                             <p className="punch-savings">Save $35</p>
                         </div>
 
                         <div className="pricing-card punch-card reveal">
-                            <div className="punch-icon"><RangeIcon name="punchCard" /></div>
+                            <div className="punch-icon">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                            </div>
                             <h3 className="heading-md">10 Large Buckets</h3>
                             <div className="price">$125</div>
                             <p className="punch-savings">Save $30</p>
@@ -111,7 +117,10 @@ export default function PricingPage() {
 
                         <div className="pricing-card punch-card popular reveal">
                             <div className="popular-badge">MOST POPULAR</div>
-                            <div className="punch-icon"><RangeIcon name="punchCard" /></div>
+                            <div className="punch-icon">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                            </div>
                             <h3 className="heading-md">20 Large Buckets</h3>
                             <div className="price">$200</div>
                             <p className="punch-savings">Save $110</p>
