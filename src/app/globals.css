@@ -614,6 +614,14 @@ h1, h2, h3, h4 {
     flex: 0 0 auto;
 }
 
+.glass-floating-icon-img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
 .glass-floating-card div {
     display: flex;
     flex-direction: column;

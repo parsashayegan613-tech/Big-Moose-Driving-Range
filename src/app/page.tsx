@@ -63,7 +63,8 @@ export default function Home() {
                 {/* Floating Glass Elements & Particles */}
                 <div className="hero-particles">
                     <div className="glass-floating-card glass-card-1">
-                        <RangeIcon name="bays" />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/images/icons/elevated-mats-icon.png" alt="" className="glass-floating-icon-img" aria-hidden="true" />
                         <div>
                             <strong>35 Bays</strong>
                             <span>Open Now</span>
@@ -158,7 +159,8 @@ export default function Home() {
                         </div>
                         <div className="visit-step reveal">
                             <span>03</span>
-                            <RangeIcon name="mat" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/images/icons/elevated-mats-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Pick a Mat</h3>
                             <p>Set up at an elevated mat, aim at the targets, and work through your bag at your pace.</p>
                         </div>
