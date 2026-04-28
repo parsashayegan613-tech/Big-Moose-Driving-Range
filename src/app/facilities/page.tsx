@@ -38,7 +38,10 @@ export default function FacilitiesPage() {
                                 <Image src="/images/range/range-bays.jpg" alt="Elevated hitting mats at Big Moose Driving Range" width={900} height={675} />
                             </div>
                             <div className="feature-card-body">
-                                <div className="feature-icon"><RangeIcon name="bays" /></div>
+                                <div className="feature-icon">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/elevated-mats-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md mt-4">35 Elevated Mats</h3>
                                 <p>Spacious elevated hitting stations that simulate real fairway conditions for a true-to-course experience.</p>
                             </div>
