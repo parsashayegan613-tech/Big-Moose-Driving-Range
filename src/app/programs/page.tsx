@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
 
@@ -33,7 +32,10 @@ export default function ProgramsPage() {
                         </div>
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <div className="feature-icon mx-auto mb-4"><RangeIcon name="clipboard" /></div>
+                                <div className="feature-icon mx-auto mb-4">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src="/images/icons/field-trip-program-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                </div>
                                 <h3 className="heading-md">Field Trip Program</h3>
                                 <p className="mb-4">A curriculum-aligned Physical Education field trip for Grades 7-12, built around golf fundamentals, safety, and active outdoor learning.</p>
                                 <Link href="#field-trips" className="btn btn-primary w-full">View Proposal</Link>
