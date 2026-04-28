@@ -785,7 +785,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-style: normal;
     font-weight: 400;
-    color: var(--clr-accent-light);
+    color: var(--clr-brand-brown);
     display: inline-block;
     transform: rotate(-1.5deg) skewX(-3deg);
 }
@@ -2797,7 +2797,7 @@ h1, h2, h3, h4 {
 }
 
 .footer h4 {
-    color: var(--clr-accent-light);
+    color: var(--clr-brand-brown);
     margin-bottom: 1.5rem;
     font-size: 0.85rem;
     text-transform: uppercase;
