@@ -133,7 +133,10 @@ export default function PricingPage() {
                         </div>
 
                         <div className="extra-item">
-                            <div className="extra-icon"><RangeIcon name="senior" /></div>
+                            <div className="extra-icon">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src="/images/icons/senior-discount-icon.png" alt="" className="pricing-extra-icon-img" aria-hidden="true" />
+                            </div>
                             <div>
                                 <h4>Senior Discount</h4>
                                 <p>30% off all buckets</p>
