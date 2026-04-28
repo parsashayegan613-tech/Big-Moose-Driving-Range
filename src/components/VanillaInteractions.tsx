@@ -166,7 +166,7 @@ export default function VanillaInteractions() {
           ease: "none",
           scrollTrigger: {
             trigger: galleryWrap,
-            start: "top 68%",
+            start: "top 24%",
             end: () => `+=${totalScroll}`,
             scrub: 1,
             pin: true,
