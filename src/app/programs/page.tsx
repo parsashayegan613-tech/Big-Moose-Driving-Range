@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
 
@@ -170,9 +171,8 @@ export default function ProgramsPage() {
                         </div>
 
                         <div className="teaching-pro-card reveal">
-                            <div className="pro-photo-placeholder" aria-label="Photo placeholder for Cam Kyle">
-                                <span>CK</span>
-                                <small>Photo coming soon</small>
+                            <div className="pro-photo-frame">
+                                <Image src="/images/team/cam-kyle-headshot.png" alt="Cam Kyle" width={400} height={400} className="pro-photo-image" />
                             </div>
                             <div className="pro-card-body">
                                 <span className="pro-role">Swing Match Instructor</span>
