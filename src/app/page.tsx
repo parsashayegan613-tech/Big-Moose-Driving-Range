@@ -364,32 +364,32 @@ export default function Home() {
                     <div className="instagram-grid reveal">
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-1.svg" alt="Instagram post 1" />
+                            <img src="/images/range/range-bays.jpg" alt="Elevated hitting bays at Big Moose Driving Range" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-2.svg" alt="Instagram post 2" />
+                            <img src="/images/range/yard-games-mini-golf.jpg" alt="Yard games and mini golf area at Big Moose" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-3.svg" alt="Instagram post 3" />
+                            <img src="/images/range/putting-green.jpg" alt="Putting green at Big Moose Driving Range" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-4.svg" alt="Instagram post 4" />
+                            <img src="/images/range/range-targets.jpg" alt="Marked range targets at Big Moose" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-5.svg" alt="Instagram post 5" />
+                            <img src="/images/range/golden-hour-range.jpg" alt="Big Moose driving range at golden hour" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                         <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/insta-6.svg" alt="Instagram post 6" />
+                            <img src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance sign" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
                     </div>
