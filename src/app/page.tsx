@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import HeroBackground from '@/components/HeroBackground';
+import Icon from '@/components/Icon';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
@@ -71,8 +73,7 @@ export default function Home() {
                 {/* Floating Glass Elements & Particles */}
                 <div className="hero-particles">
                     <div className="glass-floating-card glass-card-1">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/images/icons/elevated-mats-icon.png" alt="" className="glass-floating-icon-img" aria-hidden="true" />
+                        <Image src="/images/icons/elevated-mats-icon.png" alt="" width={72} height={72} className="glass-floating-icon-img" aria-hidden="true" />
                         <div>
                             <strong>35 Bays</strong>
                             <span>Open Now</span>
@@ -110,10 +111,10 @@ export default function Home() {
                 <div className="container hero-content text-center reveal active">
                     <div className="hero-badges">
                         <span className="badge premium-badge">
-                            <i className="fa-solid fa-clock"></i> Open today: 10 AM - sunset
+                            <Icon name="clock" /> Open today: 10 AM - sunset
                         </span>
                         <span className="badge hero-location-badge">
-                            <i className="fa-solid fa-location-dot"></i> Southwest Edmonton
+                            <Icon name="location" /> Southwest Edmonton
                         </span>
                     </div>
 
@@ -128,7 +129,7 @@ export default function Home() {
 
                     <div className="hero-actions">
                         <TrackedCta href={ctaLinks.pricing.href} action={ctaLinks.pricing.action} placement="home_hero" className="btn btn-primary btn-lg">
-                            {ctaLinks.pricing.label} <i className="fa-solid fa-arrow-right"></i>
+                            {ctaLinks.pricing.label} <Icon name="arrowRight" className="hero-arrow-icon" />
                         </TrackedCta>
                         <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_hero" className="btn btn-outline btn-lg">
                             {ctaLinks.directions.label}
@@ -143,8 +144,7 @@ export default function Home() {
 
             <section className="mobile-hero-feature-grid" aria-label="Range highlights">
                 <div className="mobile-hero-feature">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/icons/elevated-mats-icon.png" alt="" aria-hidden="true" />
+                    <Image src="/images/icons/elevated-mats-icon.png" alt="" width={72} height={72} aria-hidden="true" />
                     <div>
                         <strong>35 Bays</strong>
                         <span>Open now</span>
@@ -200,8 +200,7 @@ export default function Home() {
                         <div className="visit-line" aria-hidden="true"></div>
                         <div className="visit-step reveal">
                             <span>01</span>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/icons/park-check-in-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
+                            <Image src="/images/icons/park-check-in-icon.png" alt="" width={72} height={72} className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Park & Check In</h3>
                             <p>Head to the range shack, pick your bucket size, and ask about rentals if you need clubs.</p>
                         </div>
@@ -213,15 +212,13 @@ export default function Home() {
                         </div>
                         <div className="visit-step reveal">
                             <span>03</span>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/icons/elevated-mats-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
+                            <Image src="/images/icons/elevated-mats-icon.png" alt="" width={72} height={72} className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Pick a Mat</h3>
                             <p>Set up at an elevated mat, aim at the targets, and work through your bag at your pace.</p>
                         </div>
                         <div className="visit-step reveal">
                             <span>04</span>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/icons/stay-play-cornhole-icon.png" alt="" className="visit-step-icon-img" aria-hidden="true" />
+                            <Image src="/images/icons/stay-play-cornhole-icon.png" alt="" width={72} height={72} className="visit-step-icon-img" aria-hidden="true" />
                             <h3>Stay & Play</h3>
                             <p>Add mini golf, putting practice, yard games, or a lesson inquiry while you are here.</p>
                         </div>
@@ -270,23 +267,23 @@ export default function Home() {
                                         </span>
                                     </div>
                                     <div className="testimonial-stars" aria-label="5 star rating">
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
+                                        <Icon name="star" filled />
+                                        <Icon name="star" filled />
+                                        <Icon name="star" filled />
+                                        <Icon name="star" filled />
+                                        <Icon name="star" filled />
                                     </div>
                                     <p className="testimonial-text">&ldquo;{review.text}&rdquo;</p>
                                     <div className="google-review-footer">
                                         <span>Open on Google</span>
-                                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                        <Icon name="externalLink" />
                                     </div>
                                 </a>
                             ))}
                         </div>
 
                         <div className="testimonial-controls">
-                            <button className="testimonial-prev" aria-label="Previous review"><i className="fa-solid fa-arrow-left"></i></button>
+                            <button className="testimonial-prev" aria-label="Previous review"><Icon name="arrowLeft" /></button>
                             <div className="testimonial-dots">
                                 {reviews.map((review, index) => (
                                     <button
@@ -297,7 +294,7 @@ export default function Home() {
                                     ></button>
                                 ))}
                             </div>
-                            <button className="testimonial-next" aria-label="Next review"><i className="fa-solid fa-arrow-right"></i></button>
+                            <button className="testimonial-next" aria-label="Next review"><Icon name="arrowRight" /></button>
                         </div>
                     </div>
                 </div>
@@ -327,10 +324,10 @@ export default function Home() {
                             </div>
                             <div className="local-cta-actions">
                                 <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="home_local_section" className="btn btn-primary">
-                                    <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                                    <Icon name="diamondTurnRight" /> {ctaLinks.directions.label}
                                 </TrackedCta>
                                 <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="home_local_section" className="btn btn-outline">
-                                    <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                                    <Icon name="phone" /> {ctaLinks.call.label}
                                 </TrackedCta>
                             </div>
                         </div>
@@ -343,16 +340,14 @@ export default function Home() {
                                 </div>
                             </div>
                             <div>
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/mini-golf-family-icon.png" alt="" className="local-highlight-icon" aria-hidden="true" />
+                                <Image src="/images/icons/mini-golf-family-icon.png" alt="" width={72} height={72} className="local-highlight-icon" aria-hidden="true" />
                                 <div>
                                     <h3>Mini Golf & Family Practice</h3>
                                     <p>Bring family or friends for mini golf, yard games, club rentals, and space for beginners to get comfortable.</p>
                                 </div>
                             </div>
                             <div>
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/teaching-pros-icon.png" alt="" className="local-highlight-icon" aria-hidden="true" />
+                                <Image src="/images/icons/teaching-pros-icon.png" alt="" width={72} height={72} className="local-highlight-icon" aria-hidden="true" />
                                 <div>
                                     <h3>Golf Lessons & Teaching Pros</h3>
                                     <p>Connect with experienced instructors for swing help, private lessons, junior development, and structured practice support.</p>
@@ -372,34 +367,28 @@ export default function Home() {
                     </div>
                     <div className="instagram-grid reveal">
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/range-bays.jpg" alt="Elevated hitting bays at Big Moose Driving Range" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/range-bays.jpg" alt="Elevated hitting bays at Big Moose Driving Range" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/yard-games-mini-golf.jpg" alt="Yard games and mini golf area at Big Moose" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/yard-games-mini-golf.jpg" alt="Yard games and mini golf area at Big Moose" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/putting-green.jpg" alt="Putting green at Big Moose Driving Range" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/putting-green.jpg" alt="Putting green at Big Moose Driving Range" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/range-targets.jpg" alt="Marked range targets at Big Moose" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/range-targets.jpg" alt="Marked range targets at Big Moose" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/golden-hour-range.jpg" alt="Big Moose driving range at golden hour" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/golden-hour-range.jpg" alt="Big Moose driving range at golden hour" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                         <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance sign" />
-                            <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
+                            <Image src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance sign" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
+                            <div className="insta-overlay"><Icon name="instagram" /></div>
                         </a>
                     </div>
                 </div>

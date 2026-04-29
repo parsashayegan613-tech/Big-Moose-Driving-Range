@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Icon from '@/components/Icon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
 
@@ -94,7 +95,7 @@ export default function ContactPage() {
                                 <textarea id="body" name="body" rows={5} placeholder="How can we help you?" className="form-textarea" required></textarea>
                             </div>
                             <button type="submit" className="btn btn-primary contact-submit" {...ctaTracking(ctaLinks.email.action, "contact_form")}>
-                                <i className="fa-solid fa-paper-plane"></i> Send via Email Client
+                                <Icon name="paperPlane" /> Send via Email Client
                             </button>
                         </form>
                     </div>
@@ -111,7 +112,7 @@ export default function ContactPage() {
                             <p className="text-lead mb-6">Conveniently located in southwest Edmonton with plenty of parking. Open daily from 10 AM until sunset.</p>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-regular fa-clock" aria-hidden="true"></i></div>
+                                <div className="info-icon"><Icon name="clock" /></div>
                                 <div>
                                     <h4>Hours of Operation</h4>
                                     <p>Open Daily: 10:00 AM &ndash; Sunset</p>
@@ -119,7 +120,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                                <div className="info-icon"><Icon name="location" /></div>
                                 <div>
                                     <h4>Location</h4>
                                     <p>{siteConfig.streetAddress}</p>
@@ -128,7 +129,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-solid fa-phone" aria-hidden="true"></i></div>
+                                <div className="info-icon"><Icon name="phone" /></div>
                                 <div>
                                     <h4>Call Us</h4>
                                     <p>
@@ -140,7 +141,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="info-group">
-                                <div className="info-icon"><i className="fa-regular fa-envelope" aria-hidden="true"></i></div>
+                                <div className="info-icon"><Icon name="mail" /></div>
                                 <div>
                                     <h4>Email Us</h4>
                                     <p>
@@ -152,13 +153,13 @@ export default function ContactPage() {
                             </div>
 
                             <TrackedCta href={ctaLinks.googleDirections.href} action={ctaLinks.googleDirections.action} placement="contact_location_info" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.googleDirections.label}
+                                <Icon name="diamondTurnRight" /> {ctaLinks.googleDirections.label}
                             </TrackedCta>
                         </div>
 
                         <div className="location-media reveal">
                             <div className="location-sign-photo">
-                                <Image src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance signage" width={900} height={675} />
+                                <Image src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance signage" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" quality={60} />
                                 <div className="location-sign-caption">
                                     <span>Look for the sign on 41 Ave SW</span>
                                 </div>

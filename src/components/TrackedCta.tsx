@@ -35,7 +35,7 @@ export default function TrackedCta({
 
   if (isInternalHref(href)) {
     return (
-      <Link href={href} className={className} style={style} aria-label={ariaLabel} onClick={onClick} {...tracking}>
+      <Link href={href} prefetch={false} className={className} style={style} aria-label={ariaLabel} onClick={onClick} {...tracking}>
         {children}
       </Link>
     );

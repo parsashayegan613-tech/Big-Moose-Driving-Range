@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Icon from '@/components/Icon';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
@@ -92,10 +94,10 @@ export default function PricingPage() {
                         </div>
                         <div className="decision-cta-actions">
                             <TrackedCta href={ctaLinks.directions.href} action={ctaLinks.directions.action} placement="pricing_after_buckets" className="btn btn-primary">
-                                <i className="fa-solid fa-diamond-turn-right"></i> {ctaLinks.directions.label}
+                                <Icon name="diamondTurnRight" /> {ctaLinks.directions.label}
                             </TrackedCta>
                             <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="pricing_after_buckets" className="btn btn-outline">
-                                <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                                <Icon name="phone" /> {ctaLinks.call.label}
                             </TrackedCta>
                         </div>
                     </div>
@@ -106,8 +108,7 @@ export default function PricingPage() {
                     <div className="pricing-grid punch-grid">
                         <div className="pricing-card punch-card reveal">
                             <div className="punch-icon">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                                <Image src="/images/icons/punch-card-icon.png" alt="" width={96} height={96} className="pricing-punch-icon-img" aria-hidden="true" />
                             </div>
                             <h3 className="heading-md">10 Small Buckets</h3>
                             <div className="price">$70</div>
@@ -116,8 +117,7 @@ export default function PricingPage() {
 
                         <div className="pricing-card punch-card reveal">
                             <div className="punch-icon">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                                <Image src="/images/icons/punch-card-icon.png" alt="" width={96} height={96} className="pricing-punch-icon-img" aria-hidden="true" />
                             </div>
                             <h3 className="heading-md">10 Large Buckets</h3>
                             <div className="price">$125</div>
@@ -127,8 +127,7 @@ export default function PricingPage() {
                         <div className="pricing-card punch-card popular reveal">
                             <div className="popular-badge">MOST POPULAR</div>
                             <div className="punch-icon">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/punch-card-icon.png" alt="" className="pricing-punch-icon-img" aria-hidden="true" />
+                                <Image src="/images/icons/punch-card-icon.png" alt="" width={96} height={96} className="pricing-punch-icon-img" aria-hidden="true" />
                             </div>
                             <h3 className="heading-md">20 Large Buckets</h3>
                             <div className="price">$200</div>
@@ -141,8 +140,7 @@ export default function PricingPage() {
                     <div className="extras-grid reveal">
                         <div className="extra-item">
                             <div className="extra-icon">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/club-rental-icon.png" alt="" className="pricing-extra-icon-img" aria-hidden="true" />
+                                <Image src="/images/icons/club-rental-icon.png" alt="" width={96} height={96} className="pricing-extra-icon-img" aria-hidden="true" />
                             </div>
                             <div>
                                 <h4>Club Rental</h4>
@@ -152,8 +150,7 @@ export default function PricingPage() {
 
                         <div className="extra-item">
                             <div className="extra-icon">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/icons/senior-discount-icon.png" alt="" className="pricing-extra-icon-img" aria-hidden="true" />
+                                <Image src="/images/icons/senior-discount-icon.png" alt="" width={96} height={96} className="pricing-extra-icon-img" aria-hidden="true" />
                             </div>
                             <div>
                                 <h4>Senior Discount</h4>
@@ -169,11 +166,11 @@ export default function PricingPage() {
                 <div className="cta-banner-bg"></div>
                 <div className="container cta-banner-content reveal">
                     <div className="cta-text">
-                        <span className="cta-badge"><i className="fa-solid fa-fire"></i> Best Deal</span>
+                        <span className="cta-badge"><Icon name="flame" /> Best Deal</span>
                         <h2 className="heading-lg text-white">Save up to $110 with Punch Cards</h2>
                         <p>The more you play, the more you save. Grab a 20-large-bucket punch card and pay just $10 per session.</p>
                     </div>
-                    <a href="#punch-cards" className="btn btn-accent btn-lg">See Punch Cards <i className="fa-solid fa-arrow-right"></i></a>
+                    <a href="#punch-cards" className="btn btn-accent btn-lg">See Punch Cards <Icon name="arrowRight" /></a>
                 </div>
             </section>
         </main>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import TrackedCta from './TrackedCta';
+import Icon from './Icon';
 import { ctaLinks } from '@/lib/siteConfig';
 
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
       {/* Navigation */}
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container nav-content">
-          <Link href="/" className="logo">
+          <Link href="/" prefetch={false} className="logo">
             <Image
               src="/brand/bigmoose-logo-full.png"
               alt="Big Moose Driving Range"
@@ -63,6 +64,7 @@ export default function Navbar() {
               <li key={link.path}>
                 <Link 
                   href={link.path} 
+                  prefetch={false}
                   className={pathname === link.path ? 'nav-active' : ''}
                 >
                   {link.name}
@@ -77,7 +79,7 @@ export default function Navbar() {
           </div>
 
           <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Toggle Menu">
-            <i className="fa-solid fa-bars"></i>
+            <Icon name="menu" />
           </button>
         </div>
       </nav>
@@ -85,10 +87,10 @@ export default function Navbar() {
       {/* Full-Screen Mobile Menu */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
         <button className="mobile-menu-close" onClick={closeMobileMenu} aria-label="Close Menu">
-          <i className="fa-solid fa-xmark"></i>
+          <Icon name="x" />
         </button>
         <div className="mobile-menu-content">
-          <Link href="/" className="mobile-logo" onClick={closeMobileMenu}>
+          <Link href="/" prefetch={false} className="mobile-logo" onClick={closeMobileMenu}>
             <Image
               src="/brand/bigmoose-logo-words.png"
               alt="Big Moose Driving Range"
@@ -102,6 +104,7 @@ export default function Navbar() {
               <li key={link.path}>
                 <Link 
                   href={link.path} 
+                  prefetch={false}
                   onClick={closeMobileMenu}
                   className={pathname === link.path ? 'text-primary' : ''}
                 >
@@ -111,7 +114,7 @@ export default function Navbar() {
             ))}
           </ul>
           <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="mobile_menu" className="btn btn-primary btn-lg mobile-menu-cta">
-            <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+            <Icon name="phone" /> {ctaLinks.call.label}
           </TrackedCta>
         </div>
       </div>

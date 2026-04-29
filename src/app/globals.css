@@ -112,6 +112,18 @@ img {
     display: block;
 }
 
+.site-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    flex: 0 0 auto;
+    vertical-align: -0.125em;
+}
+
+.site-icon-filled {
+    fill: currentColor;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -289,7 +301,7 @@ h1, h2, h3, h4 {
     gap: 0.5rem;
 }
 
-.open-banner i {
+.open-banner .site-icon {
     font-size: 1.1rem;
 }
 
@@ -561,11 +573,13 @@ h1, h2, h3, h4 {
     position: absolute;
     inset: -20px;
     z-index: -2;
-    background-image: url('/images/range/golden-hour-range.jpg');
-    background-size: cover;
-    background-position: center;
     will-change: transform;
     filter: brightness(0.8);
+}
+
+.hero-bg-image {
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-overlay {
@@ -613,7 +627,7 @@ h1, h2, h3, h4 {
     will-change: transform;
 }
 
-.glass-floating-card i {
+.glass-floating-card .site-icon {
     font-size: 1.5rem;
     color: var(--clr-accent-light);
 }
@@ -716,15 +730,9 @@ h1, h2, h3, h4 {
 /* Staggered Text Reveal */
 .split-text-animate .word {
     display: inline-block;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: revealWord 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 1;
+    transform: none;
 }
-
-.split-text-animate .word:nth-child(1) { animation-delay: 0.2s; }
-.split-text-animate .word:nth-child(2) { animation-delay: 0.3s; }
-.split-text-animate .word:nth-child(4) { animation-delay: 0.4s; }
-.split-text-animate .word:nth-child(5) { animation-delay: 0.5s; }
 
 @keyframes revealWord {
     to {
@@ -830,11 +838,11 @@ h1, h2, h3, h4 {
     font-size: 1.05rem;
 }
 
-.hero-actions .fa-arrow-right {
+.hero-actions .hero-arrow-icon {
     transition: transform 0.3s ease;
 }
 
-.hero-actions .btn-primary:hover .fa-arrow-right {
+.hero-actions .btn-primary:hover .hero-arrow-icon {
     transform: translateX(4px);
 }
 
@@ -1219,7 +1227,7 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 0 10px var(--clr-background);
 }
 
-.visit-step i {
+.visit-step .site-icon {
     display: block;
     color: var(--clr-brand-brown);
     font-size: 1.25rem;
@@ -1338,7 +1346,7 @@ h1, h2, h3, h4 {
     align-items: start;
 }
 
-.local-highlights i {
+.local-highlights .site-icon {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-md);
@@ -1709,7 +1717,6 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
 }
 
-.pricing-features li i,
 .pricing-features li .price-bullet {
     width: 20px;
     height: 20px;
@@ -2484,7 +2491,7 @@ h1, h2, h3, h4 {
     border-bottom: none;
 }
 
-.field-trip-outcome i,
+.field-trip-outcome .site-icon,
 .field-trip-outcome .outcome-code {
     width: 44px;
     height: 44px;
@@ -2834,7 +2841,7 @@ h1, h2, h3, h4 {
     color: var(--clr-brand-blue);
 }
 
-.info-icon i {
+.info-icon .site-icon {
     font-size: 1.55rem;
     line-height: 1;
 }
@@ -4011,7 +4018,7 @@ h1, h2, h3, h4 {
   transition: opacity 0.3s ease;
 }
 
-.insta-overlay i {
+.insta-overlay .site-icon {
   font-size: 2rem;
   color: white;
 }

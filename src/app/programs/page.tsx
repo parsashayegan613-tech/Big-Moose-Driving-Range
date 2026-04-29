@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import Icon from '@/components/Icon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks, siteConfig } from '@/lib/siteConfig';
 
@@ -30,8 +31,7 @@ export default function ProgramsPage() {
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
                                 <div className="feature-icon mx-auto mb-4">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src="/images/icons/junior-camps-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                    <Image src="/images/icons/junior-camps-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
                                 </div>
                                 <h3 className="heading-md">Junior Camps</h3>
                                 <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
@@ -43,8 +43,7 @@ export default function ProgramsPage() {
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
                                 <div className="feature-icon mx-auto mb-4">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src="/images/icons/field-trip-program-icon.png" alt="" className="feature-card-icon-img" aria-hidden="true" />
+                                    <Image src="/images/icons/field-trip-program-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
                                 </div>
                                 <h3 className="heading-md">Field Trip Program</h3>
                                 <p className="mb-4">A curriculum-aligned Physical Education field trip for Grades 7-12, built around golf fundamentals, safety, and active outdoor learning.</p>
@@ -74,7 +73,7 @@ export default function ProgramsPage() {
 
                     <div className="field-trip-hero reveal">
                         <div>
-                            <span className="cta-badge"><i className="fa-solid fa-flag"></i> Spring-Fall, weather dependent</span>
+                            <span className="cta-badge"><Icon name="flag" /> Spring-Fall, weather dependent</span>
                             <h3>Big Moose Driving Range Physical Education Field Trip</h3>
                             <p>Students rotate through hitting bays and learn the fundamentals of golf, including grip, stance, balance, coordination, and swing technique. The experience is adaptable for different skill levels and focused on participation, effort, and confidence.</p>
                         </div>
@@ -144,10 +143,10 @@ export default function ProgramsPage() {
                         </div>
                         <div className="field-trip-actions">
                             <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="field_trip_cta" className="btn btn-primary">
-                                <i className="fa-solid fa-phone"></i> {ctaLinks.call.label}
+                                <Icon name="phone" /> {ctaLinks.call.label}
                             </TrackedCta>
                             <TrackedCta href={ctaLinks.fieldTripEmail.href} action={ctaLinks.fieldTripEmail.action} placement="field_trip_cta" className="btn btn-accent">
-                                <i className="fa-solid fa-envelope"></i> {ctaLinks.fieldTripEmail.label}
+                                <Icon name="mail" /> {ctaLinks.fieldTripEmail.label}
                             </TrackedCta>
                         </div>
                     </div>
@@ -174,10 +173,10 @@ export default function ProgramsPage() {
                             </div>
                             <div className="pro-actions">
                                 <TrackedCta href={ctaLinks.aaronMenorWebsite.href} action={ctaLinks.aaronMenorWebsite.action} placement="programs_teaching_pros" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn">
-                                    <i className="fa-solid fa-globe"></i> {ctaLinks.aaronMenorWebsite.label}
+                                    <Icon name="globe" /> {ctaLinks.aaronMenorWebsite.label}
                                 </TrackedCta>
                                 <TrackedCta href={ctaLinks.aaronMenorCall.href} action={ctaLinks.aaronMenorCall.action} placement="programs_teaching_pros" className="btn btn-primary">
-                                    <i className="fa-solid fa-phone"></i> {ctaLinks.aaronMenorCall.label}
+                                    <Icon name="phone" /> {ctaLinks.aaronMenorCall.label}
                                 </TrackedCta>
                             </div>
                         </div>
@@ -193,10 +192,10 @@ export default function ProgramsPage() {
                             </div>
                             <div className="pro-actions">
                                 <TrackedCta href={ctaLinks.camKyleSwingMatch.href} action={ctaLinks.camKyleSwingMatch.action} placement="programs_teaching_pros" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn">
-                                    <i className="fa-solid fa-globe"></i> {ctaLinks.camKyleSwingMatch.label}
+                                    <Icon name="globe" /> {ctaLinks.camKyleSwingMatch.label}
                                 </TrackedCta>
                                 <TrackedCta href={ctaLinks.camKyleEmail.href} action={ctaLinks.camKyleEmail.action} placement="programs_teaching_pros" className="btn btn-primary pro-email-btn">
-                                    <i className="fa-solid fa-envelope"></i> {ctaLinks.camKyleEmail.label}
+                                    <Icon name="mail" /> {ctaLinks.camKyleEmail.label}
                                 </TrackedCta>
                             </div>
                         </div>

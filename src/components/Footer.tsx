@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import TrackedCta from './TrackedCta';
+import Icon from './Icon';
 import { ctaLinks, siteConfig } from '@/lib/siteConfig';
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
         <div className="container footer-cta">
             <div>
-                <span className="cta-badge"><i className="fa-solid fa-golf-ball-tee"></i> Ready to hit a bucket?</span>
+                <span className="cta-badge"><Icon name="golfBall" /> Ready to hit a bucket?</span>
                 <h2 className="heading-lg text-white">Plan your next practice session.</h2>
                 <p>Check pricing, get directions, or call before you head over.</p>
             </div>
@@ -40,19 +41,19 @@ export default function Footer() {
             <div className="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><Link href="/pricing">Pricing</Link></li>
-                    <li><Link href="/facilities">Facility Features</Link></li>
-                    <li><Link href="/facilities#gallery">Gallery</Link></li>
-                    <li><Link href="/contact#faq">FAQ</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+                    <li><Link href="/pricing" prefetch={false}>Pricing</Link></li>
+                    <li><Link href="/facilities" prefetch={false}>Facility Features</Link></li>
+                    <li><Link href="/facilities#gallery" prefetch={false}>Gallery</Link></li>
+                    <li><Link href="/contact#faq" prefetch={false}>FAQ</Link></li>
+                    <li><Link href="/contact" prefetch={false}>Contact</Link></li>
                 </ul>
             </div>
 
             <div className="footer-social">
                 <h4>Connect</h4>
                 <div className="social-icons">
-                    <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                    <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+                    <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Icon name="instagram" /></a>
+                    <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Icon name="facebook" /></a>
                 </div>
             </div>
         </div>
