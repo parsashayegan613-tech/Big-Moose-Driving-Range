@@ -1,7 +1,16 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
+
+export const metadata: Metadata = {
+    title: "Pricing & Packages",
+    description: "View Big Moose Driving Range pricing for small and large buckets, punch cards, club rentals, and the 30% senior discount in southwest Edmonton.",
+    alternates: {
+        canonical: "/pricing",
+    },
+};
 
 export default function PricingPage() {
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import TrackedCta from './TrackedCta';
-import { ctaLinks } from '@/lib/siteConfig';
+import { ctaLinks, siteConfig } from '@/lib/siteConfig';
 
 export default function Footer() {
   return (
@@ -51,8 +51,8 @@ export default function Footer() {
             <div className="footer-social">
                 <h4>Connect</h4>
                 <div className="social-icons">
-                    <a href="https://www.instagram.com/bigmoosedrivingrange/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61571553647188" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+                    <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                    <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
                 </div>
             </div>
         </div>

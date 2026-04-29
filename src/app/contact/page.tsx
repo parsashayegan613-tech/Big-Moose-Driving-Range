@@ -1,7 +1,16 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
+
+export const metadata: Metadata = {
+    title: "Contact & Location",
+    description: "Find Big Moose Driving Range at 13415 41 Ave SW in Edmonton, call (587) 594-8874, email bigmoosedrivingrange@gmail.com, or open the Google Maps listing.",
+    alternates: {
+        canonical: "/contact",
+    },
+};
 
 export default function ContactPage() {
     const faqSchema = {
@@ -113,8 +122,8 @@ export default function ContactPage() {
                                 <div className="info-icon"><i className="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>13415 41 Ave SW</p>
-                                    <p>Edmonton, AB T6Y 0H4</p>
+                                    <p>{siteConfig.streetAddress}</p>
+                                    <p>{siteConfig.city}, {siteConfig.region} {siteConfig.postalCode}</p>
                                 </div>
                             </div>
 

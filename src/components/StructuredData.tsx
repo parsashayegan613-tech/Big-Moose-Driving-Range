@@ -1,23 +1,26 @@
+import { siteConfig } from "@/lib/siteConfig";
+
 export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://www.bigmoosedrivingrange.ca/#localbusiness",
-        "name": "Big Moose Driving Range",
-        "url": "https://www.bigmoosedrivingrange.ca/",
+        "@id": `${siteConfig.siteUrl}/#localbusiness`,
+        "name": siteConfig.name,
+        "url": `${siteConfig.siteUrl}/`,
         "description": "Big Moose Driving Range is a golf practice facility in southwest Edmonton with elevated mats, premium practice balls, targets, mini golf, grass range access, and teaching pros.",
-        "telephone": "+1-587-594-8874",
-        "email": "bigmoosedrivingrange@gmail.com",
+        "telephone": siteConfig.phoneE164,
+        "email": siteConfig.email,
+        "hasMap": siteConfig.directionsUrl,
         "priceRange": "$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "13415 41 Ave SW",
-          "addressLocality": "Edmonton",
-          "addressRegion": "AB",
-          "postalCode": "T6Y 0H4",
-          "addressCountry": "CA"
+          "streetAddress": siteConfig.streetAddress,
+          "addressLocality": siteConfig.city,
+          "addressRegion": siteConfig.region,
+          "postalCode": siteConfig.postalCode,
+          "addressCountry": siteConfig.country
         },
         "openingHoursSpecification": [
           {
@@ -36,17 +39,17 @@ export default function StructuredData() {
           }
         ],
         "sameAs": [
-          "https://www.instagram.com/bigmoosedrivingrange/",
-          "https://www.facebook.com/profile.php?id=61571553647188"
+          siteConfig.social.instagram,
+          siteConfig.social.facebook
         ]
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.bigmoosedrivingrange.ca/#website",
-        "url": "https://www.bigmoosedrivingrange.ca/",
-        "name": "Big Moose Driving Range",
+        "@id": `${siteConfig.siteUrl}/#website`,
+        "url": `${siteConfig.siteUrl}/`,
+        "name": siteConfig.name,
         "publisher": {
-          "@id": "https://www.bigmoosedrivingrange.ca/#localbusiness"
+          "@id": `${siteConfig.siteUrl}/#localbusiness`
         }
       }
     ]

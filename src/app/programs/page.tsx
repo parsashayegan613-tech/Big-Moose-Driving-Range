@@ -1,8 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import TrackedCta from '@/components/TrackedCta';
-import { ctaLinks } from '@/lib/siteConfig';
+import { ctaLinks, siteConfig } from '@/lib/siteConfig';
+
+export const metadata: Metadata = {
+    title: "Programs & Teaching Pros",
+    description: "Explore junior camp inquiries, school field trips, and teaching pros at Big Moose Driving Range in southwest Edmonton.",
+    alternates: {
+        canonical: "/programs",
+    },
+};
 
 export default function ProgramsPage() {
     return (
@@ -112,7 +121,7 @@ export default function ProgramsPage() {
                             <h3>Facility Information</h3>
                             <ul>
                                 <li><strong>Facility:</strong> Big Moose Driving Range</li>
-                                <li><strong>Address:</strong> 13415 41 Ave SW, Edmonton</li>
+                                <li><strong>Address:</strong> {siteConfig.streetAddress}, {siteConfig.city}</li>
                                 <li><strong>Season:</strong> Spring-Fall, weather dependent</li>
                                 <li><strong>Supervision:</strong> On-site staff at all times</li>
                             </ul>

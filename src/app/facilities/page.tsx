@@ -1,8 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
+
+export const metadata: Metadata = {
+    title: "Facilities",
+    description: "Explore Big Moose Driving Range facilities in Edmonton, including 35 elevated mats, premium balls, range targets, chipping and putting, mini golf, yard games, and grass range access.",
+    alternates: {
+        canonical: "/facilities",
+    },
+};
 
 export default function FacilitiesPage() {
     return (

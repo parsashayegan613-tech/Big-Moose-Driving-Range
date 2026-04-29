@@ -1,8 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import HeroBackground from '@/components/HeroBackground';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
-import { ctaLinks } from '@/lib/siteConfig';
+import { ctaLinks, siteConfig } from '@/lib/siteConfig';
+
+export const metadata: Metadata = {
+    title: "Big Moose Driving Range | Edmonton Golf Practice Facility",
+    description: "Practice at Big Moose Driving Range in southwest Edmonton with 35 elevated mats, Titleist and Callaway balls, range targets, mini golf, and affordable buckets.",
+    alternates: {
+        canonical: "/",
+    },
+};
 
 export default function Home() {
     const marqueeItems = [
@@ -13,7 +22,6 @@ export default function Home() {
         "Premium Titleist",
         "Open Daily",
     ];
-    const googleReviewsUrl = "https://www.google.com/search?q=Big+Moose+Driving+Range+Edmonton&ludocid=5294932129446520832#lrd=0x53a01d00212498d3:0x497b60b7cd766800,1,,,,";
     const reviews = [
         {
             author: "Cory Collins",
@@ -240,7 +248,7 @@ export default function Home() {
                         <div className="testimonial-carousel-track">
                             {reviews.map((review, index) => (
                                 <a
-                                    href={googleReviewsUrl}
+                                    href={siteConfig.googleReviewsUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="testimonial-card google-review-card"
@@ -362,32 +370,32 @@ export default function Home() {
                         <p className="text-lead">Tag us <strong>@bigmoosedrivingrange</strong> and show us your best shots.</p>
                     </div>
                     <div className="instagram-grid reveal">
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/range-bays.jpg" alt="Elevated hitting bays at Big Moose Driving Range" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/yard-games-mini-golf.jpg" alt="Yard games and mini golf area at Big Moose" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/putting-green.jpg" alt="Putting green at Big Moose Driving Range" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/range-targets.jpg" alt="Marked range targets at Big Moose" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/golden-hour-range.jpg" alt="Big Moose driving range at golden hour" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
                         </a>
-                        <a href="https://www.instagram.com/bigmoosedrivingrange/" className="insta-item" target="_blank" rel="noopener noreferrer">
+                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance sign" />
                             <div className="insta-overlay"><i className="fa-brands fa-instagram"></i></div>
