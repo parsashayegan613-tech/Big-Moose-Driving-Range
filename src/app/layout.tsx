@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Luckiest_Guy, Outfit, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalComponents from "@/components/GlobalComponents";
 import StructuredData from "@/components/StructuredData";
+import AnalyticsEvents from "@/components/AnalyticsEvents";
 import { siteConfig } from "@/lib/siteConfig";
 
 const outfit = Outfit({
@@ -75,6 +77,8 @@ export default function RootLayout({
         <Footer />
         <GlobalComponents />
         <StructuredData />
+        <Analytics />
+        <AnalyticsEvents />
       </body>
     </html>
   );

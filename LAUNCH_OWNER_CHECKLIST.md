@@ -41,9 +41,9 @@ These are the final launch and account-access tasks that cannot be completed onl
 
 ## Analytics And Tracking
 
-- [ ] Decide whether to use Google Analytics, Google Tag Manager, Vercel Analytics, or a combination.
-- [ ] Create the analytics property in the owner/client account.
-- [ ] Provide the Measurement ID or Tag Manager ID for implementation.
+- [x] Use Vercel Analytics for pageview tracking and key click tracking.
+- [x] Add code-side tracking for Pricing, Directions, Call, Email, Google Maps, Google review, contact-form email, and instructor-link clicks.
+- [ ] Enable/confirm Vercel Analytics on the production Vercel project if the dashboard requires owner approval.
 - [ ] Verify key click tracking after launch:
   - Pricing clicks
   - Directions clicks

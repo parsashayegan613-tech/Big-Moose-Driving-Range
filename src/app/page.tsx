@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import HeroBackground from '@/components/HeroBackground';
 import RangeIcon from '@/components/RangeIcon';
 import TrackedCta from '@/components/TrackedCta';
-import { ctaLinks, siteConfig } from '@/lib/siteConfig';
+import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Big Moose Driving Range | Edmonton Golf Practice Facility",
@@ -248,11 +248,12 @@ export default function Home() {
                         <div className="testimonial-carousel-track">
                             {reviews.map((review, index) => (
                                 <a
-                                    href={siteConfig.googleReviewsUrl}
+                                    href={ctaLinks.googleReviews.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="testimonial-card google-review-card"
                                     data-testimonial={index}
+                                    {...ctaTracking(ctaLinks.googleReviews.action, "home_testimonials")}
                                     aria-label={`Open Big Moose Driving Range Google reviews: ${review.author}`}
                                     key={review.author}
                                 >

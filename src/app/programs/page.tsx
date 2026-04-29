@@ -173,8 +173,12 @@ export default function ProgramsPage() {
                                 <p>Book one-on-one instruction for swing work, fundamentals, and structured practice support.</p>
                             </div>
                             <div className="pro-actions">
-                                <a href="https://menorgolf.com" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn"><i className="fa-solid fa-globe"></i> menorgolf.com</a>
-                                <a href="tel:+17806601963" className="btn btn-primary"><i className="fa-solid fa-phone"></i> (780) 660-1963</a>
+                                <TrackedCta href={ctaLinks.aaronMenorWebsite.href} action={ctaLinks.aaronMenorWebsite.action} placement="programs_teaching_pros" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn">
+                                    <i className="fa-solid fa-globe"></i> {ctaLinks.aaronMenorWebsite.label}
+                                </TrackedCta>
+                                <TrackedCta href={ctaLinks.aaronMenorCall.href} action={ctaLinks.aaronMenorCall.action} placement="programs_teaching_pros" className="btn btn-primary">
+                                    <i className="fa-solid fa-phone"></i> {ctaLinks.aaronMenorCall.label}
+                                </TrackedCta>
                             </div>
                         </div>
 
@@ -188,8 +192,12 @@ export default function ProgramsPage() {
                                 <p>Reach out for lesson availability, swing feedback, and practice planning.</p>
                             </div>
                             <div className="pro-actions">
-                                <a href="https://app.swingmatchgolf.com/my/instructors/cameron-kyle-0103" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn"><i className="fa-solid fa-globe"></i> Swing Match Profile</a>
-                                <a href="mailto:cakyle8@gmail.com" className="btn btn-primary pro-email-btn"><i className="fa-solid fa-envelope"></i> cakyle8@gmail.com</a>
+                                <TrackedCta href={ctaLinks.camKyleSwingMatch.href} action={ctaLinks.camKyleSwingMatch.action} placement="programs_teaching_pros" target="_blank" rel="noopener noreferrer" className="btn pro-link-btn">
+                                    <i className="fa-solid fa-globe"></i> {ctaLinks.camKyleSwingMatch.label}
+                                </TrackedCta>
+                                <TrackedCta href={ctaLinks.camKyleEmail.href} action={ctaLinks.camKyleEmail.action} placement="programs_teaching_pros" className="btn btn-primary pro-email-btn">
+                                    <i className="fa-solid fa-envelope"></i> {ctaLinks.camKyleEmail.label}
+                                </TrackedCta>
                             </div>
                         </div>
                     </div>

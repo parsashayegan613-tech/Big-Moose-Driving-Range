@@ -40,6 +40,11 @@ export const ctaLinks = {
     label: "Open in Google Maps",
     action: "open_google_maps",
   },
+  googleReviews: {
+    href: siteConfig.googleReviewsUrl,
+    label: "Open Google Reviews",
+    action: "open_google_reviews",
+  },
   call: {
     href: siteConfig.phoneHref,
     label: "Call Us",
@@ -54,6 +59,26 @@ export const ctaLinks = {
     href: `${siteConfig.emailHref}?subject=Field%20Trip%20Inquiry%20-%20Big%20Moose%20Driving%20Range`,
     label: "Email Inquiry",
     action: "email_field_trip_inquiry",
+  },
+  aaronMenorWebsite: {
+    href: "https://menorgolf.com",
+    label: "menorgolf.com",
+    action: "open_aaron_menor_website",
+  },
+  aaronMenorCall: {
+    href: "tel:+17806601963",
+    label: "(780) 660-1963",
+    action: "call_aaron_menor",
+  },
+  camKyleSwingMatch: {
+    href: "https://app.swingmatchgolf.com/my/instructors/cameron-kyle-0103",
+    label: "Swing Match Profile",
+    action: "open_cam_kyle_swing_match",
+  },
+  camKyleEmail: {
+    href: "mailto:cakyle8@gmail.com",
+    label: "cakyle8@gmail.com",
+    action: "email_cam_kyle",
   },
   campInquiry: {
     href: `${siteConfig.contactPath}?subject=Junior%20Camp%20Inquiry#contact`,
