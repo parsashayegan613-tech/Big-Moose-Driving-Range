@@ -3028,19 +3028,6 @@ h1, h2, h3, h4 {
     font-size: 0.85rem;
 }
 
-.footer-legal {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-legal a {
-    transition: var(--transition);
-}
-
-.footer-legal a:hover {
-    color: var(--clr-brand-brown);
-}
-
 @media (max-width: 768px) {
     .footer-cta {
         align-items: flex-start;

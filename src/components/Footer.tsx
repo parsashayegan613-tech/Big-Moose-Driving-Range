@@ -58,10 +58,6 @@ export default function Footer() {
         </div>
         <div className="container footer-bottom">
             <p>&copy; 2026 Big Moose Driving Range. All rights reserved.</p>
-            <div className="footer-legal">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
         </div>
     </footer>
   );
