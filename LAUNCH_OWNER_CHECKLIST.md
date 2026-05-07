@@ -59,7 +59,7 @@ These are the final launch and account-access tasks that cannot be completed onl
 - [ ] Verify a sending domain or approved sender in Resend.
 - [ ] Add these environment variables to the Vercel project:
   - `RESEND_API_KEY`
-  - `RESEND_FROM_EMAIL`
+  - `CONTACT_FROM_EMAIL`
   - `CONTACT_TO_EMAIL` if different from `bigmoosedrivingrange@gmail.com`
 - [ ] Redeploy after the environment variables are added.
 - [ ] Submit a test message from the production Contact page and confirm it lands in the Big Moose inbox.

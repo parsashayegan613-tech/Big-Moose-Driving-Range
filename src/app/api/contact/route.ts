@@ -166,9 +166,9 @@ export async function POST(request: Request) {
 
   const fields = { name, email, phone, subject, message };
   const toEmail = process.env.CONTACT_TO_EMAIL || siteConfig.email;
-  const fromEmail = process.env.RESEND_FROM_EMAIL;
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || process.env.RESEND_FROM_EMAIL;
 
-  if (!fromEmail) {
+  if (!process.env.RESEND_API_KEY || !fromEmail) {
     return NextResponse.json(
       { error: 'Email sending is not configured yet.' },
       { status: 500 },

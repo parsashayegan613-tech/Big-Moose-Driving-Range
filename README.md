@@ -26,11 +26,11 @@ The Contact page posts to `/api/contact` and sends email through Resend. Add the
 
 ```bash
 RESEND_API_KEY=your_resend_api_key
-RESEND_FROM_EMAIL="Big Moose Driving Range <hello@your-verified-domain.com>"
+CONTACT_FROM_EMAIL="Big Moose Driving Range <hello@your-verified-domain.com>"
 CONTACT_TO_EMAIL=bigmoosedrivingrange@gmail.com
 ```
 
-`CONTACT_TO_EMAIL` is optional and defaults to `bigmoosedrivingrange@gmail.com`. `RESEND_FROM_EMAIL` must be a sender/domain verified in Resend.
+`CONTACT_TO_EMAIL` is optional and defaults to `bigmoosedrivingrange@gmail.com`. `CONTACT_FROM_EMAIL` must be a sender/domain verified in Resend. `RESEND_FROM_EMAIL` is still supported as a fallback for older deployments.
 
 ## Learn More
 
