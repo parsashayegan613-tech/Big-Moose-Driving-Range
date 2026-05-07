@@ -6,6 +6,19 @@ import Icon from './Icon';
 import { ctaLinks, siteConfig } from '@/lib/siteConfig';
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      href: siteConfig.social.instagram,
+      label: 'Instagram',
+      icon: 'instagram' as const,
+    },
+    {
+      href: siteConfig.social.facebook,
+      label: 'Facebook',
+      icon: 'facebook' as const,
+    },
+  ];
+
   return (
     <footer className="footer">
         <div className="container footer-cta">
@@ -52,8 +65,11 @@ export default function Footer() {
             <div className="footer-social">
                 <h4>Connect</h4>
                 <div className="social-icons">
-                    <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Icon name="instagram" /></a>
-                    <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Icon name="facebook" /></a>
+                    {socialLinks.map((link) => (
+                        <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label} key={link.label}>
+                            <Icon name={link.icon} />
+                        </a>
+                    ))}
                 </div>
             </div>
         </div>

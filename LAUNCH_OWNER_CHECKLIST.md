@@ -53,6 +53,18 @@ These are the final launch and account-access tasks that cannot be completed onl
   - Instructor links
 - [ ] Confirm analytics data is being received after the site goes live.
 
+## Contact Form Email Delivery
+
+- [ ] Create or log in to the Resend account that Big Moose should own.
+- [ ] Verify a sending domain or approved sender in Resend.
+- [ ] Add these environment variables to the Vercel project:
+  - `RESEND_API_KEY`
+  - `RESEND_FROM_EMAIL`
+  - `CONTACT_TO_EMAIL` if different from `bigmoosedrivingrange@gmail.com`
+- [ ] Redeploy after the environment variables are added.
+- [ ] Submit a test message from the production Contact page and confirm it lands in the Big Moose inbox.
+- [ ] Confirm reply-to points back to the visitor email address.
+
 ## Social Profiles
 
 - [ ] Confirm Instagram profile access: `https://www.instagram.com/bigmoosedrivingrange/`.

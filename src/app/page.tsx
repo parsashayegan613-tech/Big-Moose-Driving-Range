@@ -24,6 +24,34 @@ export default function Home() {
         "Premium Titleist",
         "Open Daily",
     ];
+    const ambientParticles = ["p-1", "p-2", "p-3", "p-4", "p-5"];
+    const ratingStars = [1, 2, 3, 4, 5];
+    const instagramItems = [
+        {
+            src: "/images/range/range-bays.jpg",
+            alt: "Elevated hitting bays at Big Moose Driving Range",
+        },
+        {
+            src: "/images/range/yard-games-mini-golf.jpg",
+            alt: "Yard games and mini golf area at Big Moose",
+        },
+        {
+            src: "/images/range/putting-green.jpg",
+            alt: "Putting green at Big Moose Driving Range",
+        },
+        {
+            src: "/images/range/range-targets.jpg",
+            alt: "Marked range targets at Big Moose",
+        },
+        {
+            src: "/images/range/golden-hour-range.jpg",
+            alt: "Big Moose driving range at golden hour",
+        },
+        {
+            src: "/images/range/entrance-sign.jpg",
+            alt: "Big Moose Driving Range entrance sign",
+        },
+    ];
     const reviews = [
         {
             author: "Cory Collins",
@@ -70,42 +98,11 @@ export default function Home() {
                 <HeroBackground />
                 <div className="hero-overlay"></div>
 
-                {/* Floating Glass Elements & Particles */}
+                {/* Ambient Particles */}
                 <div className="hero-particles">
-                    <div className="glass-floating-card glass-card-1">
-                        <Image src="/images/icons/elevated-mats-icon.png" alt="" width={72} height={72} className="glass-floating-icon-img" aria-hidden="true" />
-                        <div>
-                            <strong>35 Bays</strong>
-                            <span>Open Now</span>
-                        </div>
-                    </div>
-                    <div className="glass-floating-card glass-card-2">
-                        <RangeIcon name="balls" />
-                        <div>
-                            <strong>Premium Balls</strong>
-                            <span>Titleist & Callaway</span>
-                        </div>
-                    </div>
-                    <div className="glass-floating-card glass-card-3">
-                        <RangeIcon name="target" />
-                        <div>
-                            <strong>Range Targets</strong>
-                            <span>Marked distances</span>
-                        </div>
-                    </div>
-                    <div className="glass-floating-card glass-card-4">
-                        <RangeIcon name="miniGolf" />
-                        <div>
-                            <strong>Mini Golf</strong>
-                            <span>Stay & play</span>
-                        </div>
-                    </div>
-                    {/* Ambient Dust Particles */}
-                    <div className="ambient-particle p-1"></div>
-                    <div className="ambient-particle p-2"></div>
-                    <div className="ambient-particle p-3"></div>
-                    <div className="ambient-particle p-4"></div>
-                    <div className="ambient-particle p-5"></div>
+                    {ambientParticles.map((particleClass) => (
+                        <div key={particleClass} className={`ambient-particle ${particleClass}`}></div>
+                    ))}
                 </div>
 
                 <div className="container hero-content text-center reveal active">
@@ -141,37 +138,6 @@ export default function Home() {
                     <div className="scroll-line"></div>
                 </div>
             </header>
-
-            <section className="mobile-hero-feature-grid" aria-label="Range highlights">
-                <div className="mobile-hero-feature">
-                    <Image src="/images/icons/elevated-mats-icon.png" alt="" width={72} height={72} aria-hidden="true" />
-                    <div>
-                        <strong>35 Bays</strong>
-                        <span>Open now</span>
-                    </div>
-                </div>
-                <div className="mobile-hero-feature">
-                    <RangeIcon name="balls" />
-                    <div>
-                        <strong>Premium Balls</strong>
-                        <span>Titleist & Callaway</span>
-                    </div>
-                </div>
-                <div className="mobile-hero-feature">
-                    <RangeIcon name="target" />
-                    <div>
-                        <strong>Targets</strong>
-                        <span>Marked distances</span>
-                    </div>
-                </div>
-                <div className="mobile-hero-feature">
-                    <RangeIcon name="miniGolf" />
-                    <div>
-                        <strong>Mini Golf</strong>
-                        <span>Stay & play</span>
-                    </div>
-                </div>
-            </section>
 
             {/* Marquee Ticker */}
             <div className="marquee-section">
@@ -254,7 +220,7 @@ export default function Home() {
                                     aria-label={`Open Big Moose Driving Range Google reviews: ${review.author}`}
                                     key={review.author}
                                 >
-                                    <div className="google-review-topline">
+                                    <div className="google-review-topline" key="topline">
                                         <div className="google-reviewer">
                                             <div className="testimonial-avatar">{review.initial}</div>
                                             <div>
@@ -266,15 +232,13 @@ export default function Home() {
                                             <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
                                         </span>
                                     </div>
-                                    <div className="testimonial-stars" aria-label="5 star rating">
-                                        <Icon name="star" filled />
-                                        <Icon name="star" filled />
-                                        <Icon name="star" filled />
-                                        <Icon name="star" filled />
-                                        <Icon name="star" filled />
+                                    <div className="testimonial-stars" aria-label="5 star rating" key="stars">
+                                        {ratingStars.map((star) => (
+                                            <Icon name="star" filled key={star} />
+                                        ))}
                                     </div>
-                                    <p className="testimonial-text">&ldquo;{review.text}&rdquo;</p>
-                                    <div className="google-review-footer">
+                                    <p className="testimonial-text" key="text">&ldquo;{review.text}&rdquo;</p>
+                                    <div className="google-review-footer" key="footer">
                                         <span>Open on Google</span>
                                         <Icon name="externalLink" />
                                     </div>
@@ -366,30 +330,12 @@ export default function Home() {
                         <p className="text-lead">Tag us <strong>@bigmoosedrivingrange</strong> and show us your best shots.</p>
                     </div>
                     <div className="instagram-grid reveal">
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/range-bays.jpg" alt="Elevated hitting bays at Big Moose Driving Range" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/yard-games-mini-golf.jpg" alt="Yard games and mini golf area at Big Moose" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/putting-green.jpg" alt="Putting green at Big Moose Driving Range" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/range-targets.jpg" alt="Marked range targets at Big Moose" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/golden-hour-range.jpg" alt="Big Moose driving range at golden hour" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
-                        <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer">
-                            <Image src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance sign" width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" />
-                            <div className="insta-overlay"><Icon name="instagram" /></div>
-                        </a>
+                        {instagramItems.map((item) => (
+                            <a href={siteConfig.social.instagram} className="insta-item" target="_blank" rel="noopener noreferrer" key={item.src}>
+                                <Image src={item.src} alt={item.alt} width={360} height={360} sizes="(max-width: 640px) 50vw, 16vw" key="image" />
+                                <div className="insta-overlay" key="overlay"><Icon name="instagram" /></div>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </section>

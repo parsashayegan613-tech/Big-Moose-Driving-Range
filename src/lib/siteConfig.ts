@@ -56,7 +56,7 @@ export const ctaLinks = {
     action: "email_us",
   },
   fieldTripEmail: {
-    href: `${siteConfig.emailHref}?subject=Field%20Trip%20Inquiry%20-%20Big%20Moose%20Driving%20Range`,
+    href: `${siteConfig.contactPath}?subject=Field%20Trip%20Inquiry%20-%20Big%20Moose%20Driving%20Range#contact`,
     label: "Email Inquiry",
     action: "email_field_trip_inquiry",
   },

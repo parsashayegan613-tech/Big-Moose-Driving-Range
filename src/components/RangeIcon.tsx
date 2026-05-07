@@ -276,6 +276,8 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
 };
 
 export default function RangeIcon({ name, className = '' }: RangeIconProps) {
+  const icon = React.Children.toArray(iconPaths[name]);
+
   return (
     <svg
       className={`range-icon ${className}`.trim()}
@@ -283,7 +285,7 @@ export default function RangeIcon({ name, className = '' }: RangeIconProps) {
       aria-hidden="true"
       focusable="false"
     >
-      {iconPaths[name]}
+      {icon}
     </svg>
   );
 }

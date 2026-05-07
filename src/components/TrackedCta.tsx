@@ -32,11 +32,12 @@ export default function TrackedCta({
   onClick,
 }: TrackedCtaProps) {
   const tracking = ctaTracking(action, placement);
+  const content = <span className="tracked-cta-content">{children}</span>;
 
   if (isInternalHref(href)) {
     return (
       <Link href={href} prefetch={false} className={className} style={style} aria-label={ariaLabel} onClick={onClick} {...tracking}>
-        {children}
+        {content}
       </Link>
     );
   }
@@ -52,7 +53,7 @@ export default function TrackedCta({
       onClick={onClick}
       {...tracking}
     >
-      {children}
+      {content}
     </a>
   );
 }

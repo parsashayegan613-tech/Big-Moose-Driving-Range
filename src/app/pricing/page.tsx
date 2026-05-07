@@ -42,7 +42,17 @@ export default function PricingPage() {
                             <strong>$15.50</strong>
                         </div>
                         <div className="pricing-summary-row">
-                            <span>Best Punch Card</span>
+                            <span>10 Small Punch Card</span>
+                            <span>10 small buckets</span>
+                            <strong>$70</strong>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>10 Large Punch Card</span>
+                            <span>10 large buckets</span>
+                            <strong>$125</strong>
+                        </div>
+                        <div className="pricing-summary-row">
+                            <span>20 Large Punch Card</span>
                             <span>20 large buckets</span>
                             <strong>$200</strong>
                         </div>

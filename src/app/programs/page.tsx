@@ -1,10 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import Icon from '@/components/Icon';
 import TrackedCta from '@/components/TrackedCta';
-import { ctaLinks, siteConfig } from '@/lib/siteConfig';
+import { ctaLinks } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Programs & Teaching Pros",
@@ -47,107 +46,10 @@ export default function ProgramsPage() {
                                 </div>
                                 <h3 className="heading-md">Field Trip Program</h3>
                                 <p className="mb-4">A curriculum-aligned Physical Education field trip for Grades 7-12, built around golf fundamentals, safety, and active outdoor learning.</p>
-                                <Link href="#field-trips" className="btn btn-primary w-full">View Proposal</Link>
+                                <TrackedCta href={ctaLinks.fieldTripEmail.href} action={ctaLinks.fieldTripEmail.action} placement="programs_field_trip_card" className="btn btn-primary w-full">
+                                    {ctaLinks.fieldTripEmail.label}
+                                </TrackedCta>
                             </div>
-                        </div>
-                    </div>
-                    <div className="program-interest-panel reveal">
-                        <div>
-                            <span className="badge premium-badge">School Groups</span>
-                            <h3 className="heading-md">Need approval materials for your school?</h3>
-                            <p>The field trip proposal below includes curriculum alignment, safety measures, pricing, and the information teachers need to submit for approval.</p>
-                        </div>
-                        <Link href="#field-trips" className="btn btn-accent">Review Details</Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* Field Trip Proposal */}
-            <section id="field-trips" className="section field-trip-section">
-                <div className="container">
-                    <div className="section-header field-trip-header text-center reveal">
-                        <span className="badge premium-badge mb-4">Physical Education</span>
-                        <h2 className="heading-lg text-reveal">Field Trip Proposal</h2>
-                        <p className="text-lead">A safe, inclusive, and engaging golf program designed to support Alberta Physical Education learning outcomes for Grades 7-12.</p>
-                    </div>
-
-                    <div className="field-trip-hero reveal">
-                        <div>
-                            <span className="cta-badge"><Icon name="flag" /> Spring-Fall, weather dependent</span>
-                            <h3>Big Moose Driving Range Physical Education Field Trip</h3>
-                            <p>Students rotate through hitting bays and learn the fundamentals of golf, including grip, stance, balance, coordination, and swing technique. The experience is adaptable for different skill levels and focused on participation, effort, and confidence.</p>
-                        </div>
-                        <div className="field-trip-price">
-                            <span>$15</span>
-                            <p>per student</p>
-                            <small>Includes one large bucket of balls and shared rental clubs if needed.</small>
-                        </div>
-                    </div>
-
-                    <div className="field-trip-outcomes stagger-reveal">
-                        <div className="field-trip-outcome reveal">
-                            <span className="outcome-code" aria-hidden="true">PE</span>
-                            <div>
-                                <h3>Physical Literacy</h3>
-                                <p>Students develop movement skills through grip, stance, posture, balance, hand-eye coordination, spatial awareness, and controlled swing patterns.</p>
-                            </div>
-                        </div>
-                        <div className="field-trip-outcome reveal">
-                            <span className="outcome-code" aria-hidden="true">HL</span>
-                            <div>
-                                <h3>Healthy Active Living</h3>
-                                <p>Golf is introduced as a lifelong outdoor activity that supports regular movement, mental focus, and continued participation beyond school.</p>
-                            </div>
-                        </div>
-                        <div className="field-trip-outcome reveal">
-                            <span className="outcome-code" aria-hidden="true">ET</span>
-                            <div>
-                                <h3>Responsibility & Etiquette</h3>
-                                <p>Students practice respect for peers, instructors, shared spaces, routines, patience, and safe conduct in a group setting.</p>
-                            </div>
-                        </div>
-                        <div className="field-trip-outcome reveal">
-                            <span className="outcome-code" aria-hidden="true">SF</span>
-                            <div>
-                                <h3>Safety & Risk Awareness</h3>
-                                <p>Staff provide clear safety briefings around equipment handling, swing zones, physical boundaries, and supervised activity flow.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="field-trip-document reveal">
-                        <div className="field-trip-panel">
-                            <h3>Facility Information</h3>
-                            <ul>
-                                <li><strong>Facility:</strong> Big Moose Driving Range</li>
-                                <li><strong>Address:</strong> {siteConfig.streetAddress}, {siteConfig.city}</li>
-                                <li><strong>Season:</strong> Spring-Fall, weather dependent</li>
-                                <li><strong>Supervision:</strong> On-site staff at all times</li>
-                            </ul>
-                        </div>
-                        <div className="field-trip-panel">
-                            <h3>Required Inquiry Details</h3>
-                            <ul>
-                                <li>School name and teacher / PE lead</li>
-                                <li>Teacher email and phone number</li>
-                                <li>Proposed grades, student count, and supervising staff count</li>
-                                <li>Proposed date, arrival time, and departure time</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="field-trip-cta reveal">
-                        <div>
-                            <h3>Ready to plan a field trip?</h3>
-                            <p>Contact us with your school details, proposed dates, grade level, group size, and any accessibility or supervision questions.</p>
-                        </div>
-                        <div className="field-trip-actions">
-                            <TrackedCta href={ctaLinks.call.href} action={ctaLinks.call.action} placement="field_trip_cta" className="btn btn-primary">
-                                <Icon name="phone" /> {ctaLinks.call.label}
-                            </TrackedCta>
-                            <TrackedCta href={ctaLinks.fieldTripEmail.href} action={ctaLinks.fieldTripEmail.action} placement="field_trip_cta" className="btn btn-accent">
-                                <Icon name="mail" /> {ctaLinks.fieldTripEmail.label}
-                            </TrackedCta>
                         </div>
                     </div>
                 </div>
@@ -198,6 +100,22 @@ export default function ProgramsPage() {
                                     <Icon name="mail" /> {ctaLinks.camKyleEmail.label}
                                 </TrackedCta>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="field-trips" className="section field-trip-section">
+                <div className="container">
+                    <div className="field-trip-cta reveal">
+                        <div>
+                            <h3>Ready to plan a field trip?</h3>
+                            <p>Contact us with your school details, proposed dates, grade level, group size, and any accessibility or supervision questions.</p>
+                        </div>
+                        <div className="field-trip-actions">
+                            <TrackedCta href={ctaLinks.fieldTripEmail.href} action={ctaLinks.fieldTripEmail.action} placement="field_trip_cta" className="btn btn-accent">
+                                <Icon name="mail" /> {ctaLinks.fieldTripEmail.label}
+                            </TrackedCta>
                         </div>
                     </div>
                 </div>

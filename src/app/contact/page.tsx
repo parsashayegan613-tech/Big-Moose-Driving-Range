@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import ContactForm from '@/components/ContactForm';
 import Icon from '@/components/Icon';
 import TrackedCta from '@/components/TrackedCta';
-import { ctaLinks, ctaTracking, siteConfig } from '@/lib/siteConfig';
+import { ctaLinks, siteConfig } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Contact & Location",
@@ -85,19 +86,9 @@ export default function ContactPage() {
             <section id="contact" className="section contact pt-0">
                 <div className="container">
                     <div className="contact-form-card reveal">
-                        <form action={siteConfig.emailHref} method="GET" encType="text/plain" className="contact-form">
-                            <div className="form-field">
-                                <label htmlFor="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="e.g. Group booking inquiry" className="form-input" required />
-                            </div>
-                            <div className="form-field">
-                                <label htmlFor="body">Message</label>
-                                <textarea id="body" name="body" rows={5} placeholder="How can we help you?" className="form-textarea" required></textarea>
-                            </div>
-                            <button type="submit" className="btn btn-primary contact-submit" {...ctaTracking(ctaLinks.email.action, "contact_form")}>
-                                <Icon name="paperPlane" /> Send via Email Client
-                            </button>
-                        </form>
+                        <Suspense fallback={null}>
+                            <ContactForm />
+                        </Suspense>
                     </div>
                 </div>
             </section>
