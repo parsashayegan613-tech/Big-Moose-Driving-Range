@@ -40,7 +40,7 @@ export default function ContactPage() {
                 "name": "What's the senior discount?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Seniors receive 30% off all bucket sizes at the point of sale."
+                    "text": "Seniors receive 30% off all bucket sizes Monday-Friday at the point of sale."
                 }
             },
             {
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 "name": "What are the bucket prices?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes."
+                    "text": "Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes Monday-Friday."
                 }
             },
             {
@@ -209,7 +209,7 @@ export default function ContactPage() {
                                 <span className="faq-icon" aria-hidden="true"></span>
                             </button>
                             <div className="faq-answer">
-                                <p>Seniors receive 30% off all bucket sizes. This discount applies at the point of sale — just let us know when purchasing your bucket.</p>
+                                <p>Seniors receive 30% off all bucket sizes Monday-Friday. This discount applies at the point of sale — just let us know when purchasing your bucket.</p>
                             </div>
                         </div>
 
@@ -229,7 +229,7 @@ export default function ContactPage() {
                                 <span className="faq-icon" aria-hidden="true"></span>
                             </button>
                             <div className="faq-answer">
-                                <p>Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes.</p>
+                                <p>Small buckets are $10.50 and large buckets are $15.50. Seniors receive 30% off all bucket sizes Monday-Friday.</p>
                             </div>
                         </div>
 

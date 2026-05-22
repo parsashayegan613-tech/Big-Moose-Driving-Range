@@ -37,7 +37,7 @@ export default function FacilitiesPage() {
                         </div>
                         <div className="stat-item">
                             <span className="stat-number" data-target="30" data-suffix="%">0</span>
-                            <span className="stat-label">Senior Discount</span>
+                            <span className="stat-label">Senior Discount Monday-Friday</span>
                         </div>
                     </div>
 

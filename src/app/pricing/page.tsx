@@ -8,7 +8,7 @@ import { ctaLinks } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Pricing & Packages",
-    description: "View Big Moose Driving Range pricing for small and large buckets, punch cards, club rentals, and the 30% senior discount in southwest Edmonton.",
+    description: "View Big Moose Driving Range pricing for small and large buckets, punch cards, club rentals, and the Monday-Friday 30% senior discount in southwest Edmonton.",
     alternates: {
         canonical: "/pricing",
     },
@@ -22,7 +22,7 @@ export default function PricingPage() {
                     <div className="section-header subpage-header text-center reveal">
                         <span className="badge premium-badge mb-4">Affordable Practice</span>
                         <h1 className="heading-xl subpage-title text-reveal">Pricing & Packages</h1>
-                        <p className="text-lead max-w-2xl mx-auto mt-6">Simple, affordable pricing. Grab a bucket and start swinging. Seniors get 30% off all buckets!</p>
+                        <p className="text-lead max-w-2xl mx-auto mt-6">Simple, affordable pricing. Grab a bucket and start swinging. Seniors get 30% off all buckets Monday-Friday.</p>
                     </div>
 
                     <div className="pricing-summary reveal" aria-label="Pricing summary">
@@ -63,7 +63,7 @@ export default function PricingPage() {
                         </div>
                         <div className="pricing-summary-row pricing-summary-highlight">
                             <span>Senior Discount</span>
-                            <span>All buckets</span>
+                            <span>All buckets Monday-Friday</span>
                             <strong>30% off</strong>
                         </div>
                     </div>
@@ -164,7 +164,7 @@ export default function PricingPage() {
                             </div>
                             <div>
                                 <h4>Senior Discount</h4>
-                                <p>30% off all buckets</p>
+                                <p>30% off all buckets Monday-Friday</p>
                             </div>
                         </div>
                     </div>

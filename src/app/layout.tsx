@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Big Moose Driving Range | Edmonton Golf Practice Facility",
     template: "%s | Big Moose Driving Range",
   },
-  description: "Big Moose Driving Range in southwest Edmonton offers 35 elevated mats, premium Titleist balls, affordable bucket pricing, and a 30% senior discount.",
+  description: "Big Moose Driving Range in southwest Edmonton offers 35 elevated mats, premium Titleist balls, affordable bucket pricing, and a Monday-Friday 30% senior discount.",
   alternates: {
     canonical: "/",
   },
