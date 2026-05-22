@@ -59,7 +59,7 @@ export default function FacilitiesPage() {
                         {/* Feature 2 */}
                         <div className="feature-card reveal">
                             <div className="feature-card-img">
-                                <Image src="/images/feature-balls.svg" alt="Titleist and Callaway golf balls" width={900} height={675} />
+                                <Image src="/images/range/titleist-callaway-balls.jpg" alt="Titleist and Callaway golf balls at Big Moose Driving Range" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" quality={75} />
                             </div>
                             <div className="feature-card-body">
                                 <div className="feature-icon"><RangeIcon name="balls" /></div>
