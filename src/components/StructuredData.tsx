@@ -9,7 +9,7 @@ export default function StructuredData() {
         "@id": `${siteConfig.siteUrl}/#localbusiness`,
         "name": siteConfig.name,
         "url": `${siteConfig.siteUrl}/`,
-        "description": "Big Moose Driving Range is a golf practice facility in southwest Edmonton with elevated mats, premium practice balls, targets, mini golf, grass range access, and teaching pros.",
+        "description": "Big Moose Driving Range is a golf practice facility in southwest Edmonton with elevated mats, premium practice balls, targets, mini golf, yard games, and teaching pros.",
         "telephone": siteConfig.phoneE164,
         "email": siteConfig.email,
         "hasMap": siteConfig.directionsUrl,

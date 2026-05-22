@@ -79,7 +79,6 @@ These are the final launch and account-access tasks that cannot be completed onl
 - [ ] Confirm punch-card pricing is final.
 - [ ] Confirm hours and seasonal opening details.
 - [ ] Confirm food cart availability.
-- [ ] Confirm grass range availability.
 - [ ] Confirm instructor details:
   - Aaron Menor website and phone
   - Cam Kyle Swing Match profile and email

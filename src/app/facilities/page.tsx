@@ -8,7 +8,7 @@ import { ctaLinks } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Facilities",
-    description: "Explore Big Moose Driving Range facilities in Edmonton, including 35 elevated mats, premium balls, range targets, chipping and putting, mini golf, yard games, and grass range access.",
+    description: "Explore Big Moose Driving Range facilities in Edmonton, including 35 elevated mats, premium balls, range targets, chipping and putting, mini golf, and yard games.",
     alternates: {
         canonical: "/facilities",
     },
@@ -113,20 +113,6 @@ export default function FacilitiesPage() {
                         {/* Feature 6 */}
                         <div className="feature-card reveal">
                             <div className="feature-card-img">
-                                <Image src="/images/range/golden-hour-range.jpg" alt="Grass hitting area at Big Moose Driving Range" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" />
-                            </div>
-                            <div className="feature-card-body">
-                                <div className="feature-icon">
-                                    <Image src="/images/icons/grass-range-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
-                                </div>
-                                <h3 className="heading-md mt-4">Grass Range</h3>
-                                <p>Hit off real grass on our dedicated grass range. Over 8 bays available, open Friday through Sunday.</p>
-                            </div>
-                        </div>
-
-                        {/* Feature 7 */}
-                        <div className="feature-card reveal">
-                            <div className="feature-card-img">
                                 <Image src="/images/range/putting-green.jpg" alt="Chipping and putting green at Big Moose Driving Range" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                             <div className="feature-card-body">
@@ -138,7 +124,7 @@ export default function FacilitiesPage() {
                             </div>
                         </div>
 
-                        {/* Feature 8 */}
+                        {/* Feature 7 */}
                         <div className="feature-card reveal">
                             <div className="feature-card-img">
                                 <Image src="/images/range/yard-games-mini-golf.jpg" alt="Yard games at Big Moose Driving Range" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" />

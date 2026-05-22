@@ -9,7 +9,6 @@ export type RangeIconName =
   | 'sign'
   | 'flag'
   | 'miniGolf'
-  | 'grass'
   | 'shortGame'
   | 'yardGames'
   | 'swing'
@@ -143,13 +142,6 @@ const iconPaths: Record<RangeIconName, React.ReactNode> = {
       <path d="M36 50c7 2 14 1 19-3" stroke={blue} strokeWidth="4" strokeLinecap="round" />
       <GolfBall cx={46} cy={41} r={5} />
       <path d="M39 37c3-2 7-2 10 0" stroke={tan} strokeWidth="4" strokeLinecap="round" />
-    </>
-  ),
-  grass: (
-    <>
-      <path d="M10 51h44V42H10z" fill={tan} {...strokeProps} />
-      <path d="M14 42c4-14 6-18 9-26 0 13 2 18 3 25 5-18 8-24 12-30-1 16 0 22 2 30 4-13 8-19 12-25-2 13-2 19 0 26Z" fill={green} {...strokeProps} />
-      <path d="M21 42c2-8 4-14 8-20M37 42c1-10 4-17 9-23" stroke={blueDark} strokeWidth="3" strokeLinecap="round" />
     </>
   ),
   shortGame: (
