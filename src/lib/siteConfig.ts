@@ -12,7 +12,7 @@ export const siteConfig = {
   region: "AB",
   postalCode: "T6Y 0H4",
   country: "CA",
-  directionsUrl: "https://www.google.com/maps/search/?api=1&query=Big%20Moose%20Driving%20Range%20Edmonton%20AB",
+  directionsUrl: "https://www.google.com/maps?cid=5294932129446520832",
   mapsEmbedUrl: "https://maps.google.com/maps?q=Big+Moose+Driving+Range+Edmonton+AB&t=&z=15&ie=UTF8&iwloc=&output=embed",
   googleReviewsUrl: "https://www.google.com/search?q=Big+Moose+Driving+Range+Edmonton&ludocid=5294932129446520832#lrd=0x53a01d00212498d3:0x497b60b7cd766800,1,,,,",
   social: {
