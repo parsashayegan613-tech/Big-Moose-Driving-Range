@@ -85,7 +85,7 @@ export default function FacilitiesPage() {
                         {/* Feature 4 */}
                         <div className="feature-card reveal">
                             <div className="feature-card-img">
-                                <Image src="/images/feature-food.svg" alt="Hotdog cart at the driving range" width={900} height={675} />
+                                <Image src="/images/range/hotdog-cart.jpg" alt="Hotdog cart at Big Moose Driving Range" width={900} height={675} sizes="(max-width: 768px) 100vw, 50vw" quality={75} />
                             </div>
                             <div className="feature-card-body">
                                 <div className="feature-icon">
