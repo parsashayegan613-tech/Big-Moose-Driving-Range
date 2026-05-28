@@ -29,6 +29,7 @@ export default function ProgramsPage() {
                     <div className="features-grid stagger-reveal">
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
+                                <span className="program-status-badge">Dates coming soon</span>
                                 <div className="feature-icon mx-auto mb-4">
                                     <Image src="/images/icons/junior-camps-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
                                 </div>

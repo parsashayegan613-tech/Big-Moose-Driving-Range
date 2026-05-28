@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Icon from '@/components/Icon';
 import RangeIcon from '@/components/RangeIcon';
+import RangeGallery from '@/components/RangeGallery';
 import TrackedCta from '@/components/TrackedCta';
 import { ctaLinks } from '@/lib/siteConfig';
 
@@ -20,7 +21,7 @@ export default function FacilitiesPage() {
             <div className="container subpage-header text-center">
                 <span className="badge premium-badge mb-4">Premium Amenities</span>
                 <h1 className="heading-xl subpage-title text-reveal">Everything You Need <br /> To Improve Your Game</h1>
-                <p className="text-lead max-w-2xl mx-auto mt-6">From our pristine turf to our top-tier practice greens, Big Moose is designed for golfers who take their practice seriously.</p>
+                <p className="text-lead max-w-2xl mx-auto mt-6">Featuring elevated hitting mats, multiple tee sizes, Titleist and Callaway golf balls, and a dedicated short game area, Big Moose Driving Range is designed for golfers of all skill levels looking to improve their game. Whether you&apos;re brand new to golf or a seasoned player, you&apos;ll find a welcoming environment to practice, learn, and have fun.</p>
             </div>
 
             <section className="section features pb-24">
@@ -64,7 +65,7 @@ export default function FacilitiesPage() {
                             <div className="feature-card-body">
                                 <div className="feature-icon"><RangeIcon name="balls" /></div>
                                 <h3 className="heading-md mt-4">Titleist & Callaway Balls</h3>
-                                <p>Practice with the same quality balls the pros use. Every bucket is loaded with premium non-restricting Titleist and Callaway balls.</p>
+                                <p>Practice with quality golf balls. Every bucket is loaded with non-restricting Titleist and Callaway range balls.</p>
                             </div>
                         </div>
 
@@ -156,7 +157,7 @@ export default function FacilitiesPage() {
                 </div>
             </section>
 
-            {/* Gallery Section - Horizontal Scroll */}
+            {/* Gallery Section */}
             <section id="gallery" className="section gallery bg-secondary">
                 <div className="container">
                     <div className="section-header text-center reveal">
@@ -164,56 +165,7 @@ export default function FacilitiesPage() {
                         <p className="text-lead">Take a look at our facility and see what makes Big Moose the go-to driving range in Edmonton.</p>
                     </div>
                 </div>
-
-                <div className="gallery-horizontal-wrap">
-                    <div className="gallery-horizontal-track">
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/range-bays.jpg" alt="Range overview with hitting mats" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">01</span>
-                                <span className="gallery-h-label">The Range</span>
-                            </div>
-                        </div>
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/putting-green.jpg" alt="Practice putting green" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">02</span>
-                                <span className="gallery-h-label">Hitting Bays</span>
-                            </div>
-                        </div>
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/range-targets.jpg" alt="Open range with distance targets" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">03</span>
-                                <span className="gallery-h-label">In Action</span>
-                            </div>
-                        </div>
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/yard-games-mini-golf.jpg" alt="Mini golf and yard games area" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">04</span>
-                                <span className="gallery-h-label">Equipment</span>
-                            </div>
-                        </div>
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/golden-hour-range.jpg" alt="Golden hour view across the driving range" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">05</span>
-                                <span className="gallery-h-label">Golden Hour</span>
-                            </div>
-                        </div>
-                        <div className="gallery-h-item" data-lightbox>
-                            <Image src="/images/range/entrance-sign.jpg" alt="Big Moose Driving Range entrance signage" width={1200} height={900} sizes="(max-width: 768px) 90vw, 42vw" />
-                            <div className="gallery-h-overlay">
-                                <span className="gallery-h-number">06</span>
-                                <span className="gallery-h-label">Entrance Sign</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="gallery-h-progress">
-                        <div className="gallery-h-progress-bar"></div>
-                    </div>
-                </div>
+                <RangeGallery />
             </section>
         </main>
     );

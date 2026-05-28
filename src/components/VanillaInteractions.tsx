@@ -153,51 +153,6 @@ export default function VanillaInteractions() {
         );
       });
 
-      // --- Horizontal scroll gallery ---
-      const galleryWrap = document.querySelector(".gallery-horizontal-wrap");
-      const galleryTrack = document.querySelector(".gallery-horizontal-track");
-      const galleryProgressBar = document.querySelector(".gallery-h-progress-bar");
-
-      if (galleryWrap && galleryTrack && window.innerWidth > 768) {
-        const totalScroll = galleryTrack.scrollWidth - window.innerWidth;
-
-        gsapInstance.to(galleryTrack, {
-          x: -totalScroll,
-          ease: "none",
-          scrollTrigger: {
-            trigger: galleryWrap,
-            start: "top 24%",
-            end: () => `+=${totalScroll}`,
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            onUpdate: (self: any) => {
-              if (galleryProgressBar) {
-                (galleryProgressBar as HTMLElement).style.width = `${self.progress * 100}%`;
-              }
-            },
-          },
-        });
-
-        document.querySelectorAll(".gallery-h-item").forEach((item) => {
-          gsapInstance.fromTo(
-            item,
-            { opacity: 0.3, scale: 0.9 },
-            {
-              opacity: 1,
-              scale: 1,
-              duration: 0.28,
-              scrollTrigger: {
-                trigger: item,
-                containerAnimation: gsapInstance.getById?.("galleryScroll"),
-                start: "left 80%",
-                once: true,
-              },
-            }
-          );
-        });
-      }
-
       // --- CTA banner parallax ---
       const ctaBg = document.querySelector(".cta-banner-bg");
       if (ctaBg) {
