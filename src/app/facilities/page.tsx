@@ -32,7 +32,7 @@ export default function FacilitiesPage() {
                             <span className="stat-label">Elevated Mats</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-number" data-target="110">0</span>
+                            <span className="stat-number" data-target="100" data-prefix="~">0</span>
                             <span className="stat-label">Balls Per Large Bucket</span>
                         </div>
                         <div className="stat-item">

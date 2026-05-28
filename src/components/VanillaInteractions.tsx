@@ -235,10 +235,11 @@ export default function VanillaInteractions() {
           onEnter: () => {
             statNumbers.forEach((counter) => {
               const target = parseInt(counter.getAttribute("data-target") || "0");
+              const prefix = counter.getAttribute("data-prefix") || "";
               const suffix = counter.getAttribute("data-suffix") || "";
               gsapInstance.to({ val: 0 }, {
                 val: target, duration: 0.9, ease: "power2.out",
-                onUpdate: function () { counter.textContent = Math.round(this.targets()[0].val) + suffix; },
+                onUpdate: function () { counter.textContent = prefix + Math.round(this.targets()[0].val) + suffix; },
               });
             });
           },

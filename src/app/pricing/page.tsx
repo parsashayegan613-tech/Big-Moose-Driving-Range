@@ -33,12 +33,12 @@ export default function PricingPage() {
                         </div>
                         <div className="pricing-summary-row">
                             <span>Small Bucket</span>
-                            <span>45 balls</span>
+                            <span>Roughly 45 balls</span>
                             <strong>$10.50</strong>
                         </div>
                         <div className="pricing-summary-row">
                             <span>Large Bucket</span>
-                            <span>110 balls</span>
+                            <span>Roughly 100 balls</span>
                             <strong>$15.50</strong>
                         </div>
                         <div className="pricing-summary-row">
@@ -74,7 +74,7 @@ export default function PricingPage() {
                         {/* Small Bucket */}
                         <div className="pricing-card reveal">
                             <h3 className="heading-md">Small Bucket</h3>
-                            <p className="balls-count">45 Balls</p>
+                            <p className="balls-count">Roughly 45 Balls</p>
                             <div className="price">$10<span className="price-cents">.50</span></div>
                             <ul className="pricing-features">
                                 <li><span className="price-bullet"><RangeIcon name="balls" /></span> Titleist & Callaway balls</li>
@@ -87,7 +87,7 @@ export default function PricingPage() {
                         <div className="pricing-card popular reveal">
                             <div className="popular-badge">BEST VALUE</div>
                             <h3 className="heading-md">Large Bucket</h3>
-                            <p className="balls-count">110 Balls</p>
+                            <p className="balls-count">Roughly 100 Balls</p>
                             <div className="price">$15<span className="price-cents">.50</span></div>
                             <ul className="pricing-features">
                                 <li><span className="price-bullet"><RangeIcon name="balls" /></span> Titleist & Callaway balls</li>
