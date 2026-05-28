@@ -92,7 +92,7 @@ export default function FacilitiesPage() {
                                     <Image src="/images/icons/hotdog-cart-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
                                 </div>
                                 <h3 className="heading-md mt-4">Hotdog Cart</h3>
-                                <p>Grab a bite from our on-site hotdog cart. Available Friday-Sunday to fuel up your practice session.</p>
+                                <p>Grab a bite from our on-site hotdog cart. Available Saturday-Sunday from 11 AM-4 PM to fuel up your practice session.</p>
                             </div>
                         </div>
 
