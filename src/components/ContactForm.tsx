@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { track } from '@vercel/analytics';
 import Icon from '@/components/Icon';
 import { ctaLinks, ctaTracking } from '@/lib/siteConfig';
+import { gaEvent } from '@/lib/gtag';
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
@@ -47,6 +48,10 @@ export default function ContactForm() {
       track('Contact Form Submitted', {
         placement: 'contact_form',
         subject: payload.subject || 'Website inquiry',
+      });
+      gaEvent('contact_form_submitted', {
+        form_location: 'contact_page',
+        has_prefilled_subject: Boolean(initialSubject),
       });
 
       form.reset();

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Luckiest_Guy, Outfit } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -8,6 +9,7 @@ import GlobalComponents from "@/components/GlobalComponents";
 import StructuredData from "@/components/StructuredData";
 import AnalyticsEvents from "@/components/AnalyticsEvents";
 import { siteConfig } from "@/lib/siteConfig";
+import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -62,6 +64,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${brandDisplay.variable} antialiased`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <Navbar />
         {children}
         <Footer />
