@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     template: "%s | Big Moose Driving Range",
   },
   description: "Big Moose Driving Range in southwest Edmonton offers 35 elevated mats, premium Titleist balls, affordable bucket pricing, and a Monday-Friday 30% senior discount.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=big-moose-20260616", sizes: "any", type: "image/x-icon" },
+      { url: "/icon.png?v=big-moose-20260616", sizes: "434x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png?v=big-moose-20260616", sizes: "152x180", type: "image/png" }],
+  },
   alternates: {
     canonical: "/",
   },
