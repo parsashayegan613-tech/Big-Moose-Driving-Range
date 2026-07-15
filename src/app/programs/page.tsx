@@ -7,7 +7,7 @@ import { ctaLinks } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
     title: "Programs & Teaching Pros",
-    description: "Explore junior camp inquiries, school field trips, and teaching pros at Big Moose Driving Range in southwest Edmonton.",
+    description: "Explore school field trips and connect with teaching pros at Big Moose Driving Range in southwest Edmonton.",
     alternates: {
         canonical: "/programs",
     },
@@ -26,20 +26,7 @@ export default function ProgramsPage() {
             <section id="programs" className="section programs pt-0">
                 <div className="container">
                     <h2 className="heading-lg text-center mb-12">Programs & Events</h2>
-                    <div className="features-grid stagger-reveal">
-                        <div className="feature-card reveal glass-card">
-                            <div className="feature-card-body text-center py-10 w-full col-span-1">
-                                <span className="program-status-badge">Dates coming soon</span>
-                                <div className="feature-icon mx-auto mb-4">
-                                    <Image src="/images/icons/junior-camps-icon.png" alt="" width={96} height={96} className="feature-card-icon-img" aria-hidden="true" />
-                                </div>
-                                <h3 className="heading-md">Junior Camps</h3>
-                                <p className="mb-4">Junior camps and youth practice sessions are being planned. Tell us you are interested and we will help route the inquiry.</p>
-                                <TrackedCta href={ctaLinks.campInquiry.href} action={ctaLinks.campInquiry.action} placement="programs_junior_card" className="btn btn-primary w-full">
-                                    {ctaLinks.campInquiry.label}
-                                </TrackedCta>
-                            </div>
-                        </div>
+                    <div className="features-grid programs-single-card-grid stagger-reveal">
                         <div className="feature-card reveal glass-card">
                             <div className="feature-card-body text-center py-10 w-full col-span-1">
                                 <div className="feature-icon mx-auto mb-4">

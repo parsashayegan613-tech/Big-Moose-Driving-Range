@@ -80,11 +80,6 @@ export const ctaLinks = {
     label: "cakyle8@gmail.com",
     action: "email_cam_kyle",
   },
-  campInquiry: {
-    href: `${siteConfig.contactPath}?subject=Junior%20Camp%20Inquiry#contact`,
-    label: "Ask About Camps",
-    action: "ask_about_camps",
-  },
 };
 
 export type CtaAction = typeof ctaLinks[keyof typeof ctaLinks]["action"];

@@ -2324,6 +2324,11 @@ h1, h2, h3, h4 {
     padding-bottom: 3rem !important;
 }
 
+.programs-single-card-grid {
+    grid-template-columns: minmax(0, 52rem);
+    justify-content: center;
+}
+
 .programs .feature-icon {
     width: 108px;
     height: 108px;
@@ -2343,27 +2348,6 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.program-status-badge {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.45rem 1rem;
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(104, 56, 24, 0.2);
-    background: var(--clr-brand-brown-soft);
-    color: var(--clr-brand-brown);
-    font-size: 0.78rem;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    white-space: nowrap;
 }
 
 /* =========================================
